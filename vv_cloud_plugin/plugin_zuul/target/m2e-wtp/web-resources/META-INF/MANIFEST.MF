@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: plugin_zuul
+Implementation-Version: 1.0.1.20180928
+Built-By: peiwei
+Implementation-Vendor-Id: com.vv_cloud.plugin.plugin_zuul
+Build-Jdk: 1.8.0_181
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/vv_cloud/plugin/plugin_zuul
+Created-By: Maven Integration for Eclipse
+

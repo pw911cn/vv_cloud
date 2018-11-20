@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration scan="true" scanPeriod="60 seconds" debug="false">
+	<!-- 自动扫描默认为60s -->
+
+	<contextName>projectName</contextName>
+	<!-- 工程项目名称 -->
+	<property name="projectName" value="plugin_zuul" scope="context" />
+
+	<!-- 日志输出目录 -->
+	<property name="log_dir" value="vv_cloud/logs/${projectName}" scope="context" />
+	<!-- 输出格式 -->
+	<property name="layoutPattern1" value="%d{yyyy-MM-dd HH:mm:ss} %-5level[%c{70}]- %msg%n" />
+	<property name="layoutPattern2" value="%d{yyyy-MM-dd HH:mm:ss} %-5level[%t] [%c{70}]- %msg%n" />
+
+	<!-- 控制台日志 -->
+	<appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>${layoutPattern1}</pattern>
+		</encoder>
+	</appender>
+
+	<!-- ===================文件日志_ERROR级别=================== -->
+	<appender name="file_error" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<!-- 日志级别，过滤日志 -->
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">
+			<level>ERROR</level>
+			<onMatch>ACCEPT</onMatch>
+			<onMismatch>DENY</onMismatch>
+		</filter>
+
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${log_dir}/${projectName}_%d{yyyy-MM-dd}_error.%i.log
+			</fileNamePattern>
+			<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>20MB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+			<maxHistory>15</maxHistory>
+		</rollingPolicy>
+		<encoder>
+			<pattern>${layoutPattern1}</pattern>
+		</encoder>
+	</appender>
+
+	<!-- ===================文件日志_DEBUG级别=================== -->
+	<appender name="file_debug" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<!-- 日志级别，过滤日志 -->
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">
+			<level>DEBUG</level>
+			<onMatch>ACCEPT</onMatch>
+		</filter>
+
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${log_dir}/${projectName}_%d{yyyy-MM-dd}_debug.%i.log
+			</fileNamePattern>
+			<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>20MB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+			<maxHistory>15</maxHistory>
+		</rollingPolicy>
+		<encoder>
+			<pattern>${layoutPattern1}</pattern>
+		</encoder>
+	</appender>
+
+	<!-- ===================文件日志_自定义级别=================== -->
+	<appender name="file_custom" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<!-- 日志级别，过滤日志 -->
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">
+			<level>DEBUG</level>
+			<onMatch>ACCEPT</onMatch>
+		</filter>
+
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${log_dir}/${projectName}_%d{yyyy-MM-dd}_custom.%i.log
+			</fileNamePattern>
+			<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>20MB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+			<maxHistory>15</maxHistory>
+		</rollingPolicy>
+		<encoder>
+			<pattern>${layoutPattern1}</pattern>
+		</encoder>
+	</appender>
+
+	<!-- ============================================================================= -->
+	<!-- ================================ 系统日志配置================================= -->
+	<!-- root节点：生产环境必须为ERROR，开发环境可以为DEBUG -->
+	<!-- logger节点：生产环境不允许修改。 -->
+	<!-- ============================================================================= -->
+	<root level="INFO">
+		<appender-ref ref="console" />
+		<appender-ref ref="file_error" />
+		<appender-ref ref="file_debug" />
+	</root>
+
+	<!-- =============================== spring ================================== -->
+	<!-- level:用来设置打印级别，大小写无关。 -->
+	<logger name="org.springframework" level="INFO" />
+	<logger name="org.springframework.web" level="INFO"/>
+	<logger name="org.springframework.web.servlet.mvc.method" level="INFO"/>
+	<logger name="org.springframework.web.servlet.view.JstlView" level="DEBUG"/>
+
+	<!-- =============================== spring cloud================================== -->
+	<logger name="com.netflix" level="INFO"/>
+	<logger name="com.netflix.loadbalancer.LoadBalancerContext" level="DEBUG"/>
+
+	<!-- =============================== 持久层 ================================== -->
+	<!-- 不加level，则依据ROOT节点的设置 -->
+	<logger name="com.jolbox.bonecp" level="DEBUG"/>
+	<logger name="org.apache.ibatis" level="INFO"/>
+	<logger name="org.mybatis" level="DEBUG"/>
+
+	<logger name="java.sql.Connection"  level="DEBUG"/>
+	<logger name="java.sql.PreparedStatement"  level="DEBUG"/>
+	<logger name="java.sql.Statement"  level="DEBUG"/>
+	<logger name="java.sql.ResultSet"  level="DEBUG"/>
+	
+	<logger name="dao"  level="DEBUG"/>
+	<!-- =============================== 系统架构层日志 ================================== -->
+	<logger name="com.framework.component"  level="INFO"/>
+	<logger name="com.framework.core"  level="INFO"/>
+	
+	<logger name="org.apache.commons" level="INFO" />
+	<logger name="org.apache.cxf" level="INFO" />
+	<logger name="net.sf.ehcache" level="INFO" />
+	<logger name="org.quartz.core.QuartzSchedulerThread" level="INFO" />
+	<!-- =============================== 应用系统日志 ================================== -->
+
+
+	<!-- =============================== 单独模块日志 ================================== -->
+	<!-- addtivity:是否向上级loger传递打印信息。默认是true。如果设置为false,加appender-ref ref="console"才能打印 -->
+	<logger name="com.senyint.platform.fundManage" level="DEBUG">
+		<appender-ref ref="file_custom" />
+	</logger>
+	
+</configuration>  

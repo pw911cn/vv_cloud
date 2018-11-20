@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.vv_cloud.biz.biz_pub</groupId>
+	<artifactId>biz_pub</artifactId>
+	<packaging>war</packaging>
+
+	<parent>
+		<groupId>com.vv_cloud.biz</groupId>
+		<artifactId>biz</artifactId>
+		<version>${project-version}</version>
+	</parent>
+
+	<build>
+		<finalName>biz_pub</finalName>
+		<!-- <plugins> <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-war-plugin</artifactId> <configuration> 
+			这里叫什么名之后包就叫什么名 <warName>bootTest</warName> </configuration> </plugin> </plugins> -->
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.vv_cloud.biz.biz_main</groupId>
+			<artifactId>biz_main</artifactId>
+			<version>${project-version}</version>
+		</dependency>
+		
+
+	</dependencies>
+
+
+</project>
