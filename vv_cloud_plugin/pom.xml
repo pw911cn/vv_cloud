@@ -3,19 +3,30 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.vv_cloud.plugin</groupId>
-	<artifactId>plugin</artifactId>
-	<packaging>pom</packaging>
-
 	<parent>
-		<groupId>com.vv_cloud</groupId>
+		<groupId>com.senyint</groupId>
 		<artifactId>vv_cloud</artifactId>
-		<version>${project-version}</version>
+		<version>4.1.1</version>
 	</parent>
+
+	<groupId>com.senyint.vv_cloud</groupId>
+	<artifactId>vv_cloud_plugin</artifactId>
+	<packaging>pom</packaging>
 
 	<modules>
 		<module>plugin_eureka</module>
 		<module>plugin_zuul</module>
 		<module>plugin_config</module>
 	</modules>
+
+	<build>
+		<defaultGoal>compile</defaultGoal>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
 </project>

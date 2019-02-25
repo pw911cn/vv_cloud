@@ -1,33 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.vv_cloud</groupId>
-	<artifactId>vv_cloud</artifactId>
-	<version>${project-version}</version>
-	<packaging>pom</packaging>
-
 	<properties>
-		<project-version>1.0.1.20180928</project-version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.8</java.version>
-		<spring-boot.version>2.0.4.RELEASE</spring-boot.version>
-		<spring-cloud.version>Finchley.SR2</spring-cloud.version>
-		<zuul-ratelimit>2.2.0.RELEASE</zuul-ratelimit>
 	</properties>
+
+	<groupId>com.senyint</groupId>
+	<artifactId>vv_cloud</artifactId>
+	<version>4.1.1</version>
+	<packaging>pom</packaging>
+
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.0.3.RELEASE</version>
+		<version>2.0.4.RELEASE</version>
 	</parent>
 
 	<modules>
-		<module>vv_cloud_plugin</module>
-		<module>vv_cloud_biz</module>
 		<module>vv_cloud_frame</module>
-	</modules>
+		<module>vv_cloud_plugin</module>
+    <module>vv_cloud_biz</module>
+    <module>vv_cloud_web</module>
+    <module>vv_cloud_entity</module>
+  </modules>
 
 	<!-- ==================== dependencyManagement里只是声明依赖，并不实现引入，子项目需要显性的声明需要的依赖 ==================== -->
 	<dependencyManagement>
@@ -35,7 +33,7 @@
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-dependencies</artifactId>
-				<version>${spring-cloud.version}</version>
+				<version>Finchley.RELEASE</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
@@ -44,6 +42,12 @@
 
 	<!-- ==================== dependencies在子项目中不写该依赖项，子项目仍然会从父项目中继承该依赖项（全部继承）==================== -->
 	<dependencies>
+		<!-- web 支持 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
 		<!-- servlet依赖 -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -51,6 +55,7 @@
 			<scope>provided</scope>
 		</dependency>
 
+		<!-- servlet依赖 -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
@@ -71,46 +76,63 @@
 			<scope>provided</scope>
 		</dependency>
 
+		<!-- aop支持 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
+			<artifactId>spring-boot-starter-aop</artifactId>
 		</dependency>
 
-
+		<!-- 服务信息收集 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
 	</dependencies>
 
 
 	<build>
 		<pluginManagement>
 			<plugins>
-				<plugin>
-					<!-- 指定maven编译的jdk版本,如果不指定,maven3默认用jdk 1.5 maven2默认用jdk1.3 -->
-					<artifactId>maven-compiler-plugin</artifactId>
-					<configuration>
-						<target>${java.version}</target>
-						<source>${java.version}</source>
-						<encoding>${project.build.sourceEncoding}</encoding>
-					</configuration>
-				</plugin>
+				<!-- <plugin> 指定maven编译的jdk版本,如果不指定,maven3默认用jdk 1.5 maven2默认用jdk1.3 <artifactId>maven-compiler-plugin</artifactId> <configuration> 
+					<target>${java.version}</target> <source>${java.version}</source> <encoding>${project.build.sourceEncoding}</encoding> </configuration> 
+					</plugin> -->
 
 				<plugin>
 					<!-- 能够将Spring Boot应用打包为可执行的jar或war文件 -->
 					<groupId>org.springframework.boot</groupId>
 					<artifactId>spring-boot-maven-plugin</artifactId>
-					<version>${spring-boot.version}</version>
 				</plugin>
 			</plugins>
 		</pluginManagement>
 	</build>
 
+	<!-- 代理中央仓库 -->
 	<repositories>
 		<repository>
-			<id>aliyun</id>
-			<name>aliyun</name>
-			<url>http://maven.aliyun.com/nexus/content/groups/public</url>
+			<id>nexus</id>
+			<name>maven-central</name>
+			<url>http://127.0.0.1:10128/repository/maven-public/</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
 		</repository>
-		<!-- <repository> <id>oss-snapshots</id> <url>https://oss.sonatype.org/content/repositories/snapshots</url> <releases> 
-			<enabled>false</enabled> </releases> <snapshots> <enabled>true</enabled> </snapshots> </repository> -->
 	</repositories>
+
+	<!-- 发布管理 -->
+	<distributionManagement>
+		<repository>
+			<id>releases</id>
+			<name>Nexus Releases Repository Pro</name>
+			<url>http://127.0.0.1:10128/repository/maven-releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>snapshots</id>
+			<name>Nexus Snapshots Repository Pro</name>
+			<url>http://127.0.0.1:10128/repository/maven-snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
 
 </project>
