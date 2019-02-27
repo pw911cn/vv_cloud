@@ -1,0 +1,41 @@
+# ################################# 应用服务器配置 ##################################
+server:
+  port: 8010
+  servlet:
+    context-path: /${spring.application.name}  
+spring:
+  application:
+    name: plugin_config
+  jmx:
+    default-domain: ${spring.application.name}
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/,classpath:/server-base
+
+# ################################# 配置注册中心 ##################################
+eureka:
+  instance:
+    prefer-ip-address: true
+#    health-check-url-path: ${server.servlet.context-path:}/actuator/health
+#    home-page-url-path: ${server.servlet.context-path:}
+#    status-page-url-path: ${server.servlet.context-path:}/actuator/info
+#    metadata-map:
+#      configPath: ${server.servlet.context-path:}
+#      management.context-path: ${server.servlet.context-path:}
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8010/plugin_eureka/eureka/
+#测试访问配置文件 http://localhost:8010/plugin_config/config/dev
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: ALWAYS

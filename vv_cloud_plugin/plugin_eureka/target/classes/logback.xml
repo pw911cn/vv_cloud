@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <configuration scan="true" scanPeriod="60 seconds" debug="false">
-	<!-- 自动扫描默认为60s -->
-
-	<contextName>projectName</contextName>
-	<!-- 工程项目名称 -->
+	<!-- 工程名称 -->
 	<property name="projectName" value="plugin_eureka" scope="context" />
-
+	<!-- 上下文名称 -->
+	<contextName>${projectName}</contextName>
+	
 	<!-- 日志输出目录 -->
-	<property name="log_dir" value="../vv_cloud_plugin/logs/${projectName}" scope="context" />
+	<property name="log_dir" value="/senyint_logs/${projectName}" scope="context" />
 	<!-- 输出格式 -->
-	<property name="layoutPattern1" value="%d{yyyy-MM-dd HH:mm:ss} %-5level[%c{70}]- %msg%n" />
-	<property name="layoutPattern2" value="%d{yyyy-MM-dd HH:mm:ss} %-5level[%t] [%c{70}]- %msg%n" />
+	<property name="layoutPattern1" value="%d{yyyy-MM-dd HH:mm:ss}[%contextName] %-5level[%c{70}]- %msg%n" />
+	<property name="layoutPattern2" value="%d{yyyy-MM-dd HH:mm:ss}[%contextName] %-5level[%t] [%c{70}]- %msg%n" />
 
 	<!-- 控制台日志 -->
 	<appender name="console" class="ch.qos.logback.core.ConsoleAppender">

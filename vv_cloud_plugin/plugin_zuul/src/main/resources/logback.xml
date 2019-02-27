@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <configuration scan="true" scanPeriod="60 seconds" debug="false">
-	<!-- 自动扫描默认为60s -->
-
-	<contextName>projectName</contextName>
-	<!-- 工程项目名称 -->
-	<property name="projectName" value="plugin_zuul" scope="context" />
-
+	<!-- 工程名称 -->
+	<property name="projectName" value="plugin_eureka" scope="context" />
+	<!-- 上下文名称 -->
+	<contextName>${projectName}</contextName>
+	
 	<!-- 日志输出目录 -->
-	<property name="log_dir" value="vv_cloud/logs/${projectName}" scope="context" />
+	<property name="log_dir" value="/senyint_logs/${projectName}" scope="context" />
 	<!-- 输出格式 -->
-	<property name="layoutPattern1" value="%d{yyyy-MM-dd HH:mm:ss} %-5level[%c{70}]- %msg%n" />
-	<property name="layoutPattern2" value="%d{yyyy-MM-dd HH:mm:ss} %-5level[%t] [%c{70}]- %msg%n" />
+	<property name="layoutPattern1" value="%d{yyyy-MM-dd HH:mm:ss}[%contextName] %-5level[%c{70}]- %msg%n" />
+	<property name="layoutPattern2" value="%d{yyyy-MM-dd HH:mm:ss}[%contextName] %-5level[%t] [%c{70}]- %msg%n" />
 
 	<!-- 控制台日志 -->
 	<appender name="console" class="ch.qos.logback.core.ConsoleAppender">
@@ -101,31 +100,26 @@
 	<logger name="org.springframework.web.servlet.mvc.method" level="INFO"/>
 	<logger name="org.springframework.web.servlet.view.JstlView" level="DEBUG"/>
 
-	<!-- =============================== spring cloud================================== -->
-	<logger name="com.netflix" level="INFO"/>
-	<logger name="com.netflix.loadbalancer.LoadBalancerContext" level="DEBUG"/>
-
 	<!-- =============================== 持久层 ================================== -->
 	<!-- 不加level，则依据ROOT节点的设置 -->
-	<logger name="com.jolbox.bonecp" level="DEBUG"/>
+	<logger name="com.jolbox.bonecp" />
 	<logger name="org.apache.ibatis" level="INFO"/>
-	<logger name="org.mybatis" level="DEBUG"/>
+	<logger name="org.mybatis"/>
 
-	<logger name="java.sql.Connection"  level="DEBUG"/>
-	<logger name="java.sql.PreparedStatement"  level="DEBUG"/>
-	<logger name="java.sql.Statement"  level="DEBUG"/>
-	<logger name="java.sql.ResultSet"  level="DEBUG"/>
+	<logger name="java.sql.Connection" />
+	<logger name="java.sql.PreparedStatement" />
+	<logger name="java.sql.Statement" />
+	<logger name="java.sql.ResultSet" />
 	
-	<logger name="dao"  level="DEBUG"/>
+	<logger name="dao"/>
 	<!-- =============================== 系统架构层日志 ================================== -->
-	<logger name="com.framework.component"  level="INFO"/>
-	<logger name="com.framework.core"  level="INFO"/>
-	
+	<logger name="com.framework.component" />
+	<logger name="com.framework.core" />
+	<!-- =============================== 应用系统日志 ================================== -->
 	<logger name="org.apache.commons" level="INFO" />
 	<logger name="org.apache.cxf" level="INFO" />
 	<logger name="net.sf.ehcache" level="INFO" />
 	<logger name="org.quartz.core.QuartzSchedulerThread" level="INFO" />
-	<!-- =============================== 应用系统日志 ================================== -->
 
 
 	<!-- =============================== 单独模块日志 ================================== -->
