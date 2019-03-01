@@ -7,19 +7,17 @@
 		<groupId>com.senyint.vv_cloud</groupId>
 		<artifactId>vv_cloud_plugin</artifactId>
 		<version>4.1.1</version>
-	</parent>	
+	</parent>
 
-	<artifactId>plugin_zuul</artifactId>
+	<artifactId>plugin_eureka</artifactId>
+	<!-- pom、jar、war -->
 	<packaging>war</packaging>
-	
+
 	<dependencies>
+		<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-eureka-server -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-zuul</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
 		</dependency>
 	</dependencies>
 
