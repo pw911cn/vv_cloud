@@ -1,0 +1,18 @@
+# ################################# 应用服务器配置 ##################################
+server:
+  port: 8010
+  servlet:
+    context-path: /${spring.application.name}  
+spring:
+  application:
+    name: server_base
+  jmx:
+    default-domain: ${spring.application.name}
+# ################################# 注册中心配置 ##################################
+
+eureka:
+  instance: 
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8010/plugin_eureka/eureka/

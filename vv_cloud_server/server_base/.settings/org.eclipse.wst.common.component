@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="server_base-4.1.1">
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+        <dependent-module archiveName="entity_base-4.1.1.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/entity_base/entity_base">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="context-root" value="server_base"/>
+        <property name="java-output-path" value="/server_base/target/classes"/>
+    </wb-module>
+</project-modules>
