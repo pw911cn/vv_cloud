@@ -9,7 +9,7 @@
 		<version>4.1.1</version>
 	</parent>
 
-	<groupId>com.senyint.vv_cloud</groupId>
+	<groupId>com.senyint.vv_cloud_frame</groupId>
 	<artifactId>vv_cloud_frame</artifactId>
 	<packaging>pom</packaging>
 
@@ -19,7 +19,7 @@
 	</modules>
 	
 	<build>
-		<defaultGoal>compile</defaultGoal>
+		<!-- <defaultGoal>compile</defaultGoal> -->
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
