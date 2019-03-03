@@ -1,0 +1,67 @@
+# ################################# 应用服务器配置 ##################################
+server: 
+  port: 8010
+  servlet:
+    context-path: /${spring.application.name}
+spring: 
+  application:
+    name: plugin_zuul
+  jmx:
+    default-domain: ${spring.application.name}
+    
+# ################################# 配置注册中心 ##################################     
+eureka: 
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://localhost:8010/plugin_eureka/eureka/
+      
+# ################################# 配置智能路由 ##################################  
+zuul:
+  routes:
+    server-base: 
+      path: /server-base/**
+      serviceId: server-base
+      stripPrefix: true
+    server-pub: 
+      path: /server-pub/**
+      serviceId: server-pub
+      stripPrefix: true         
+    server-conf: 
+      path: /server-conf/**
+      serviceId: server-conf
+      stripPrefix: true
+    server-cons: 
+      path: /server-cons/**
+      serviceId: server-cons
+      stripPrefix: true
+    # 王师！！将具体说明填写全      
+    plugin-zuul:
+      path: /**
+      serviceId: forward:/local    
+
+#ribbon:
+#  eureka:
+#    enabled: false
+
+server-base: 
+  ribbon: 
+    NFLoadBalancerRuleClassName: com.senyint.plugin_zuul.dev.DevRule
+server-conf: 
+  ribbon: 
+    NFLoadBalancerRuleClassName: com.senyint.plugin_zuul.dev.DevRule
+server-cons: 
+  ribbon: 
+    NFLoadBalancerRuleClassName: com.senyint.plugin_zuul.dev.DevRule
+server-pub: 
+  ribbon: 
+    NFLoadBalancerRuleClassName: com.senyint.plugin_zuul.dev.DevRule      
+auth-server: 
+  ribbon: 
+    NFLoadBalancerRuleClassName: com.senyint.plugin_zuul.dev.DevRule 
+
+    
+ 
+    
+
