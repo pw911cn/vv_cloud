@@ -1,6 +1,0 @@
-
-########################## 注册中心配置 ##########################
-## 注册中心带有安全验证时的配置
-#eureka.client.serviceUrl.defaultZone=http://${userName}:${password}@127.0.0.1:8761/eureka/
-eureka.client.serviceUrl.defaultZone=${eureka.client.serviceUrl.defaultZone}
-
