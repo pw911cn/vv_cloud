@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <configuration scan="true" scanPeriod="60 seconds" debug="false">
 	<!-- 工程名称 -->
-	<property name="projectName" value="plugin_eureka" scope="context" />
+	<property name="projectName" value="plugin_zuul" scope="context" />
 	<!-- 上下文名称 -->
 	<contextName>${projectName}</contextName>
 	
