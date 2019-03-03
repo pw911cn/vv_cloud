@@ -7,7 +7,7 @@
 	</configSuffixes>
 	<enableImports><![CDATA[false]]></enableImports>
 	<configs>
-		<config>java:com.senyint.plugin_eureka.Eureka_SpringApp</config>
+		<config>java:com.senyint.vv_cloud.plugin_eureka.Eureka_SpringApp</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>

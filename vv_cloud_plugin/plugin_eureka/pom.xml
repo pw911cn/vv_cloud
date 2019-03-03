@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>com.senyint.vv_cloud</groupId>
+		<groupId>com.senyint.vv_cloud_plugin</groupId>
 		<artifactId>vv_cloud_plugin</artifactId>
 		<version>4.1.1</version>
 	</parent>
@@ -14,7 +14,7 @@
 	<packaging>war</packaging>
 
 	<dependencies>
-		<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-eureka-server -->
+		<!-- eureka-server -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
