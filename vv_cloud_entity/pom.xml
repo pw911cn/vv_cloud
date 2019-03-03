@@ -9,12 +9,16 @@
 		<version>4.1.1</version>
 	</parent>
 
-	<groupId>com.senyint.vv_cloud</groupId>
+	<groupId>com.senyint.vv_cloud_entity</groupId>
 	<artifactId>vv_cloud_entity</artifactId>
-	<packaging>jar</packaging>
+	<packaging>pom</packaging>
 
+	<modules>
+		<module>entity_base</module>
+	</modules>
+	
 	<build>
-		<defaultGoal>compile</defaultGoal>
+		<!-- <defaultGoal>compile</defaultGoal> -->
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
