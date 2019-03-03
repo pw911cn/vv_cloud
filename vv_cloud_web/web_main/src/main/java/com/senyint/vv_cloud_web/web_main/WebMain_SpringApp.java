@@ -1,10 +1,9 @@
-package com.senyint.plugin_eureka;
+package com.senyint.vv_cloud_web.web_main;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
-import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 /**
  * @author peiwei
@@ -14,17 +13,15 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
  *       ---------------------------------------------------------<br>
  *       2018年10月11日 peiwei 4.0.1 xxx<br>
  */
-// 开启注册中心服务
-@EnableEurekaServer
 @SpringBootApplication
-public class Eureka_SpringApp extends SpringBootServletInitializer {
+public class WebMain_SpringApp extends SpringBootServletInitializer {
 
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(Eureka_SpringApp.class);
+        return application.sources(WebMain_SpringApp.class);
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(Eureka_SpringApp.class, args);
+        SpringApplication.run(WebMain_SpringApp.class, args);
     }
 }
