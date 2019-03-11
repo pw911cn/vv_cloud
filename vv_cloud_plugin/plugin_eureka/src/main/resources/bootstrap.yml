@@ -21,13 +21,12 @@ spring:
 eureka:
   instance: 
     prefer-ip-address: true
-    health-check-url-path: ${server.servlet.context-path:}/actuator/health
-    home-page-url-path: ${server.servlet.context-path:}
-    status-page-url-path: ${server.servlet.context-path:}/actuator/info
+    health-check-url-path: /${server.servlet.context-path}/actuator/health
+    home-page-url-path: /${server.servlet.context-path}
+    status-page-url-path: /${server.servlet.context-path}/actuator/info
     metadata-map:
-      configPath: ${server.servlet.context-path:}
-      management.context-path: ${server.servlet.context-path:}    
-    
+      configPath: /${server.servlet.context-path}
+      management.context-path: /${server.servlet.context-path}    
 #  server:
 #    enable-self-preservation: false #Eureka自我保护机制以及心跳周期长会遇到 Eureka不剔除已关停的节点的问题，默认打开状态。建议生产环境打开此配置
 #    eviction-interval-timer-in-ms: 4000 #清理间隔（单位毫秒，默认是60*1000）

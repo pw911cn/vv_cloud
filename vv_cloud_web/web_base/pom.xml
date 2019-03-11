@@ -1,0 +1,22 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<groupId>com.senyint.vv_cloud_web</groupId>
+		<artifactId>vv_cloud_web</artifactId>
+		<version>4.1.1</version>
+	</parent>
+	
+	<artifactId>web_base</artifactId>
+	
+	<build>
+		<resources>
+			<resource>
+				<directory>${project.basedir}/src/main/resources/${artifactId}</directory>
+				<targetPath>${project.build.outputDirectory}/META-INF/resources/${artifactId}</targetPath>
+			</resource>
+		</resources>
+	</build>
+
+</project>

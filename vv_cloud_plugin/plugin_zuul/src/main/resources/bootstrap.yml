@@ -36,7 +36,6 @@ zuul:
       path: /server-cons/**
       serviceId: server-cons
       stripPrefix: true
-    # 王师！！将具体说明填写全      
     plugin-zuul:
       path: /**
       serviceId: forward:/local    

@@ -1,4 +1,4 @@
-package com.senyint.vv_cloud_server.server_base.userLogin;
+package com.senyint.vv_cloud_server.server_base.userLogin.action;
 
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

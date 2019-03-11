@@ -20,16 +20,10 @@ spring:
 eureka:
   instance:
     prefer-ip-address: true
-#    health-check-url-path: ${server.servlet.context-path:}/actuator/health
-#    home-page-url-path: ${server.servlet.context-path:}
-#    status-page-url-path: ${server.servlet.context-path:}/actuator/info
-#    metadata-map:
-#      configPath: ${server.servlet.context-path:}
-#      management.context-path: ${server.servlet.context-path:}
   client:
     serviceUrl:
       defaultZone: http://localhost:8010/plugin_eureka/eureka/
-#测试访问配置文件 http://localhost:8010/plugin_config/config/dev
+      #测试访问配置文件 http://localhost:8010/plugin_config/config/dev
 
 management:
   endpoints:

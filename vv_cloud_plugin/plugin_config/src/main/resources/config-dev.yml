@@ -1,4 +1,6 @@
 ##############################################################################
+config.test.val : weiweitest
+
 spring: 
     #jta相关参数配置
 #    jta:
@@ -65,19 +67,13 @@ spring:
       max-wait: -1
       max-idle: 8
       min-idle: 0
-        
-  
-      
-
 mybatis:
   mapper-locations: classpath*:com/senyint/entity/**/mapper/*.xml
   type-aliases-package: com.senyint.entity
-
 mapper:
   mappers:  com.senyint.persistent.mybatis.CommonMapper
   not-empty: false
   identity: ORACLE
-
 pagehelper:
   reasonable: true
   supportMethodsArguments: true

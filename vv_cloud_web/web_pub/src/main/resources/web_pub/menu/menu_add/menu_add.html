@@ -1,0 +1,92 @@
+<div class="popup-content-lyt">
+    <div class="popup-content-center">
+    	<form name="menu_add_form" id="menu_add_form">
+    	<div style="padding:10px 10px">
+			<div class="flowlyt-wrap labelwidth7">
+				<div class="flowlyt-child width100 mustfill">
+			         <div class="form-block">
+			             <div class="form-label"><div class="labelcont">功能菜单名称<span class="muststar">*</span></div></div>
+			             <div class="form-cont">
+			                 <input type="text" class="xInput required" value="" name="menu_name">
+			             </div>
+			         </div>
+		         </div>
+				<div class="flowlyt-child width100">
+			         <div class="form-block">
+			             <div class="form-label"><div class="labelcont">上级功能菜单ID<span class="muststar">*</span></div></div>
+                         <div class="tms-fuzzySearch form-cont">
+                              <input type="text" class="xInput" value="" name="p_id" style="display:none">
+                              <input type="text" class="xInput" value="" id="fuzzy_menu_id">
+                         </div>
+			         </div>
+		         </div>
+   				 <div class="flowlyt-child width100">
+			         <div class="form-block">
+			             <div class="form-label"><div class="labelcont">功能URL<span class="muststar">*</span></div></div>
+			             <div class="form-cont">
+			                 <input type="text" class="xInput" value="" name="menu_url">
+			             </div>
+			         </div>
+		         </div>
+		         <div class="flowlyt-child width100 mustfill">
+			         <div class="form-block">
+			             <div class="form-label"><div class="labelcont">功能级别<span class="muststar">*</span></div></div>
+			             <div class="form-cont ">
+			                 <select class="xInput required coreselct" name="menu_level" mode="only" default_value="" type_key="MENU_LEVEL">
+                             </select>
+                             
+                             
+   
+			             </div>
+			         </div>
+ 
+		         </div>
+		         <div class="flowlyt-child width100">
+			         <div class="form-block">
+			             <div class="form-label"><div class="labelcont">打开方式<span class="muststar">*</span></div></div>
+			             <div class="form-cont">
+        			         <select class="xInput" name="open_style" mode="only" default_value="" type_key="OPEN_STYLE">
+                             </select>
+			             </div>
+			         </div>
+		         </div>
+		         <div class="flowlyt-child width100">
+			         <div class="form-block">
+			             <div class="form-label"><div class="labelcont">是否展开<span class="muststar">*</span></div></div>
+			             <div class="form-cont">
+			                 <select class="xInput" name="is_open" mode="only" default_value="" type_key="IS_OPEN">
+                             </select>
+			             </div>
+			         </div>
+		         </div>
+		         <div class="flowlyt-child width100">
+			         <div class="form-block">
+			             <div class="form-label"><div class="labelcont">排序号<span class="muststar">*</span></div></div>
+			             <div class="form-cont">
+			                 <input type="text" class="xInput" value="" name="order_no">
+			             </div>
+			         </div>
+		         </div>
+		         <div class="flowlyt-child width100 mustfill">
+			         <div class="form-block">
+			         	<div class="form-label"><div class="labelcont">数据有效性<span class="muststar">*</span></div></div>
+			             <div class="form-cont">
+			                 <select class="xInput required" name="flag" mode="only" default_value="" type_key="FLAG">
+                             </select>
+			             </div>
+			         </div>
+		         </div>
+		         
+			 </div>
+    	</div>
+
+    </div>
+    <div class="popup-content-footerWrap">
+        <div class="popup-footerText"></div>
+        <div class="popup-btns">
+	        <button type="button" class="xBtn xBtn-default" id="menu_add_cancle">取消</button>
+        	<button type="button" class="xBtn xBtn-primary xBtn-horpa-lg" id="menu_add_save">确认</button>
+        </div>
+    </div>
+	</form>
+</div>
