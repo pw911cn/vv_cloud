@@ -1,9 +1,11 @@
 package com.senyint.vv_cloud_web.web_main;
 
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+import org.springframework.context.annotation.PropertySource;
 
 /**
  * @author peiwei
@@ -14,6 +16,9 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
  *       2018年10月11日 peiwei 4.0.1 xxx<br>
  */
 @SpringBootApplication
+//帮助SpringBoot应用将所有符合条件的@Configuration配置都加载到当前SpringBoot创建并使用的IoC容器。
+//@EnableAutoConfiguration
+@PropertySource("classpath:application.properties")
 public class WebMain_SpringApp extends SpringBootServletInitializer {
 
     @Override

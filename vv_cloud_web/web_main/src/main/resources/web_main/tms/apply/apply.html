@@ -1,0 +1,127 @@
+<!-- 平台管理  机构管理 列表  -->
+<div class="platmana_comlist_wrap">
+	<div class="platmana_comlist_lyt2">
+		<div class="platmana_comlist_search">
+			<!-- 搜索区 -->
+			<form id="org_list_searchform">
+			<div class="v-panel01 br-all">
+				
+				<div class="inputwrap">
+					
+					<div class="flowlyt-wrap">
+						<div class="flowlyt-child">
+							<div class="form-block">
+								<div class="form-label"><div class="labelcont">机构名称<span class="muststar">*</span></div></div>
+								<div class="form-cont">
+									<input type="text" class="xInput" value="" name="org_name">
+								</div>
+							</div>
+						</div>
+						<div class="flowlyt-child">
+							<div class="form-block">
+								<div class="form-label"><div class="labelcont">机构类型<span class="muststar">*</span></div></div>
+								<div class="form-cont">
+									<select class="xInput" name="org_type">
+										<option title="--请选择--" value="">--请选择--</option>
+										<option title="医院" value="10">医院机构</option>
+										<option title="监管机构" value="20">监管机构</option>
+										<option title="运营公司" value="30">运营公司</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="flowlyt-child">
+							<div class="form-block">
+								<div class="form-label"><div class="labelcont">机构状态<span class="muststar">*</span></div></div>
+								<div class="form-cont">
+									<select class="xInput" name="flag">
+										<option title="--请选择--" value="">--请选择--</option>
+										<option title="有效" value="1">有效</option>
+										<option title="无效" value="0">无效</option>
+										<option title="冻结" value="2">冻结</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="flowlyt-child">
+							<div class="form-block">
+								<div class="form-label"><div class="labelcont">省<span class="muststar">*</span></div></div>
+								<div class="form-cont">
+									<select class="xInput" name="province">
+										<option title="--请选择--" value="">--请选择--</option>
+										<option value="110000">北京市</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="flowlyt-child">
+							<div class="form-block">
+								<div class="form-label"><div class="labelcont">市<span class="muststar">*</span></div></div>
+								<div class="form-cont">
+									<select class="xInput" name="city">
+										<option title="--请选择--" value="">--请选择--</option>
+										<option value="110100">市辖区</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="flowlyt-child">
+							<div class="form-block">
+								<div class="form-label"><div class="labelcont">区/县<span class="muststar">*</span></div></div>
+								<div class="form-cont">
+									<select class="xInput" name="area">
+										<option title="--请选择--" value="">--请选择--</option>
+										<option value="110101">东城区</option>
+								        <option value="110102">西城区</option>
+								        <option value="110103">崇文区</option>
+								        <option value="110104">宣武区</option>
+								        <option value="110105">朝阳区</option>
+								        <option value="110106">丰台区</option>
+								        <option value="110107">石景山区</option>
+								        <option value="110108">海淀区</option>
+								        <option value="110109">门头沟区</option>
+								        <option value="110111">房山区</option>
+								        <option value="110112">通州区</option>
+								        <option value="110113">顺义区</option>
+								        <option value="110114">昌平区</option>
+								        <option value="110115">大兴区</option>
+								        <option value="110116">怀柔区</option>
+								        <option value="110117">平谷区</option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="btnwrap">
+					<button class="xBtn xBtn-primary" type="button" id="org_list_searchbtn">搜索</button>
+					<button class="xBtn xBtn-default" type="reset">重置</button>
+					<button class="xBtn xBtn-default" type="button" id="go">跳转</button>
+					<button class="xBtn xBtn-default" type="button" id="goDetail">跳转详情</button>
+				</div>
+				
+
+				<div class="btnwrap-right">
+					<button class="xBtn xBtn-success" type="button" id="org_list_addBtn"><i class="comicon-add"></i> 新增</button>
+				</div>
+			
+			</div>
+			</form>
+
+			<!-- 搜索区 end -->
+		</div>
+		<div class="platmana_comlist_cont" style="/*top:0px;*/">
+			<div class="platmana_comlist_tablewrap">
+				<!-- 加载表格 -->
+				<iframe id = "testIframe" src="http://localhost:9090/TMS/" width="100%" height="100%"
+						marginWidth=0 marginHeight=0   frameBorder=0  scrolling="no"></iframe>
+						<!--frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes"></iframe>-->
+				<!--<iframe id = "testIframe" src="http://172.16.161.113:8080/TMS/" width="100%" height="100%"></iframe>-->
+				<!-- 加载表格 end -->
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 平台管理  机构管理 列表 end  -->
