@@ -1,0 +1,89 @@
+
+/*  通用 确认框内容区  start */
+.comconfirm{
+	padding: 10px;
+}
+.comconfirm .comconfirmlyt{
+	display: flex;
+}
+.comconfirm .comconfirmlyt .leftlyt{
+	width: 80px;
+	flex:0 0 auto;
+	border-right:solid 1px #ddd;
+	padding: 10px;
+}
+.comconfirm .comconfirmlyt .rightlyt{
+	flex:1 1 auto;
+	padding: 10px 10px 10px 20px;
+}
+
+/* 左侧图标 */
+.comconfirm .comconfirmiconwrap{
+	font-size: 42px;
+	text-align: center;
+	padding: 20px 0;
+}
+.comconfirm .comconfirmicon{
+	display: none;
+}
+.comconfirm .comconfirmiconwrap.success .comconfirmicon.suc{
+	display: block;
+	color: #3cb52e;
+}
+.comconfirm .comconfirmiconwrap.warning .comconfirmicon.war{
+	display: block;
+	color: #ff8d00;
+}
+.comconfirm .comconfirmiconwrap.danger .comconfirmicon.dan{
+	display: block;
+	color: #f50000;
+}
+
+
+/* 右侧标题 */
+.comconfirm .comconfirmtitle{
+	font-size: 22px;
+	text-align: center;
+	color: #333;
+}
+.comconfirm .comconfirmtitle.success{
+	color: #20a910;
+}
+.comconfirm .comconfirmtitle.warning{
+	color: #ff7600 ;
+}
+.comconfirm .comconfirmtitle.danger{
+	color: #f50000;
+}
+/* 说明 */
+.comconfirm .comconfirmexplain{
+	font-size: 14px;
+	margin-top: 20px;
+	color: #333;
+	line-height: 30px;
+}
+.comconfirm .comconfirmtip{
+	margin: 30px 0 15px;
+	font-size: 14px;
+	color: #777;
+}
+.comconfirm .explainzhankai{
+	margin-top: 20px;
+	display: inline-block;
+	font-size: 12px;
+	color: #777;
+	cursor: pointer;
+}
+.comconfirm .explainzhankai:hover{
+	color: #000;
+}
+.comconfirm .explaindetail{
+	margin-top: 15px;
+}
+/*  通用 确认框内容区  end */
+
+
+
+
+
+

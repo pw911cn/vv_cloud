@@ -1,0 +1,520 @@
+@charset "UTF-8";
+/* 平台管理 */
+/* 平台管理 通用列表页   ————————————————   */
+.platmana_comlist_wrap {
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.platmana_comlist_wrap .platmana_comlist_tablewrap {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* 平台管理 通用列表页 布局  */
+.platmana_comlist_lyt1,
+.platmana_comlist_lyt2 {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.platmana_comlist_lyt1 .platmana_comlist_search,
+.platmana_comlist_lyt2 .platmana_comlist_search {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.platmana_comlist_lyt1 .platmana_comlist_cont,
+.platmana_comlist_lyt2 .platmana_comlist_cont {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+/* 平台管理 通用列表页 布局 1行搜索 */
+.platmana_comlist_lyt1 .platmana_comlist_search {
+  height: 48px;
+}
+.platmana_comlist_lyt1 .platmana_comlist_cont {
+  top: 56px;
+}
+
+/* 平台管理 通用列表页 布局 2行搜索 */
+.platmana_comlist_lyt2 .platmana_comlist_search {
+  height: 84px;
+}
+.platmana_comlist_lyt2 .platmana_comlist_cont {
+  top: 92px;
+}
+
+/* 平台管理 通用列表页   end   */
+/* 平台管理 通用 弹出层容器   ————————————————   */
+.platmana_com_popcont {
+  padding: 20px;
+}
+.platmana_com_popcont .v-panel {
+  margin-top: 10px;
+}
+
+/* 平台管理 通用 弹出层容器  end   */
+/* 平台管理  权限列表 表格内样式  ————————————————  */
+/* 审核状态 待审核  */
+.platmana_permlist_examState_wait {
+  color: #9aa994;
+}
+
+/* 审核状态 成功  */
+.platmana_permlist_examState_success {
+  color: #379E0D;
+}
+
+/* 审核状态 失败  */
+.platmana_permlist_examState_fail {
+  padding: 2px 8px;
+  background-color: #FF4D4F;
+  color: #fff;
+  border-radius: 2px;
+}
+
+/* 权限组状态 正常(有效)  */
+.platmana_permlist_state_normal {
+  color: #379E0D;
+}
+
+/* 权限组状态 无效  */
+.platmana_permlist_state_invalid {
+  padding: 2px 8px;
+  background-color: #FF4D4F;
+  color: #fff;
+  border-radius: 2px;
+}
+
+/* 权限组状态 冻结  */
+.platmana_permlist_state_frozen {
+  padding: 2px 8px;
+  background-color: #FA8C16;
+  color: #fff;
+  border-radius: 2px;
+}
+
+/* 平台管理  权限列表 表格内样式  end  */
+/* 平台管理  角色权限组  新增 弹出层 布局  ———————————————— */
+.platmana_role_perm_add_lyt {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.platmana_role_perm_add_lyt .role_perm_add_lyt_baseinfo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px 20px 0 0;
+}
+.platmana_role_perm_add_lyt .role_perm_add_startbtn {
+  position: absolute;
+  top: 120px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+.platmana_role_perm_add_lyt .role_perm_add_lyt_perm {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  bottom: 10px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.platmana_role_perm_add_lyt .role_perm_add_lyt_perm .role_perm_add_lyt_perm_choose {
+  /*选择权限布局*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 60%;
+  padding: 0 10px;
+  overflow: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.platmana_role_perm_add_lyt .role_perm_add_lyt_perm .role_perm_add_lyt_perm_setdata {
+  /*配置数据范围布局*/
+  position: absolute;
+  top: 0;
+  left: 60%;
+  right: 0;
+  bottom: 0;
+  padding-right: 10px;
+  overflow: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.platmana_role_perm_add_lyt.perm_choose {
+  /* 功能调整 弹出层 布局   */
+}
+.platmana_role_perm_add_lyt.perm_choose .role_perm_add_lyt_perm {
+  top: 10px;
+}
+
+/* 平台管理  角色权限组  新增 弹出层 布局  end  */
+/* 平台管理  系统权限组  新增 弹出层 布局  ———————————————— */
+.platmana_sys_perm_add_lyt {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.platmana_sys_perm_add_lyt .sys_perm_add_lyt_baseinfo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px 20px 0 0;
+}
+.platmana_sys_perm_add_lyt .sys_perm_add_startbtn {
+  position: absolute;
+  top: 120px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+.platmana_sys_perm_add_lyt .sys_perm_add_lyt_perm {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  bottom: 10px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 10px;
+  overflow: auto;
+}
+.platmana_sys_perm_add_lyt.perm_choose {
+  /* 功能调整 弹出层 布局   */
+}
+.platmana_sys_perm_add_lyt.perm_choose .sys_perm_add_lyt_perm {
+  top: 10px;
+}
+
+/* 平台管理  系统权限组  新增 弹出层 布局  end  */
+/* 平台管理  角色权限组  选择权限  ———————————————— */
+.platmana_perm_choose {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+.platmana_perm_choose .choose_topbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 8px;
+  background-color: #F1F6FC;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.platmana_perm_choose .choose_topbar .title {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+.platmana_perm_choose .choose_topbar .oper {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+.platmana_perm_choose .choose_cont {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  overflow: auto;
+}
+.platmana_perm_choose .choose_cont .nodata {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+  color: #9B9B9B;
+  line-height: 22px;
+}
+.platmana_perm_choose .platmana_perm_choose_left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 45%;
+  overflow: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-right: solid 1px #D8D8D8;
+}
+.platmana_perm_choose .platmana_perm_choose_right {
+  position: absolute;
+  top: 0;
+  left: 45%;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.platmana_perm_choose .platmana_perm_choose_right .choose_list {
+  width: 100%;
+}
+.platmana_perm_choose .platmana_perm_choose_right .choose_list li {
+  height: 38px;
+  border-bottom: solid 1px #BFD2DE;
+  padding-right: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.platmana_perm_choose .platmana_perm_choose_right .choose_list li:first-child {
+  border-top: solid 1px #BFD2DE;
+}
+.platmana_perm_choose .platmana_perm_choose_right .choose_list li.active {
+  background-color: #C7DEEA;
+}
+.platmana_perm_choose .platmana_perm_choose_right .choose_list li .deletebtn {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 30px;
+  height: 100%;
+  cursor: pointer;
+  color: #F5222D;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.platmana_perm_choose .platmana_perm_choose_right .choose_list li .deletebtn:hover {
+  background-color: #C7DEEA;
+  color: #ff4d56;
+}
+.platmana_perm_choose .platmana_perm_choose_right .choose_list li .permname {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+.platmana_perm_choose .platmana_perm_choose_right .choose_list li .setbtn {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  cursor: pointer;
+}
+
+/* 平台管理  角色权限组  选择权限  end  */
+/* 平台管理  角色权限组  配置数据  ———————————————— */
+.platmana_perm_setdata {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+.platmana_perm_setdata .choose_topbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 8px;
+  background-color: #F1F6FC;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.platmana_perm_setdata .choose_cont {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  overflow: auto;
+}
+.platmana_perm_setdata .choose_cont .myhos {
+  padding: 10px;
+}
+
+/* 平台管理  角色权限组  配置数据  end  */
+/* 平台管理  角色权限组  关联用户  ———————————————— */
+.platmana_role_perm_assuser_lyt {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.platmana_role_perm_assuser_lyt .chooseuser_lyt {
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  width: 65%;
+  padding: 0 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.platmana_role_perm_assuser_lyt .already_lyt {
+  position: absolute;
+  top: 10px;
+  left: 65%;
+  right: 0;
+  bottom: 10px;
+  padding-right: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.platmana_role_perm_assuser_lyt .already_lyt .choose_topbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #F1F6FC;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 8px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.platmana_role_perm_assuser_lyt .already_lyt .choose_topbar .title {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  line-height: 34px;
+}
+.platmana_role_perm_assuser_lyt .already_lyt .choose_topbar .oper {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+.platmana_role_perm_assuser_lyt .already_lyt .choose_cont {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  bottom: 40px;
+  width: 100%;
+  overflow: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.platmana_role_perm_assuser_lyt .already_lyt .choose_cont .nodata {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+  color: #9B9B9B;
+  line-height: 22px;
+}
+.platmana_role_perm_assuser_lyt .already_lyt .choose_oper {
+  position: absolute;
+  height: 40px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 5px 10px 0;
+}
+.platmana_role_perm_assuser_lyt .alreadylist {
+  width: 100%;
+}
+.platmana_role_perm_assuser_lyt .alreadylist li {
+  height: 38px;
+  border-bottom: solid 1px #BFD2DE;
+  padding-left: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.platmana_role_perm_assuser_lyt .alreadylist li:first-child {
+  border-top: solid 1px #BFD2DE;
+}
+.platmana_role_perm_assuser_lyt .alreadylist li.new {
+  font-weight: bolder;
+}
+.platmana_role_perm_assuser_lyt .alreadylist li .deletebtn {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 30px;
+  height: 100%;
+  cursor: pointer;
+  color: #F5222D;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.platmana_role_perm_assuser_lyt .alreadylist li .deletebtn:hover {
+  background-color: #C7DEEA;
+  color: #ff4d56;
+}
+.platmana_role_perm_assuser_lyt .alreadylist li .permname {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+/* 平台管理  角色权限组  关联用户  end  */

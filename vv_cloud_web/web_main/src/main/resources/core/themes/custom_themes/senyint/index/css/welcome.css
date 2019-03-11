@@ -1,0 +1,13 @@
+
+
+/* 欢迎页面  */
+.welcomePage .wTitleCont{ padding:60px; position: absolute; left: 0; top: 0}
+.welcomePage .wTitleCont .wTitle{color:#0275cc; font-size: 24px; line-height: 40px; text-align: left}
+.welcomePage .wTitleCont .wSubTitle{color:#98bde5; font-size: 20px; line-height: 40px; font-weight: normal; text-align: left}
+.welcomePage .wTitleCont .wLine{ border:1px solid #aecfe8; font-size: 0; width: 100px; height: 3px; border-width: 1px 0}
+.welcomePage .wIconCont{ width:80%; height: 100%; display: inline-table;}
+.welcomePage .wIconCont td .wTip{font-size:14px; color: #0275cc}
+.welcomePage .wIconCont td:last-child{ background:none}
+
+
+

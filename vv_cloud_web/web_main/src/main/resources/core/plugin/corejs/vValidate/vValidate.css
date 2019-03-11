@@ -1,0 +1,229 @@
+
+/* 表单验证  插件 默认样式  */
+
+/* 加在 input 上的 样式， 边框变红，闪烁动画 */
+.valierror{
+  border:solid 1px #ff4e4e;
+  background-color: #fffafa;
+  transition: all .2s;
+  -webkit-animation: valierrorAni 5s 3s infinite;
+  animation: valierrorAni 5s 3s infinite;
+}
+.xInput.valierror:focus{
+  border:solid 1px #f00;
+  box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(236, 30, 0, 0.6);
+}
+
+
+/* 任意位置 span.v-errorgroupshow 样式， 文字变红，闪烁动画 */
+.v-errorgroupshow{
+  color: #f00;
+  display: none;
+}
+.v-errorgroupshow i{
+  font-size: 14px;
+  margin-right: 2px;
+}
+.v-errorgroupshow.errorshow{
+  -webkit-animation: valierrorAni2 5s 3s infinite;
+  animation: valierrorAni2 5s 3s infinite;
+}
+
+
+@-webkit-keyframes valierrorAni {
+  from {
+    border-color:#ff4e4e
+  }
+  5% {
+    border-color:#ff4e4e
+  }
+  5% {
+    border-color:#ffdada;
+  }
+  7% {
+    border-color:#ffdada;
+  }
+  7% {
+    border-color:#ff4e4e
+  }
+  12% {
+    border-color:#ff4e4e
+  }
+  12% {
+    border-color:#ffdada;
+  }
+  14% {
+    border-color:#ffdada;
+  }
+  14% {
+    border-color:#ff4e4e
+  }
+  19% {
+    border-color:#ff4e4e
+  }
+  19% {
+    border-color:#ffdada;
+  }
+  21% {
+    border-color:#ffdada;
+  }
+  21% {
+    border-color:#ff4e4e
+  }
+  to {
+    border-color:#ff4e4e
+  }
+}
+
+@keyframes valierrorAni {
+  from {
+    border-color:#ff4e4e
+  }
+  5% {
+    border-color:#ff4e4e
+  }
+  5% {
+    border-color:#ffdada;
+  }
+  7% {
+    border-color:#ffdada;
+  }
+  7% {
+    border-color:#ff4e4e
+  }
+  12% {
+    border-color:#ff4e4e
+  }
+  12% {
+    border-color:#ffdada;
+  }
+  14% {
+    border-color:#ffdada;
+  }
+  14% {
+    border-color:#ff4e4e
+  }
+  19% {
+    border-color:#ff4e4e
+  }
+  19% {
+    border-color:#ffdada;
+  }
+  21% {
+    border-color:#ffdada;
+  }
+  21% {
+    border-color:#ff4e4e
+  }
+  to {
+    border-color:#ff4e4e
+  }
+}
+
+
+
+
+@-webkit-keyframes valierrorAni2 {
+  from {
+    opacity: 1;
+  }
+  5% {
+    opacity: 1;
+  }
+  5% {
+    opacity: .6;
+  }
+  7% {
+    opacity: .6;
+  }
+  7% {
+    opacity: 1;
+  }
+  12% {
+    opacity: 1;
+  }
+  12% {
+    opacity: .6;
+  }
+  14% {
+    opacity: .6;
+  }
+  14% {
+    opacity: 1;
+  }
+  19% {
+    opacity: 1;
+  }
+  19% {
+    opacity: .6;
+  }
+  21% {
+    opacity: .6;
+  }
+  21% {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes valierrorAni2 {
+  from {
+    opacity: 1;
+  }
+  5% {
+    opacity: 1;
+  }
+  5% {
+    opacity: .6;
+  }
+  7% {
+    opacity: .6;
+  }
+  7% {
+    opacity: 1;
+  }
+  12% {
+    opacity: 1;
+  }
+  12% {
+    opacity: .6;
+  }
+  14% {
+    opacity: .6;
+  }
+  14% {
+    opacity: 1;
+  }
+  19% {
+    opacity: 1;
+  }
+  19% {
+    opacity: .6;
+  }
+  21% {
+    opacity: .6;
+  }
+  21% {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+/* 表单验证 end */
+
+
+
+
+
+
+
+
+
+
+

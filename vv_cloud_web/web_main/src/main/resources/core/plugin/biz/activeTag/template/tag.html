@@ -1,0 +1,32 @@
+<!-- withopt -->
+{{each data}}
+<li class="activeTag_wrap">
+    <div class="deletebtn activeTag_dele"><i class="comicon-subtract_fill"></i></div>
+    <div class="permname">{{$value[key.text]}}</div>
+    <div class="setbtn activeTag_opt"><button class="xBtn xBtn-default xBtn-sm xBtn-horpa-lg" type="button">分配</button></div>
+</li>
+{{/each}}
+<!-- withopt end -->
+
+<!-- user -->
+{{each data}}
+<li class="activeTag_wrap">
+    <div class="permname">{{$value[key.text]}}</div>
+    {{if edit}}
+    <div class="deletebtn activeTag_dele"><i class="comicon-no_fill"></i></div>
+    {{/if}}
+</li>
+{{/each}}
+<!-- user end -->
+
+<!-- tag -->
+{{each data}}
+<div class="v-tag v-tag-lg v-tag-primary empty activeTag_wrap">
+	<span class="v-tag-text">{{typeof $value=='string'?$value:$value[key.text]}}</span>
+	<span class="v-tag-closeBtn activeTag_dele"><i class="vicon vicon-no"></i></span>
+	{{if edit}}
+	<input type="hidden" name="{{name}}" value="{{typeof $value=='string'?$value:$value[key.hide]}}">
+	{{/if}}
+</div>
+{{/each}}
+<!-- tag end -->

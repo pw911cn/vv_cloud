@@ -1,0 +1,114 @@
+/*!
+ * Q.js<https://github.com/itorr/q.js>
+ * Version: 1.2
+ * Built: 2014/12/28
+ * 
+ * ************************************
+ * 自主改造：地址栏变更，触发回调事件优化。
+ * Version: 2.1
+ * Built: 2018/07/23
+ */
+var
+    Q=function(W,D,HTML,hash,view,arg,_arg,i,index,Regex,key,Q,pamkey){
+        HTML=D.documentElement;
+        Regex=[];
+        key='!';
+        pamkey='!';
+        arg=[];
+        onhashchange=function(){
+            Q.hash=hash=decodeURI(location.hash.substring(key.length+1));
+            i=Regex.length;
+            while(i--){
+                if(_arg=hash.match(Regex[i])){
+                    arg=_arg;
+                    if(hash.indexOf(pamkey)!=-1){
+
+                        var urlpam=hash.split(pamkey).pop(),
+                        pamjson=new Object(),
+                        urlpams=urlpam.split("&");
+
+                        for(var j=0;j<urlpams.length;j++){
+                            pamjson[urlpams[j].split("=")[0]]=urlpams[j].split("=")[1];
+                        }
+
+                        arg.splice(1,0,pamjson);
+                    }
+                    arg.unshift(Regex[i]);
+                    break;
+                }
+            }
+            if(!Q[arg[0]]) // default
+                arg[0]=index;
+
+            if(Q.pop)
+                Q.pop.apply(W,arg);
+
+            Q.lash=view=arg.shift();
+
+            HTML.setAttribute('view',view);
+            console.log(arg)
+            Q[view].apply(W,arg);
+        };
+
+
+        if(!'onhashchange' in W){
+            Q.path=location.hash;
+            setInterval(function(){
+                if(Q.path!=location.hash){
+                    onhashchange();
+                    Q.path=location.hash;
+                }
+            },100);
+        }
+
+        Q={
+            init:function(o){
+
+                if(o.key!==undefined)
+                    key=o.key;
+                if(o.pamkey!==undefined)
+                    pamkey=o.key;
+
+                index=o.index||'V';
+
+                if(o.pop&&typeof o.pop=='function')
+                    Q.pop=o.pop;
+
+                onhashchange();
+
+                return this
+            },
+            reg:function(r,u){
+                if(!r)
+                    return;
+
+                if(u == undefined)
+                    u=function(){};
+
+                if(r instanceof RegExp){ //正则注册
+                    Q[r]=u;
+                    Regex.push(r);
+                }else if(r instanceof Array){ //数组注册
+                    for(var i in r){
+                        this.reg.apply(this,[].concat(r[i]).concat(u));
+                    }
+                }else if(typeof r=='string'){ //关键字注册
+                    if(typeof u=='function')
+                        Q[r]=u;
+                    else if(typeof u=='string'&&Q[u])
+                        Q[r]=Q[u];
+                }
+
+                return this
+            },
+            V:function(){
+                console.log('Q.js <https://github.com/itorr/q.js> 2014/12/28');
+                return this
+            },
+            go:function(u){
+                location.hash='#'+key+u;
+                return this
+            }
+        };
+        return Q;
+    }(this,document);
