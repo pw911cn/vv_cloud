@@ -17,73 +17,35 @@
 	</modules>
 
 	<dependencies>
+		<dependency>
+			<groupId>com.senyint.vv_cloud_entity</groupId>
+			<artifactId>entity_base</artifactId>
+			<version>4.1.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.senyint.vv_cloud_frame</groupId>
+			<artifactId>frame_core</artifactId>
+			<version>${vv_cloud_frame.version}</version>
+		</dependency>
+
 		<!-- eureka-client -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
-		
-		<!-- config -->
+
+		<!-- cloud config -->
 		<dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-config</artifactId>
-        </dependency>
-		
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-config</artifactId>
+		</dependency>
+
 		<!-- openfeign -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-openfeign</artifactId>
 		</dependency>
-
-		<!-- servlet依赖 -->
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>javax.servlet-api</artifactId>
-			<scope>provided</scope>
-		</dependency>
-
-		<!-- servlet依赖 -->
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>jstl</artifactId>
-			<scope>compile</scope>
-		</dependency>
-
-		<!--jsp支持 -->
-		<dependency>
-			<groupId>org.apache.tomcat.embed</groupId>
-			<artifactId>tomcat-embed-jasper</artifactId>
-			<scope>provided</scope>
-		</dependency>
-
-		<!-- tomcat支持 -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-tomcat</artifactId>
-			<scope>provided</scope>
-		</dependency>
-
-		<!-- aop支持 -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-aop</artifactId>
-		</dependency>
-
-		<!-- 服务信息收集 -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-actuator</artifactId>
-		</dependency>
-
+		
 	</dependencies>
-
-	<build>
-		<!-- <defaultGoal>compile</defaultGoal> -->
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
 </project>

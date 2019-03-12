@@ -17,14 +17,4 @@
 		<module>frame_core</module>
 		<module>frame_persistent</module>
 	</modules>
-	
-	<build>
-		<!-- <defaultGoal>compile</defaultGoal> -->
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
 </project>

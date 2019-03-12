@@ -1,11 +1,11 @@
-package com.senyint.vv_cloud_server.server_base.userLogin.action;
+package com.senyint.server_base.userLogin.action;
 
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.senyint.vv_cloud_entity.entity_base.pojo.BaseUser;
+import com.senyint.vv_cloud.entity_base.pojo.BaseUser;
 
 /**
  * @desc:TODO 

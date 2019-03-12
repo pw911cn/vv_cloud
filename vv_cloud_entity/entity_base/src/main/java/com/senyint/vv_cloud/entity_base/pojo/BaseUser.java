@@ -1,4 +1,4 @@
-package com.senyint.vv_cloud_entity.entity_base.pojo;
+package com.senyint.vv_cloud.entity_base.pojo;
 
 /**
  * @desc:TODO 
