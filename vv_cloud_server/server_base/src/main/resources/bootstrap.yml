@@ -1,30 +1,33 @@
 # ################################# 应用服务器配置 ##################################
 server:
-  port: 80
+  port: 8080
   servlet:
-    context-path: /${spring.application.name} 
+    context-path: /${spring.application.name}
     
 # ################################# spring配置 ##################################
 spring:
   application:
     name: server_base
   jmx:
-    default-domain: ${spring.application.name} 
+    default-domain: ${spring.application.name}
   cloud:
     inetutils:
       # 忽略指定网卡，支持正则表达式（这里使用正则表达式忽略所有虚拟机网卡）
-      ignoredInterfaces: ['VMware.*']  
+      ignoredInterfaces: ['VMware.*']
     config: 
       name: ${spring.application.name},config
       profile: dev
       discovery:
         enabled: true # 这里必须配置为true，否则还是会取localhost:8888端口
-        service-id: plugin_config 
+        service-id: plugin_config
     
 # ################################# 注册中心配置 ##################################
 eureka:
-  instance: 
-    prefer-ip-address: true
+  instance:
+    prefer-ip-address: true #相较于hostname是否优先使用IP
+    home-page-url-path: /${server.servlet.context-path} #该实例的主页url,相对路径
+    health-check-url-path: /${server.servlet.context-path}/actuator/health #该实例健康检查url,相对路径
+    status-page-url-path: /${server.servlet.context-path}/actuator/info #该实例的状态呈现url,相对路径
   client:
     serviceUrl:
       defaultZone: http://localhost:8010/plugin_eureka/eureka/

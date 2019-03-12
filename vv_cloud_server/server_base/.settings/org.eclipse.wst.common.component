@@ -7,6 +7,9 @@
         <dependent-module archiveName="entity_base-4.1.1.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/entity_base/entity_base">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+        <dependent-module archiveName="frame_core-4.1.1.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/frame_core/frame_core">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="context-root" value="server_base"/>
         <property name="java-output-path" value="/server_base/target/classes"/>
     </wb-module>

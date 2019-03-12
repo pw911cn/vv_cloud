@@ -6,6 +6,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.8</java.version>
+		<vv_cloud_frame.version>4.1.1</vv_cloud_frame.version>
 	</properties>
 
 	<groupId>com.senyint</groupId>
@@ -29,11 +30,31 @@
 
 	<!-- ==================== dependencies在子项目中不写该依赖项，子项目仍然会从父项目中继承该依赖项（全部继承）==================== -->
 	<dependencies>
-		<!-- web 支持 -->
+		<!-- Spring Boot对web开发的支持 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+		
+		<!-- Spring Boot内嵌的Tomcat,provided是在打包时会将该包(依赖)排除  -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		
+		<!-- aop支持 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-aop</artifactId>
+		</dependency>
+		
+		<!-- 监控系统健康情况的工具 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		
 	</dependencies>
 
 	<!-- ==================== dependencyManagement里只是声明依赖，并不实现引入，子项目需要显性的声明需要的依赖 ==================== -->
@@ -52,10 +73,6 @@
 	<build>
 		<pluginManagement>
 			<plugins>
-				<!-- <plugin> 指定maven编译的jdk版本,如果不指定,maven3默认用jdk 1.5 maven2默认用jdk1.3 <artifactId>maven-compiler-plugin</artifactId> <configuration> 
-					<target>${java.version}</target> <source>${java.version}</source> <encoding>${project.build.sourceEncoding}</encoding> </configuration> 
-					</plugin> -->
-
 				<plugin>
 					<!-- 能够将Spring Boot应用打包为可执行的jar或war文件 -->
 					<groupId>org.springframework.boot</groupId>

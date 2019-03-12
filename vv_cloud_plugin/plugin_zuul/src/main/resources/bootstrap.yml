@@ -20,45 +20,35 @@ eureka:
 # ################################# 配置智能路由 ##################################  
 zuul:
   routes:
-    server-base: 
-      path: /server-base/**
-      serviceId: server-base
-      stripPrefix: true
-    server-pub: 
-      path: /server-pub/**
-      serviceId: server-pub
-      stripPrefix: true         
-    server-conf: 
-      path: /server-conf/**
-      serviceId: server-conf
-      stripPrefix: true
-    server-cons: 
-      path: /server-cons/**
-      serviceId: server-cons
-      stripPrefix: true
-    plugin-zuul:
-      path: /**
-      serviceId: forward:/local    
+    server_base: 
+      path: /**/server_base/**
+      serviceId: server_base
+    server_pub: 
+      path: /server_pub/**
+      serviceId: server_pub        
+#    plugin_zuul:
+#      path: /**
+#      serviceId: forward:/local    
 
 #ribbon:
 #  eureka:
 #    enabled: false
 
-server-base: 
-  ribbon: 
-    NFLoadBalancerRuleClassName: com.senyint.plugin_zuul.dev.DevRule
-server-conf: 
-  ribbon: 
-    NFLoadBalancerRuleClassName: com.senyint.plugin_zuul.dev.DevRule
-server-cons: 
-  ribbon: 
-    NFLoadBalancerRuleClassName: com.senyint.plugin_zuul.dev.DevRule
-server-pub: 
-  ribbon: 
-    NFLoadBalancerRuleClassName: com.senyint.plugin_zuul.dev.DevRule      
-auth-server: 
-  ribbon: 
-    NFLoadBalancerRuleClassName: com.senyint.plugin_zuul.dev.DevRule 
+#server-base: 
+#  ribbon: 
+#    NFLoadBalancerRuleClassName: com.senyint.plugin_zuul.dev.DevRule
+#server-conf: 
+#  ribbon: 
+#    NFLoadBalancerRuleClassName: com.senyint.plugin_zuul.dev.DevRule
+#server-cons: 
+#  ribbon: 
+#    NFLoadBalancerRuleClassName: com.senyint.plugin_zuul.dev.DevRule
+#server-pub: 
+#  ribbon: 
+#    NFLoadBalancerRuleClassName: com.senyint.plugin_zuul.dev.DevRule      
+#auth-server: 
+#  ribbon: 
+#    NFLoadBalancerRuleClassName: com.senyint.plugin_zuul.dev.DevRule 
 
     
  

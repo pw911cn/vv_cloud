@@ -87,7 +87,7 @@
 	<!-- root节点：生产环境必须为ERROR，开发环境可以为DEBUG -->
 	<!-- logger节点：生产环境不允许修改。 -->
 	<!-- ============================================================================= -->
-	<root level="INFO">
+	<root level="DEBUG">
 		<appender-ref ref="console" />
 		<appender-ref ref="file_error" />
 		<appender-ref ref="file_debug" />
@@ -115,6 +115,9 @@
 	<!-- =============================== 系统架构层日志 ================================== -->
 	<logger name="com.framework.component" />
 	<logger name="com.framework.core" />
+	<!-- =============================== 应用系统日志 ================================== -->
+	<logger name="com.netflix" level="INFO"/>
+	
 	<!-- =============================== 应用系统日志 ================================== -->
 	<logger name="org.apache.commons" level="INFO" />
 	<logger name="org.apache.cxf" level="INFO" />
