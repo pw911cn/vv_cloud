@@ -12,5 +12,13 @@
 	<artifactId>server_base</artifactId>
 	<packaging>war</packaging>
 
+	<dependencies>
+		<dependency>
+			<groupId>com.senyint.vv_cloud_entity</groupId>
+			<artifactId>entity_base</artifactId>
+			<version>4.1.1</version>
+		</dependency>
+	</dependencies>
+
 
 </project>

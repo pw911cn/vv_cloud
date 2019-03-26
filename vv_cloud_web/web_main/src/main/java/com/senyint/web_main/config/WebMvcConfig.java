@@ -1,4 +1,4 @@
-package com.senyint.vv_cloud_web.web_main.config;
+package com.senyint.web_main.config;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,7 +12,7 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-import com.senyint.vv_cloud_web.web_main.interceptor.System_Interceptor;
+import com.senyint.web_main.interceptor.System_Interceptor;
 
 /**
  * web容器配置 ClassName: WebMvcConfig <br/>

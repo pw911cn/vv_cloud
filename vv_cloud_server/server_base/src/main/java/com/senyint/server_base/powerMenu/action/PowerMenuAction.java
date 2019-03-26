@@ -6,20 +6,27 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.senyint.frame_core.core.action.support.CoreActionSupport;
 import com.senyint.frame_core.core.exception.CoreException;
+import com.senyint.frame_core.core.support.CoreActionSupport;
 import com.senyint.frame_core.core.vo.RequestInfoVo;
 import com.senyint.frame_core.core.vo.ResponseInfoVo;
 import com.senyint.vv_cloud.entity_base.pojo.PowerMenu;
 
 /**
-  * 类名：PowerMenuAction<BR>
-  * 描述：菜单<BR>
-  * 作者： jinyanyu<BR>
-  * 日期 ：2019年1月3日 上午11:28:37<BR>
-  */
+ * 
+ * @desc:TODO 
+ * @author: weiwei
+ * version: V4.0
+ * date: 2019年3月26日 下午11:57:02
+ *
+ * history:
+ * date          author          version          description
+ * -----------------------------------------------------------------------------------
+ * 2019年3月26日       weiwei          4.0             1.0
+ * modification
+ */
 @RestController
-@RequestMapping("/powerMenu")
+@RequestMapping("powerMenu")
 public class PowerMenuAction extends CoreActionSupport<PowerMenu> {
 
     @RequestMapping("/test")
@@ -67,8 +74,8 @@ public class PowerMenuAction extends CoreActionSupport<PowerMenu> {
      * 2019年3月7日       peiwei          4.0             1.0
      * modification
      */
-    @PostMapping("queryPage")
-    public ResponseInfoVo queryPage(@RequestBody RequestInfoVo<PowerMenu> requestInfoVo) throws CoreException {
+    @RequestMapping("queryPageByCdn")
+    public ResponseInfoVo queryPageByCdn() throws CoreException {
     
     
         ResponseInfoVo responseInfoVo = new ResponseInfoVo();
@@ -90,8 +97,8 @@ public class PowerMenuAction extends CoreActionSupport<PowerMenu> {
      */
     @RequestMapping(value = "add", method = RequestMethod.POST)
     public ResponseInfoVo add(@RequestBody RequestInfoVo<PowerMenu> request) throws CoreException {
-        ResponseInfoVo result = new ResponseInfoVo();
-        return result;
+        ResponseInfoVo responseInfoVo = new ResponseInfoVo();
+        return responseInfoVo;
     }
 
     /**

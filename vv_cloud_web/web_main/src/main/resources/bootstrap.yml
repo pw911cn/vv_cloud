@@ -1,10 +1,10 @@
 # ################################# 应用服务器配置 ##################################
 server:
-  port: 80
+  port: 8080
   servlet:
     context-path: /${spring.application.name}  
 spring:
   application:
-    name: web_base
+    name: web_main
   jmx:
     default-domain: ${spring.application.name}

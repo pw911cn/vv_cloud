@@ -8,7 +8,6 @@
 		<version>4.1.1</version>
 	</parent>
 	
-	<groupId>com.senyint.vv_cloud_web</groupId>
 	<artifactId>web_pub</artifactId>
 	
 	<build>

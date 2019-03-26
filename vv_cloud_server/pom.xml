@@ -17,18 +17,6 @@
 	</modules>
 
 	<dependencies>
-		<dependency>
-			<groupId>com.senyint.vv_cloud_entity</groupId>
-			<artifactId>entity_base</artifactId>
-			<version>4.1.1</version>
-		</dependency>
-
-		<dependency>
-			<groupId>com.senyint.vv_cloud_frame</groupId>
-			<artifactId>frame_core</artifactId>
-			<version>${vv_cloud_frame.version}</version>
-		</dependency>
-
 		<!-- eureka-client -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
@@ -45,6 +33,13 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-openfeign</artifactId>
+		</dependency>
+		
+		<!-- 系统架构依赖 -->
+		<dependency>
+			<groupId>com.senyint.vv_cloud_frame</groupId>
+			<artifactId>frame_core</artifactId>
+			<version>${vv_cloud_frame.version}</version>
 		</dependency>
 		
 	</dependencies>

@@ -1,4 +1,4 @@
-package com.senyint.vv_cloud_web.web_main;
+package com.senyint.web_main;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;

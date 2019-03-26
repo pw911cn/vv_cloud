@@ -1,5 +1,5 @@
 
-package com.senyint.vv_cloud_web.web_main.interceptor;
+package com.senyint.web_main.interceptor;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

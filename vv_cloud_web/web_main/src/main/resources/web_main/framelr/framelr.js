@@ -37,6 +37,7 @@ define([ 'jquery', 'corectr','plugin/corejs/navigation/0.1/navigation_my','plugi
 							iconClass: "icon"
 						}
 					}
+					
 					navigation_my.creatMenu(sideMenuOptions);
 
 					//var sideMenuInstance = navigation.sideMenu(sideMenuOptions);
@@ -52,8 +53,9 @@ define([ 'jquery', 'corectr','plugin/corejs/navigation/0.1/navigation_my','plugi
 	};
 	
 	var _uninstall=function(){
-		console.log("拜拜");
+		//console.log("拜拜");
 	}
+	
 	return {
 		initoptions:_initoptions,
 		initdataconvert : _initdataconvert,

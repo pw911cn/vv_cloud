@@ -3,7 +3,8 @@ package com.senyint.frame_core.component.config;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.core.Ordered;
+import org.springframework.web.servlet.config.annotation.CorsRegistration;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
@@ -38,10 +39,9 @@ public class WebMvcConfig implements WebMvcConfigurer {
          * 系统拦截器
          */
         registry.addInterceptor(new System_Interceptor());
-        
+
         //List<String> excludeList = new ArrayList<String>();
         //registry.addInterceptor(new System_Interceptor()).excludePathPatterns(excludeList);
-
 
         WebMvcConfigurer.super.addInterceptors(registry);
     }
@@ -58,11 +58,11 @@ public class WebMvcConfig implements WebMvcConfigurer {
      */
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
-//        logger.info("====>系统默认页面全局配置");
-//
-//        registry.addViewController("/").setViewName("redirect:/index.htm");
-//        registry.setOrder(Ordered.HIGHEST_PRECEDENCE);
-//        WebMvcConfigurer.super.addViewControllers(registry);
+        //        logger.info("====>系统默认页面全局配置");
+        //
+        //        registry.addViewController("/").setViewName("redirect:/index.htm");
+        //        registry.setOrder(Ordered.HIGHEST_PRECEDENCE);
+        //        WebMvcConfigurer.super.addViewControllers(registry);
     }
 
     /**
@@ -78,6 +78,29 @@ public class WebMvcConfig implements WebMvcConfigurer {
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
 
         WebMvcConfigurer.super.addResourceHandlers(registry);
+    }
+
+    /**
+     * 支持跨域访问
+     * @desc:TODO 
+     * @author: weiwei
+     * version: V4.0
+     * date: 2019年3月27日 上午12:21:59
+     *
+     * history:
+     * date          author          version          description
+     * -----------------------------------------------------------------------------------
+     * 2019年3月27日       weiwei          4.0             1.0
+     * modification
+     */
+    public void addCorsMappings(CorsRegistry registry) {
+        CorsRegistration corsRegistration = registry.addMapping("/**");
+        corsRegistration.allowedOrigins("*");
+        corsRegistration.allowCredentials(true);
+        corsRegistration.allowedMethods("GET", "POST");
+        corsRegistration.maxAge(3600);
+
+        WebMvcConfigurer.super.addCorsMappings(registry);
     }
 
 }

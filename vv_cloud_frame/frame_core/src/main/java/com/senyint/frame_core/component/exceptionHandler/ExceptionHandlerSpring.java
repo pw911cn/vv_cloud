@@ -15,7 +15,7 @@ import org.springframework.web.servlet.view.json.MappingJackson2JsonView;
 import com.senyint.frame_core.component.properties.PropertyConfig;
 import com.senyint.frame_core.core.common.CoreConstant;
 import com.senyint.frame_core.core.exception.CoreException;
-import com.senyint.frame_core.core.exception.biz.CoreExceptionBiz;
+import com.senyint.frame_core.core.exception.CoreExceptionBiz;
 import com.senyint.frame_core.core.exception.sys.CoreExceptionAuthSys;
 import com.senyint.frame_core.core.vo.ResponseInfoVo;
 

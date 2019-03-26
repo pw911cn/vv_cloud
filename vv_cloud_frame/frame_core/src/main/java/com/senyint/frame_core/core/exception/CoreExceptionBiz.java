@@ -1,7 +1,4 @@
-package com.senyint.frame_core.core.exception.biz;
-
-import com.senyint.frame_core.core.exception.ContextLog;
-import com.senyint.frame_core.core.exception.CoreException;
+package com.senyint.frame_core.core.exception;
 
 /**
  * Function: 业务模块异常，为action，service等模块提供异常<br/>

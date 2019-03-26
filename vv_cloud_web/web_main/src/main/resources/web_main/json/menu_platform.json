@@ -82,7 +82,7 @@
   {
     "menu_id": "101401",
     "menu_name": "菜单配置",
-    "menu_url": "#platform/web_pub/menu/menu_list/menu_list",
+    "menu_url": "#platform/web_base/powerMenu/menu_list/menu_list",
     "icon": "",
     "p_id": "1014",
     "is_open": "20",

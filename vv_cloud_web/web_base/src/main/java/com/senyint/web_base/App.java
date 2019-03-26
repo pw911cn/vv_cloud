@@ -1,4 +1,4 @@
-package com.senyint.vv_cloud_web.web_base;
+package com.senyint.web_base;
 
 /**
  * Hello world!
