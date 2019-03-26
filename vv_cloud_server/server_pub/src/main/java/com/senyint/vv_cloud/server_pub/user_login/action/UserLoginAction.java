@@ -1,11 +1,7 @@
-package com.senyint.server_base.userLogin.action;
+package com.senyint.vv_cloud.server_pub.user_login.action;
 
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.senyint.vv_cloud.entity_base.pojo.BaseUser;
 
 /**
  * @desc:TODO 
@@ -20,16 +16,14 @@ import com.senyint.vv_cloud.entity_base.pojo.BaseUser;
  * modification
  */
 @RestController
-@RequestMapping("/")
+@RequestMapping("/userLogin")
 public class UserLoginAction {
 
-    @RequestMapping("/userLogin")
-    public BaseUser userLogin(@RequestBody BaseUser baseUser) {
+    
+    @RequestMapping("/test")
+    public String test() {
         
-        baseUser.setUser_id("test user_id");
-        baseUser.setUser_name("test user_name");
-        
-        return baseUser;
+        return "test 返回成功";
     }
     
 }

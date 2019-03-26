@@ -7,7 +7,7 @@
 	</configSuffixes>
 	<enableImports><![CDATA[false]]></enableImports>
 	<configs>
-		<config>java:com.senyint.server_base.ServerBase_SpringApp</config>
+		<config>java:com.senyint.vv_cloud.server_base.ServerBase_SpringApp</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>

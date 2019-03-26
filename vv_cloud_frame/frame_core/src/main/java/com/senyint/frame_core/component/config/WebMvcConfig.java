@@ -1,8 +1,13 @@
 package com.senyint.frame_core.component.config;
 
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.converter.HttpMessageConverter;
+import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
+import org.springframework.web.servlet.HandlerExceptionResolver;
 import org.springframework.web.servlet.config.annotation.CorsRegistration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
@@ -11,16 +16,20 @@ import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import com.senyint.frame_core.component.interceptor.System_Interceptor;
+import com.senyint.frame_core.component.transport.http.DataTypeConverter.JsonObjectMapper;
 
 /**
- * web容器配置 ClassName: WebMvcConfig <br/>
- * Function: TODO ADD FUNCTION. <br/>
- * Reason: TODO ADD REASON(可选). <br/>
- * date: 2018年6月21日 下午5:32:11 <br/>
- * 
- * @author zhangyang
- * @version
- * @since JDK 1.8
+ * web容器配置
+ * @desc:TODO 
+ * @author: weiwei
+ * version: V4.0
+ * date: 2019年3月27日 上午1:11:51
+ *
+ * history:
+ * date          author          version          description
+ * -----------------------------------------------------------------------------------
+ * 2019年3月27日       weiwei          4.0             1.0
+ * modification
  */
 @Configuration
 public class WebMvcConfig implements WebMvcConfigurer {
@@ -94,13 +103,66 @@ public class WebMvcConfig implements WebMvcConfigurer {
      * modification
      */
     public void addCorsMappings(CorsRegistry registry) {
+        // 允许指定的pathPattern可以进行跨域请求
         CorsRegistration corsRegistration = registry.addMapping("/**");
+        // 设置允许哪些可以进行跨域访问，设置为"*"表示允许所有
         corsRegistration.allowedOrigins("*");
-        corsRegistration.allowCredentials(true);
+        // 设置允许的跨域请求动作，设置为"*"表示允许所有，默认设置为允许简单动作，包括GET POST HEAD
         corsRegistration.allowedMethods("GET", "POST");
+
+        // 设置浏览器是否需要发送认证信息
+        corsRegistration.allowCredentials(true);
+        // 设置客户端保存pre-flight request缓存的时间
+        // pre-flight request 预检请求
         corsRegistration.maxAge(3600);
+
+        // 设置允许的请求头，默认设置为允许所有，即"*"
+        //corsRegistration.allowedHeaders("Cache-Control", "Content-Language");
+        // 设置response的头结构，不支持"*"
+        //corsRegistration.exposedHeaders("Cache-Control", "Content-Language");
 
         WebMvcConfigurer.super.addCorsMappings(registry);
     }
+
+    /**
+     * @desc:TODO 
+     * @author: weiwei
+     * version: V4.0
+     * date: 2019年3月27日 下午10:47:03
+     *
+     * history:
+     * date          author          version          description
+     * -----------------------------------------------------------------------------------
+     * 2019年3月27日       weiwei          4.0             1.0
+     * modification
+     */
+    @Override
+    public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
+        logger.info("====>HttpMessageConverter全局配置");
+        MappingJackson2HttpMessageConverter httpMessageConverter = new MappingJackson2HttpMessageConverter();
+
+        JsonObjectMapper jsonObjectMapper = new JsonObjectMapper();
+        httpMessageConverter.setObjectMapper(jsonObjectMapper);
+
+        converters.add(httpMessageConverter);
+        WebMvcConfigurer.super.configureMessageConverters(converters);
+    }
+
+    /**
+     * 添加一个处理异常的解析器
+     * @desc:TODO 
+     * @author: weiwei
+     * version: V4.0
+     * date: 2019年3月27日 下午11:10:32
+     *
+     * history:
+     * date          author          version          description
+     * -----------------------------------------------------------------------------------
+     * 2019年3月27日       weiwei          4.0             1.0
+     * modification
+     */
+//    public void configureHandlerExceptionResolvers(List<HandlerExceptionResolver> resolvers) {
+//        WebMvcConfigurer.super.configureHandlerExceptionResolvers(resolvers);
+//    }
 
 }

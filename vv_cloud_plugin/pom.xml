@@ -19,4 +19,12 @@
 		<module>plugin_config</module>
 	</modules>
 
+	<dependencies>
+		<!-- 监控系统健康情况的工具 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+	</dependencies>
+
 </project>

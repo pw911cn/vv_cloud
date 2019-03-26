@@ -8,6 +8,7 @@ import java.util.TimeZone;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.DeserializationFeature;
@@ -34,27 +35,25 @@ public class JsonObjectMapper extends ObjectMapper {
         /**
          * 序列化时的配置
          */
-        // 忽略空map值异常
-        this.configure(SerializationFeature.WRITE_NULL_MAP_VALUES, false);
         // 忽略空bean异常
         this.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
         // 忽略未知属性异常
         this.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+        // 取消时间格式使用long形式
+        // configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false);
 
         // 允许单引号
         this.configure(JsonParser.Feature.ALLOW_SINGLE_QUOTES, true);
         // 允许反斜杠
         this.configure(JsonParser.Feature.ALLOW_UNQUOTED_CONTROL_CHARS, true);
-        // 取消时间格式使用long形式
-        // configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false);
 
         // 设置为北京时间
         this.setTimeZone(TimeZone.getTimeZone("GMT+08:00"));
         // 序列化时，日期的统一格式
         this.setDateFormat(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss"));
 
-        // 空值不序列化
-        //this.setSerializationInclusion(Include.NON_NULL);
+        //空值不序列化
+        this.setSerializationInclusion(Include.NON_NULL);
 
         /**
          * 重写特定类型，序列化方法

@@ -1,4 +1,4 @@
-package com.senyint.server_base.powerMenu.action;
+package com.senyint.vv_cloud.server_base.power_menu.action;
 
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

@@ -32,6 +32,8 @@ public class System_Interceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
             throws Exception {
 
+        logger.debug("====》系统请求URI：" + request.getRequestURI());
+        
         return HandlerInterceptor.super.preHandle(request, response, handler);
     }
 
@@ -42,8 +44,6 @@ public class System_Interceptor implements HandlerInterceptor {
     @Override
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler,
             ModelAndView modelAndView) throws Exception {
-        
-        logger.debug("====》系统请求URI：" + request.getRequestURI());
         
         HandlerInterceptor.super.postHandle(request, response, handler, modelAndView);
     }

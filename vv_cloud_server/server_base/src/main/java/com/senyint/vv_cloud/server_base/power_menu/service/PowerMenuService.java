@@ -1,4 +1,4 @@
-package com.senyint.server_base.powerMenu.service;
+package com.senyint.vv_cloud.server_base.power_menu.service;
 
 
 /**

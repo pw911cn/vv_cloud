@@ -1,4 +1,4 @@
-package com.senyint.server_base;
+package com.senyint.vv_cloud.server_pub;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -25,14 +25,14 @@ import org.springframework.context.annotation.ComponentScans;
 @SpringBootApplication
 @ComponentScan(basePackages = {"com.senyint.frame_core.**.config", "com.senyint.**.action", "com.senyint.**.service"})
 @EnableEurekaClient
-public class ServerBase_SpringApp extends SpringBootServletInitializer {
+public class ServerPub_SpringApp extends SpringBootServletInitializer {
 
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(ServerBase_SpringApp.class);
+        return application.sources(ServerPub_SpringApp.class);
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(ServerBase_SpringApp.class, args);
+        SpringApplication.run(ServerPub_SpringApp.class, args);
     }
 }

@@ -19,6 +19,7 @@ eureka:
       
 # ################################# 配置智能路由 ##################################  
 zuul:
+  prefix: true
   routes:
     server_base: 
       path: /**/server_base/**
@@ -26,6 +27,7 @@ zuul:
     server_pub: 
       path: /server_pub/**
       serviceId: server_pub        
+  
 #    plugin_zuul:
 #      path: /**
 #      serviceId: forward:/local    

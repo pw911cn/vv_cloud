@@ -14,6 +14,7 @@
 
 	<modules>
 		<module>server_base</module>
+		<module>server_pub</module>
 	</modules>
 
 	<dependencies>
@@ -34,13 +35,13 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-openfeign</artifactId>
 		</dependency>
-		
+
 		<!-- 系统架构依赖 -->
 		<dependency>
 			<groupId>com.senyint.vv_cloud_frame</groupId>
 			<artifactId>frame_core</artifactId>
-			<version>${vv_cloud_frame.version}</version>
+			<version>4.1.1</version>
 		</dependency>
-		
+
 	</dependencies>
 </project>
