@@ -26,7 +26,7 @@ import com.senyint.vv_cloud.entity_base.pojo.PowerMenu;
  * modification
  */
 @RestController
-@RequestMapping("powerMenu")
+@RequestMapping("/powerMenu")
 public class PowerMenuAction extends CoreActionSupport<PowerMenu> {
 
     @RequestMapping("/test")

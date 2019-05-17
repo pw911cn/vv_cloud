@@ -19,7 +19,7 @@ import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
  */
 @EnableZuulProxy
 @EnableDiscoveryClient
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "com.senyint.**.config")
 public class Zuul_SpringApp extends SpringBootServletInitializer {
 
     @Override
