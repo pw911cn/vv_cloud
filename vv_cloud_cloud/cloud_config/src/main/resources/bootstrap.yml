@@ -1,27 +1,22 @@
 # ################################# 应用服务器配置 ##################################
 server:
-  port: 8080
+  port: 8010
   servlet:
-    context-path: /${spring.application.name}
-    
-# ################################# spring配置 ##################################
+    context-path: /${spring.application.name}  
 spring:
   application:
-    name: server_base
+    name: cloud_config
   jmx:
     default-domain: ${spring.application.name}
+  profiles:
+    active: native
   cloud:
-    inetutils:
-      # 忽略指定网卡，支持正则表达式（这里使用正则表达式忽略所有虚拟机网卡）
-      ignoredInterfaces: ['VMware.*']
-    config: 
-      name: ${spring.application.name},config
-      profile: dev
-      discovery:
-        enabled: true # 这里必须配置为true，否则还是会取localhost:8888端口
-        service-id: cloud_config
-    
-# ################################# 注册中心配置 ##################################
+    config:
+      server:
+        native:
+          search-locations: classpath:/,classpath:/server-base
+
+# ################################# 配置注册中心 ##################################
 eureka:
   instance:
     prefer-ip-address: true #相较于hostname是否优先使用IP
@@ -31,6 +26,5 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8010/cloud_eureka/eureka/
+      #测试访问配置文件 http://localhost:8010/cloud_config/config/dev
 
-
-         

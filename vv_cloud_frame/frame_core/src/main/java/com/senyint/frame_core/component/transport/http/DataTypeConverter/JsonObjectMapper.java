@@ -101,10 +101,5 @@ public class JsonObjectMapper extends ObjectMapper {
         this.registerModule(simpleModule);
     }
 
-    public static void main(String[] args) {
-        TimeZone timeZone = TimeZone.getTimeZone("GMT+08:00");
-        logger.debug("timeZone:", timeZone);
-
-    }
 
 }

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.senyint</groupId>
+		<artifactId>vv_cloud</artifactId>
+		<version>4.1.1</version>
+	</parent>
+
+	<groupId>com.senyint.vv_cloud_cloud</groupId>
+	<artifactId>vv_cloud_cloud</artifactId>
+	<packaging>pom</packaging>
+
+	<modules>
+		<module>cloud_eureka</module>
+		<module>cloud_zuul</module>
+		<module>cloud_config</module>
+	</modules>
+
+	<dependencies>
+		<!-- 监控系统健康情况的工具 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+	</dependencies>
+
+</project>

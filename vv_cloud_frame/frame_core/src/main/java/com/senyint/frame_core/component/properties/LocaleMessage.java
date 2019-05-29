@@ -117,11 +117,6 @@ public class LocaleMessage {
         return getLocale().getCountry();
     }
     
-    public static void main(String[] args){
-        Locale locale  = getLocale();
-        
-        logger.debug("locale：" + locale.toString());
-    }
     
     
 }

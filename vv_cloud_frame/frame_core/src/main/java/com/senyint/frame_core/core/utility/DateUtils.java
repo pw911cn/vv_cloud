@@ -1398,18 +1398,4 @@ public class DateUtils extends Date implements Serializable {
 		}
 		return returnDateTime;
 	}
-	
-	public static void main(String[] args){
-	    String dateStr = dateFormat(new Date(), "yyyyMMdd");
-	    logger.debug("dateStr:"+dateStr);
-        
-        Random rd1 = new Random();
-        String smallVesion1 = rd1.nextInt(10000) + "";
-        logger.debug("smallVesion1:"+smallVesion1);
-        
-        String smallVesion = Math.random()+"";
-        logger.debug("smallVesion:"+smallVesion);
-	    
-	}
-	
 }

@@ -22,10 +22,10 @@
 
 	<modules>
 		<module>vv_cloud_frame</module>
-		<module>vv_cloud_plugin</module>
+		<module>vv_cloud_cloud</module>
 		<module>vv_cloud_web</module>
-		<module>vv_cloud_server</module>
 		<module>vv_cloud_entity</module>
+		<module>vv_cloud_server</module>
 	</modules>
 
 	<!-- ==================== dependencies在子项目中不写该依赖项，子项目仍然会从父项目中继承该依赖项（全部继承）==================== -->

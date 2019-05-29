@@ -110,13 +110,6 @@ public final class DataUtils {
         return null;
     }
 
-    public static void main(String[] args) {
-        //    	Test1 t1 = new Test1();
-        //    	Test test =  new Test();
-        //    	t1.setPid("123");
-        //    	copySimpleObject(t1, test);
-        //    	System.out.println(test.getId());
-    }
 
     /**
      * 拷贝简单对象，如果源对象的属性为null默认不拷贝.

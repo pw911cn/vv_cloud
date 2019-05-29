@@ -396,17 +396,6 @@ public class BeanUtils extends org.apache.commons.beanutils.BeanUtils {
 	    return BeanUtils.class.getResource("/").getPath();
 	}
 	
-	/**
-	 * 
-	 * @author peiwei
-	 * @date 2016-6-13
-	 *
-	 * @param args
-	 */
-	public static void main(String[] args){
-	    logger.debug(getClassRootPath());
-	    
-	}
 	
 	
 }

@@ -100,13 +100,5 @@ public class JsonUtils extends ObjectMapper {
         return "";
     }
 
-    /**
-     * @author peiwei
-     * @date 2016-5-24
-     * @param args
-     */
-    public static void main(String[] args) {
-
-    }
 
 }

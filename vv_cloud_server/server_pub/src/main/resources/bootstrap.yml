@@ -19,7 +19,7 @@ spring:
       profile: dev
       discovery:
         enabled: true # 这里必须配置为true，否则还是会取localhost:8888端口
-        service-id: plugin_config
+        service-id: cloud_config
     
 # ################################# 注册中心配置 ##################################
 eureka:
@@ -30,7 +30,7 @@ eureka:
     status-page-url-path: /${server.servlet.context-path}/actuator/info #该实例的状态呈现url,相对路径
   client:
     serviceUrl:
-      defaultZone: http://localhost:8010/plugin_eureka/eureka/
+      defaultZone: http://localhost:8010/cloud_eureka/eureka/
 
 
          
