@@ -3,12 +3,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>com.senyint</groupId>
+		<groupId>com.vv</groupId>
 		<artifactId>vv_cloud</artifactId>
 		<version>4.1.1</version>
 	</parent>
 
-	<groupId>com.senyint.vv_cloud_server</groupId>
+	<groupId>com.vv.vv_cloud_server</groupId>
 	<artifactId>vv_cloud_server</artifactId>
 	<packaging>pom</packaging>
 
@@ -38,10 +38,11 @@
 
 		<!-- 系统架构依赖 -->
 		<dependency>
-			<groupId>com.senyint.vv_cloud_frame</groupId>
+			<groupId>com.vv.vv_cloud_frame</groupId>
 			<artifactId>frame_core</artifactId>
-			<version>4.1.1</version>
+			<version>${cloudFrame.version}</version>
 		</dependency>
+		
 
 	</dependencies>
 </project>

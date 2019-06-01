@@ -7,9 +7,10 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.8</java.version>
 		<springCloud.version>Finchley.RELEASE</springCloud.version>
+		<cloudFrame.version>4.1.2</cloudFrame.version>
 	</properties>
 
-	<groupId>com.senyint</groupId>
+	<groupId>com.vv</groupId>
 	<artifactId>vv_cloud</artifactId>
 	<version>4.1.1</version>
 	<packaging>pom</packaging>

@@ -4,13 +4,14 @@
 	<modelVersion>4.0.0</modelVersion>
 	
 	<parent>
-		<groupId>com.senyint</groupId>
+		<groupId>com.vv</groupId>
 		<artifactId>vv_cloud</artifactId>
 		<version>4.1.1</version>
 	</parent>
 
-	<groupId>com.senyint.vv_cloud_frame</groupId>
+	<groupId>com.vv.vv_cloud_frame</groupId>
 	<artifactId>vv_cloud_frame</artifactId>
+	<version>${cloudFrame.version}</version>
 	<packaging>pom</packaging>
 
 	<modules>

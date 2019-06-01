@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>com.senyint.vv_cloud_server</groupId>
+		<groupId>com.vv.vv_cloud_server</groupId>
 		<artifactId>vv_cloud_server</artifactId>
 		<version>4.1.1</version>
 	</parent>
@@ -14,7 +14,7 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>com.senyint.vv_cloud_entity</groupId>
+			<groupId>com.vv.vv_cloud_entity</groupId>
 			<artifactId>entity_base</artifactId>
 			<version>4.1.1</version>
 		</dependency>

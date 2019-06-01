@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 	
 	<parent>
-		<groupId>com.senyint</groupId>
+		<groupId>com.vv</groupId>
 		<artifactId>vv_cloud</artifactId>
 		<version>4.1.1</version>
 	</parent>
 	
-	<groupId>com.senyint.vv_cloud_web</groupId>
+	<groupId>com.vv.vv_cloud_web</groupId>
 	<artifactId>vv_cloud_web</artifactId>
 	<packaging>pom</packaging>
 	
