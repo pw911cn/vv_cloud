@@ -1,0 +1,96 @@
+<div class="popup-content-lyt">
+    <div class="popup-content-center">
+
+
+        <!-- 平台管理  医联体管理  添加成员  -->
+
+        <div class="platmana_conj_add_hos_lyt">
+			<input type="hidden" name="alliance_id" value="{{alliance_id}}">
+            <!-- 公共多选静态模块    -->
+            <div class="com_mutiselect">
+                <div class="com_mutiselect_all">
+
+                    <div class="v-panel hasheader fillparent noPadding style-2 ">
+                        <div class="v-panel-header">
+                            <div class="v-panel-title">全部医院</div>
+                        </div>
+                        <div class="v-panel-body">
+
+                            <div class="select_lyt">
+                                <div class="select_topbar">
+                                    <div class="cont">
+                                        <div class="flowlyt-wrap">
+                                            <div class="flowlyt-child width150px">
+                                                <div class="form-block">
+                                                    <div class="form-cont">
+                                                        <div class="xInput-group-icon">
+                                                            <input type="text" class="xInput" placeholder="输入关键字查询" id="alliance_addhos_searchinput">
+                                                            <span class="iconwrap"><i class="comicon-no_fill"></i></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="flowlyt-child operbtn">
+                                                <div class="form-block">
+                                                    <button class="xBtn xBtn-default" type="button" id="alliance_addhos_hossarch">查询</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="oper"><a class="moresearch" href="#">高级 <i class="comicon-down"></i></a></div>
+                                </div>
+                                <div class="select_cont">
+
+                                    <ul class="ztree" id="alliance_addhos_hostree"></ul>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="com_mutiselect_selected">
+
+                    <div class="v-panel hasheader fillparent noPadding style-2 ">
+                        <div class="v-panel-header">
+                            <div class="v-panel-title">已选医院</div>
+                        </div>
+                        <div class="v-panel-body">
+
+                            <div class="select_lyt">
+                                <div class="select_topbar">
+                                    <div class="title"></div>
+                                    <div class="oper"><button class="xBtn xBtn-danger" type="button" id="alliance_addhos_removeall">移除全部</button></div>
+                                </div>
+                                <div class="select_cont">
+                                    <ul class="selected_list" id="alliance_addhos_hoslist">
+                                    </ul>
+                                    <!-- 没有添加提示 -->
+                                    <div class="nodata">还没有选择医院<br>请从左侧目录树中选择</div>
+                                    <!-- 没有添加提示 end -->
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- 公共多选静态模块  end   -->
+
+        </div>
+
+        <!-- 平台管理  医联体管理  添加成员  end  -->
+
+
+
+    </div>
+    <div class="popup-content-footerWrap">
+        <div class="popup-footerText"></div>
+        <div class="popup-btns">
+            <button type="button" class="xBtn xBtn-default" id="alliance_addhos_cancle">取消</button>
+            <button type="button" class="xBtn xBtn-primary xBtn-horpa-lg" id="alliance_addhos_save">确认</button>
+        </div>
+    </div>
+</div>

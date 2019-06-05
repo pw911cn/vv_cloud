@@ -1,0 +1,543 @@
+
+
+/* 远程会诊 */
+
+/*  会诊申请  ————————————————   */
+.consul_apply_wrap{
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: auto;
+  .label_to_select{
+    /* 选择 标签 待选 */
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px 10px 2px 10px;
+    background-color: #f9f9f9;
+    border: solid 1px #eee;
+    .select_text{
+      font-size: 12px;
+      color: #999;
+      line-height: 26px;
+    }
+    .select_item{
+      height: 26px;
+      background-image: linear-gradient(180deg,#fff 0,#f8f8f8);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#fff,endColorstr=#f8f8f8,GradientType=0);
+      border: 1px solid #cddde6;
+      box-shadow: 0 1px 1px rgba(0,0,0,.1);
+      border-radius: 3px;
+      color: #333;
+      font-size: 14px;
+      line-height: 26px;
+      cursor: pointer;
+      white-space: nowrap;
+      padding: 0 8px;
+      margin-right: 3px;
+      margin-bottom: 3px;
+    }
+    .moreLabel{
+      margin-left:5px;
+      margin-right:5px;
+    }
+    .addNewLabel{
+      margin-left: 5px;
+    }
+  }
+  .label_selected{
+    /* 选择 标签 已选 */
+    margin: 4px 0;
+    padding: 5px 10px 2px 10px;
+    background-color: #f9f9f9;
+    border: solid 1px #eee;
+    .select_text{
+      display: inline-block;
+      color: #1790ff;
+    }
+    .select_tag{
+      height: 24px;
+      box-sizing: border-box;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 10px;
+      border-radius: 3px;
+      color: #222;
+      font-size: 14px;
+      background-color: #cee1f8;
+      .select_tag_closeBtn{
+        -webkit-flex: 0 0 auto;
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        text-align: center;
+        margin-left: 4px;
+        cursor: pointer;
+        border-radius: 50%;
+        &:hover{
+          background-color: #f00;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+
+/* 会诊申请 布局 */
+.consul_apply_lyt {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  .consul_apply_lyt_top{
+    position: absolute;
+    top: 0;
+    height: 62px;
+    left: 0;
+    right: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #fff;
+    box-shadow:0px 2px 7px 0px rgba(92,145,239,0.15);
+    z-index: 6;
+  }
+  .consul_apply_lyt_center{
+    position: absolute;
+    top: 62px;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: auto;
+  }
+  .consul_apply_lyt_bottom{
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    left: 0;
+    right: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 10px;
+    background-color: #fff;
+    box-shadow:0px -2px 4px 0px rgba(0,0,0,0.06);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 4;
+  }
+}
+
+.consul_apply_lyt_center_top{
+  height: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 50px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.consul_apply_lyt_center_cont{
+  position: absolute;
+  top: 50px;
+  bottom: 0;
+  left: 0;
+  right: 50px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: auto;
+  padding: 10px;
+  .v-panel{
+    margin-top:10px
+  }
+}
+
+.consul_apply_lyt_center_right{
+  width: 50px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+
+
+/* 会诊 时间轴 */
+.consul_apply_timeaxis{
+  height: 52px;
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  .consul_apply_timeaxis_cont{
+    width: auto;
+    margin-left: -120px;
+    .item{
+      width: 150px;
+      height: 52px;
+      display: inline-block;
+      background-color: #fff;
+      color: #999;
+      font-weight: normal;
+      position: relative;
+      overflow: visible;
+      &:before{
+        content: '';
+        position: absolute;
+        top: 23px;
+        left: 0;
+        right: 20px;
+        height: 4px;
+        background-color: #D3D3D3;
+      }
+      &:first-child{
+        &:before{
+          display: none;
+        }
+      }
+      .point{
+        width: 8px;
+        height: 8px;
+        position: absolute;
+        top: 21px;
+        right: 4px;
+        border-radius: 50%;
+        background-color: #C7DEEA;
+      }
+      .toptext, .textcont{
+        position: absolute;
+        top: 36px;
+        right: 8px;
+        transform: translateX(50%);
+        font-size: 12px;
+        z-index: 2;
+      }
+      .toptext{
+        top: 2px;
+        color: #999;
+      }
+      &.finish{
+        &:before{
+          background-color: #59b973;
+        }
+        .point{
+          background-color: #59b973;
+        }
+        .textcont{
+          color: #30b554;
+        }
+      }
+      &.active{
+        &:before{
+          background-color: #FF6600;
+        }
+        .point{
+          background-color: #FF6600;
+          box-shadow: 0 0 0px 2px #fff, 0 0 0px 3px #FF6600;
+        }
+        .textcont{
+          color: #ff6600;
+        }
+      }
+    }
+
+  }
+}
+
+
+
+/* 会诊 申请 提示 */
+.consul_apply_tipwrap{
+  width: 100%;
+  height: 100%;
+  background: #fbf8ea;
+  border: solid 1px #f5e2bb;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  .titletext{
+    color: #333;
+    font-size: 18px;
+    font-weight: bolder;
+    margin-right: 20px;
+  }
+  .titletip{
+    color: #666;
+    font-size: 14px;
+  }
+}
+
+
+/* 会诊 侧边栏 快速导航 */
+.consul_sidenav{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #e2ebf1;
+  -webkit-box-shadow: inset 0 0px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0px 2px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  overflow: hidden;
+  li {
+    width: 34px;
+    height: 90px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #666;
+    margin-top: 3px;
+    margin-left: 7px;
+    padding-left: 8px;
+    text-align: center;
+    background-color: #fff;
+    border: solid 1px #ccc;
+    border-radius: 3px;
+    line-height: 15px;
+    cursor: pointer;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+    word-break: break-all;
+    -webkit-writing-mode: vertical-lr;
+    -ms-writing-mode: tb-lr;
+    writing-mode: vertical-lr;
+    &.active, &:hover{
+      background-color: #006ec1;
+      border-color: #006ec1;
+      color: #fff;
+    }
+  }
+}
+/* 会诊 侧边栏 快速导航 */
+
+
+
+/* 会诊 通用 标题 */
+.consul_com_title{
+  height: 20px;
+  line-height: 20px;
+  font-size: 16px;
+  color: #222;
+  font-weight: bolder;
+  display: flex;
+  align-items: center;
+  margin: 20px 0 10px;
+  &:before{
+    content: '';
+    width: 10px;
+    height: 20px;
+    border-radius: 5px;
+    background-color: #1790FF;
+    margin-right: 6px;
+  }
+}
+
+
+
+
+/* 会诊申请 操作区 */
+.consul_apply_operwrap{
+  display: flex;
+  align-items: center;
+}
+.consul_apply_operwraptip{
+  margin-left: 10px;
+  color: #FA8C16;
+  .text{
+    margin-left: 3px;
+    font-size: 12px;
+  }
+}
+/* 会诊申请 操作区 end */
+
+
+
+
+
+
+
+/* 医生卡 信息查看 */
+.docCardWrap{
+  display: flex;
+  flex-wrap: wrap;
+  .docCard{
+    width: 380px;
+    margin:15px 15px 0 0;
+    padding: 5px 10px 20px;
+    box-sizing: border-box;
+    background:linear-gradient(360deg,rgba(253,253,255,1) 0%,rgba(251,251,255,1) 100%);
+    box-shadow:0 4px 24px 0 rgba(36,48,58,0.1);
+    border-radius:8px;
+    border:1px solid rgba(186,209,221,1);
+    color: #222;
+    display: flex;
+    flex-direction: column;
+    .docCard_top{
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      color: #222;
+      .operBtn{
+        height: 20px;
+        padding: 4px 8px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+      }
+      .editBtn{
+        i{
+          margin-right: 3px;
+        }
+        &:hover{
+          color: #3B82FF;
+        }
+      }
+      .deleteBtn{
+        margin-left: 20px;
+        font-size: 16px;
+        &:hover{
+          color: #FF0000;
+        }
+      }
+    }
+    .docCard_center{
+      padding: 5px 10px 0;
+      flex: 1 1 auto;
+      .contItem{  /* 一行 */
+        margin: 8px 0;
+      }
+      .unselected{ /* 未选定 */
+        color: #666;
+      }
+      .doctor{  /* 医生 */
+        font-size:22px;
+      }
+      .doctor_tag{
+        font-size:12px;
+        color: #666;
+      }
+      .hospital{  /* 医院 */
+        font-size: 16px;
+      }
+      .hospital_tag{
+        padding: 1px 5px;
+        margin-left: 4px;
+        line-height: 16px;
+        background-color: rgba(249,236,204,1);
+        border-radius:2px;
+        border:1px solid rgba(250,171,119,1);
+        color: #f60;
+        font-size: 12px;
+      }
+      .onlySpecialty{  /* 专科 */
+        font-size: 16px;
+      }
+      .nortext{  /* 正常文字 */
+      }
+      .boldtext{  /* 加粗文字 */
+        font-weight: bolder;
+      }
+      .oblique{  /* 斜线 */
+        color: #999;
+        margin: 0 2px;
+      }
+      .time_choose{  /* 时间选择 */
+        .time_choose_input{
+          width: 95px;
+          height:25px;
+          box-sizing: border-box;
+          padding: 0 8px;
+          background:#fff;
+          box-shadow:0px 1px 3px rgba(0,0,0,0.1) inset;
+          border-radius:3px;
+          border:1px solid rgba(199,218,230,1);
+          color: #222;
+          &.starttime,
+          &.endtime{
+            width: 65px;
+          }
+          &::placeholder {
+            color: #999;
+            font-size: 12px;
+          }
+        }
+        .time_choose_space{
+          padding: 0 1px;
+        }
+      }
+      .room_choose{  /* 会议室选择 */
+        box-sizing: border-box;
+        padding:2px 8px;
+        margin-left: 6px;
+        font-size: 12px;
+        color: #333;
+        background:linear-gradient(360deg,rgba(246,250,255,1) 0%,rgba(255,255,255,1) 100%);
+        box-shadow:0px 1px 1px 0px rgba(0,0,0,0.1);
+        border-radius:10px;
+        border:1px solid rgba(191,210,222,1);
+        cursor: pointer;
+        &:hover{
+          background:#e4f1f9;
+        }
+      }
+      .v-check{
+        margin-right: 16px;
+      }
+      .checked{
+        margin-right: 16px;
+        display: inline-flex;
+        i{
+          color: #52C41A;
+          margin-right: 3px;
+        }
+      }
+
+    }
+    .docCard_bottom{
+      display: flex;
+      justify-content: flex-end;
+      padding:10px 10px 0;
+      .xBtn{
+        margin-left: 3px;
+      }
+    }
+  }
+}
+/* 医生卡 信息查看 end */
+
+
+
+
+
+/* 会诊申请   end  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

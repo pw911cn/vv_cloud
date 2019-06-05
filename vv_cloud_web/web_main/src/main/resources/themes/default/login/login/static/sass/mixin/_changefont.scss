@@ -1,0 +1,19 @@
+// px | rem | none   /  像素 | rem | 原始
+
+// 设置要选择
+$changefont-select:rem;
+
+//设置法
+@function changefont($value){
+
+  @if $changefont-select == 'px'{
+    @return $value / 2px * 1px; //除2
+  }
+  @else if $changefont-select == 'rem' {
+    @return $value / 100px * 1rem; //100px为根字体大小
+  }
+  @else {
+    @return $value; //原始字体
+  }
+
+}

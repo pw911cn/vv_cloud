@@ -1,0 +1,349 @@
+/*选择文件按钮的外围容器*/
+.webuploader-container {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.webuploader-element-invisible {
+	position: absolute !important;
+	clip: rect(1px, 1px, 1px, 1px);
+}
+
+/*选择文件按钮样式*/
+.webuploader-pick {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	text-align: center;
+}
+
+.webuploader-pick-hover {
+}
+
+.webuploader-pick-disable {
+	opacity: 0.6;
+	pointer-events: none;
+}
+
+/*----------------- uploader_2 start -----------------*/
+.v_webUploader2 {
+	position: relative;
+	font-size: 12px;
+	width: 100%;
+	height: 38px;
+	line-height: 38px;
+	color: #FFF;
+	display: flex;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+}
+
+.v_webUploader2 > * {
+	margin: 6px 0;
+	display: none;
+}
+
+/*承载webuploader的容器*/
+.v_webUploader2_start > .v_webUploader_holder {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	margin: 0;
+	z-index:5;
+	display: block;
+}
+
+/*hover*/
+.v_webUploader2_start:hover {
+	background: #F90;
+}
+
+/*点击选择文件文字*/
+.v_webUploader2_start > .v_webUploader_uploadText {
+
+}
+
+/*上传按钮*/
+.v_webUploader2_start > .v_webUploader_uploadBtn {
+	display: block;
+	margin: 0;
+	background: #0097ed;
+	border: 1px solid #126ba4;
+	color: #FFF;
+	height: 38px;
+	line-height: 36px;
+	padding: 0 20px;
+	cursor: pointer;
+	align-items: center;
+	justify-content: center;
+}
+
+/*上传百分比*/
+.v_webUploader2_uploading .v_webUploader_percent {
+	width: 100%;
+	color: #666;
+	display: block;
+}
+
+/*上传进度条容器*/
+.v_webUploader2_uploading .v_webUploader_progress {
+	width: 80%;
+	height: 8px;
+	border-radius: 4px;
+	overflow: hidden;
+	background: #eeeded;
+	display: block;
+}
+
+/*上传进度条*/
+.v_webUploader2_uploading .v_webUploader_progressBar {
+	animation: v_webUploader2_progress_animation .3s linear infinite alternate;
+	width: 0;
+	height: 100%;
+	background: #0ed172;
+}
+
+/*正在上传动画*/
+@keyframes v_webUploader2_progress_animation {
+	0% {
+		opacity: .4;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: .4;
+	}
+}
+
+/*上传错误文字*/
+.v_webUploader2_error .v_webUploader_errorText {
+	color: #ff3333;
+	display: block;
+}
+
+/*重试按钮*/
+.v_webUploader2_error .v_webUploader_retry {
+	background: #FFF;
+	color: #0066ff;
+	border-radius: 10px;
+	border: 1px solid #eaeaea;
+	outline: none;
+	cursor: pointer;
+	display: block;
+}
+
+/*上传错误的进度条样式*/
+.v_webUploader2_error .v_webUploader_progress {
+	width: 80%;
+	height: 8px;
+	border-radius: 4px;
+	overflow: hidden;
+	background: #eeeded;
+	display: block;
+}
+
+/*上传进度条*/
+.v_webUploader2_error .v_webUploader_progressBar {
+	width: 50%;
+	height: 100%;
+	background: #CCC;
+}
+
+/*上传成功后的缩略图*/
+.v_webUploader2_success .v_webUploader_thumbnail {
+	align-items: center;
+	display: block;
+}
+
+/*上传成功后的删除按钮*/
+.v_webUploader2_success .v_webUploader_remove {
+	width: 16px;
+	height: 16px;
+	line-height: 14px;
+	text-align: center;
+	overflow: hidden;
+	position: absolute;
+	z-index: 2;
+	right: -10px;
+	top: -10px;
+	color: #C00;
+	background: #FFF;
+	border: 1px solid #CCC;
+	border-radius: 100%;
+	cursor: pointer;
+	display: block;
+}
+
+/*----------------- uploader_2 end -----------------*/
+
+/*----------------- uploader_3 start -----------------*/
+.v_webUploader3 {
+	position: relative;
+	font-size: 12px;
+	width: 100%;
+	height: 38px;
+	line-height: 38px;
+	color: #FFF;
+	display: flex;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+}
+
+.v_webUploader3 > * {
+	margin: 6px 0;
+	display: none;
+}
+
+/*小图标*/
+.v_webUploader3 .v_webUploader_icon {
+	width: 22px;
+	flex: 0 0 22px;
+}
+
+/*文件名容器*/
+.v_webUploader3 .v_webUploader_fileName {
+	height: 100%;
+	overflow: hidden;
+	flex: 1 1 auto;
+	color: #333;
+	text-indent: 5px;
+	text-align: left;
+	display: block;
+}
+
+/*webuploader容器*/
+.v_webUploader3_start > .v_webUploader_holder {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	margin: 0;
+	display: block;
+}
+
+/*文件名容器*/
+.v_webUploader3_start .v_webUploader_fileName {
+	display: none;
+}
+
+/*上传按钮*/
+.v_webUploader3_start > .v_webUploader_uploadBtn {
+	display: block;
+	margin: 0;
+	background: #0097ed;
+	border: 1px solid #126ba4;
+	color: #FFF;
+	height: 38px;
+	line-height: 36px;
+	padding: 0 20px;
+	cursor: pointer;
+	align-items: center;
+	justify-content: center;
+}
+
+.v_webUploader3_start > .oralupload-btn {
+	display: block;
+    margin: 0;
+    /* background: #0097ed; */
+    /* border: 1px solid #126ba4; */
+    color: #FFF;
+    height: 38px;
+    line-height: 36px;
+    padding: 0 20px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+/*正在上传百分比*/
+.v_webUploader3_uploading .v_webUploader_percent {
+	color: #FFF;
+	flex: 1 1 auto;
+}
+
+/*上传进度容器*/
+.v_webUploader3_uploading .v_webUploader_processing {
+	display: flex;
+}
+
+/*3种状态通用的东西*/
+.v_webUploader3_uploading .v_webUploader_processing,
+.v_webUploader3_error .v_webUploader_error,
+.v_webUploader3_success .v_webUploader_processing {
+	cursor: pointer;
+	width: 66px;
+	height: 20px;
+	flex: 0 0 66px;
+	border-radius: 10px;
+	line-height: 20px;
+	background: #0066ff;
+	display: flex;
+}
+
+/*上传成功的进度条*/
+.v_webUploader3_success .v_webUploader_processing {
+	background: #0ed172;
+}
+
+/*删除按钮*/
+.v_webUploader3_success .v_webUploader_remove {
+	width: 34px;
+	color: #C00;
+	cursor: pointer;
+	flex: 0 0 34px;
+	display: block;
+}
+
+/*错误*/
+.v_webUploader3_error .v_webUploader_error {
+	background: #f5f5f5;
+	color: #F00;
+	flex: 0 0 66px;
+	display: flex;
+	border: 1px solid #eaeaea;
+}
+
+/*重试按钮*/
+.v_webUploader3_error .v_webUploader_retry {
+	color: #0a7ef5;
+}
+
+/*----------------- uploader_3 end -----------------*/
+
+/*----------------- uploader_4 start -----------------*/
+.v_webUploader1{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.v_webUploader1 .v_webUploader_holder{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+.v_webUploader1 .v_webUploader_holder>*{
+	position: absolute;
+	width: 100% !important;
+	height: 100% !important;
+}
+.v_webUploader1 .v_webUploader_holder label{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+/*上传成功后的缩略图*/
+.v_webUploader1 .v_webUploader_thumbnail {
+	align-items: center;
+	display: block;
+}
+/*----------------- uploader_4 end -----------------*/

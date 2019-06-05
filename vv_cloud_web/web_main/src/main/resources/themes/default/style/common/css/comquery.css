@@ -1,0 +1,19 @@
+
+/*  通用 查询模块  start */
+.comquery { width: 100%; height: auto; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-sizing: border-box; box-sizing: border-box; padding: 5px; background: #F4F8FA url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OEE1NzMwN0E4RUVGMTFFNzkxN0FBMzlDMUMzMTg5QzIiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OEE1NzMwNzk4RUVGMTFFNzkxN0FBMzlDMUMzMTg5QzIiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjBDMDgzQUM5OEQ0NzExRTdBNjVCQzczMDVBNjk4QUU2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjBDMDgzQUNBOEQ0NzExRTdBNjVCQzczMDVBNjk4QUU2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+C2laSwAAACBJREFUeNpiYGBgYGLADkDi7AwEJJmGhCQDAUkmgAADAC3kAFkFd56MAAAAAElFTkSuQmCC); background-size: 7px; }
+.comquery .comquery-cond { -webkit-box-flex: 0; -ms-flex: 0 1 auto; flex: 0 1 auto; /* min-width: 920px;*/ -webkit-box-sizing: border-box; box-sizing: border-box; padding-right: 10px; vertical-align: top; }
+.comquery .comquery-cond .form-block .form-label { width: 120px; }
+.comquery .comquery-oper { -webkit-box-flex: 1; -ms-flex: 1 0 auto; flex: 1 0 auto; -webkit-box-sizing: border-box; box-sizing: border-box; padding-left: 10px; padding-right: 10px;border-left: solid 1px #b5bdc3; font-size: 0; }
+.comquery .comquery-oper .xBtn { margin: 3px; }
+.comquery .comquery-oper-right { -webkit-box-flex: 0; -ms-flex: 0 0 auto; flex: 0 0 auto; -webkit-box-sizing: border-box; box-sizing: border-box; padding-left: 10px; border-left: solid 1px #b5bdc3; text-align: right; font-size: 0; }
+.comquery .comquery-oper-right .xBtn { margin: 3px; }
+.comquery.bg-none { background: none; }
+.comquery.bs-b { -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); }
+.comquery.br-all { border: solid 1px #CCDADE; }
+.comquery.br-t { border-top: solid 1px #CCDADE; }
+.comquery.br-r { border-right: solid 1px #CCDADE; }
+.comquery.br-b { border-bottom: solid 1px #CCDADE; }
+.comquery.br-l { border-left: solid 1px #CCDADE; }
+
+/*  通用 查询模块  end */
+

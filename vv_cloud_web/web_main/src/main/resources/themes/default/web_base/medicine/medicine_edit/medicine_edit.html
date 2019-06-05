@@ -1,0 +1,45 @@
+<div class="popup-content-lyt">
+    <div class="popup-content-center">
+    	<form name="medicine_edit_form" id="medicine_edit_form">
+	    	<div style="padding:10px 10px">
+	    		 <input type="hidden" class="xInput" value="{{datas.medicine_id}}" name="medicine_id">
+				<div class="flowlyt-wrap labelwidth7">
+					<div class="flowlyt-child width100 mustfill">
+				         <div class="form-block">
+				             <div class="form-label"><div class="labelcont">病种名称<span class="muststar">*</span></div></div>
+				             <div class="form-cont">
+				                 <input type="text" class="xInput required" value="{{datas.medicine_name}}" name="medicine_name">
+				             </div>
+				         </div>
+			         </div>
+			         <div class="flowlyt-child width100">
+				         <div class="form-block">
+				             <div class="form-label"><div class="labelcont">排序号<span class="muststar">*</span></div></div>
+				             <div class="form-cont">
+				                 <input type="text" class="xInput" value="{{datas.medicine_no}}" name="medicine_no">
+				             </div>
+				         </div>
+			         </div>
+			         <div class="flowlyt-child width100 mustfill">
+				         <div class="form-block">
+				             <div class="form-label"><div class="labelcont">病种定义级别<span class="muststar">*</span></div></div>
+				             <div class="form-cont">
+				                 <select class="xInput required" name="type" mode="only" default_value="{{datas.type}}" type_key="medicine_type">
+	                             </select>
+				             </div>
+				         </div>
+			         </div>
+			         
+				 </div>
+	    	</div>
+	
+	    </div>
+	    <div class="popup-content-footerWrap">
+	        <div class="popup-footerText"></div>
+	        <div class="popup-btns">
+		        <button type="button" class="xBtn xBtn-default" id="medicine_edit_cancle">取消</button>
+	        	<button type="button" class="xBtn xBtn-primary xBtn-horpa-lg" id="medicine_edit_save">确认</button>
+	        </div>
+	    </div>
+	</form>
+</div>

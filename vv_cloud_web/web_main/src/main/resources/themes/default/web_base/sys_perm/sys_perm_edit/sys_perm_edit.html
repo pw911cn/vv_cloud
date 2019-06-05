@@ -1,0 +1,35 @@
+<!-- 平台管理  系统权限组管理  修改权限组  -->
+
+<div class="platmana_com_popcont">
+
+    <input name="sys_group_id" type="hidden" value="{{datas.sys_group_id}}">
+    <div class="flowlyt-wrap labelwidth7">
+        <div class="flowlyt-child width100 mustfill">
+            <div class="form-block">
+                <div class="form-label"><div class="labelcont">权限组名称<span class="muststar">*</span></div></div>
+                <div class="form-cont">
+                    <input type="text" class="xInput" value="{{datas.sys_group_name}}" name="sys_group_name" >
+                </div>
+            </div>
+        </div>
+        <div class="flowlyt-child width100">
+            <div class="form-block">
+                <div class="form-label"><div class="labelcont">权限组简介<span class="muststar">*</span></div></div>
+                <div class="form-cont">
+                    <input type="text" class="xInput" value="{{datas.descr}}" name="descr" >
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<!-- 平台管理  系统权限组管理  修改权限组  end  -->
+<div class="popup-content-footerWrap">
+    <div class="popup-footerText"></div>
+    <div class="popup-btns">
+        <button type="button" class="xBtn xBtn-default" id="role_edit_cancle">取消</button>
+        <button type="button" class="xBtn xBtn-primary xBtn-horpa-lg" id="role_edit_save">确认</button>
+    </div>
+</div>

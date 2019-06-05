@@ -1,0 +1,827 @@
+@charset "UTF-8";
+/* 通用列表页  布局  ————————————————   */
+.comlist_wrap {
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.comlist_tablewrap {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.comlist_lyt1,
+.comlist_lyt2 {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.comlist_lyt1 .comlist_search,
+.comlist_lyt2 .comlist_search {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.comlist_lyt1 .comlist_cont,
+.comlist_lyt2 .comlist_cont {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+/* 通用列表页 布局 1行搜索 */
+.comlist_lyt1 .comlist_search {
+  height: 48px;
+}
+.comlist_lyt1 .comlist_cont {
+  top: 56px;
+}
+
+/* 通用列表页 布局 2行搜索 */
+.comlist_lyt2 .comlist_search {
+  height: 84px;
+}
+.comlist_lyt2 .comlist_cont {
+  top: 92px;
+}
+
+/* 通用列表页   end   */
+/*  通用 布局  ———————————————— */
+.comlyt_1 {
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /*左侧医联体列表*/
+}
+.comlyt_1 .platmana_conj_lyt {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.comlyt_1 .platmana_conj_leftlyt {
+  width: 360px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: auto;
+}
+.comlyt_1 .platmana_conj_list {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.comlyt_1 .platmana_conj_list .platmana_conj_list_search {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: auto;
+}
+.comlyt_1 .platmana_conj_list .platmana_conj_list_cont {
+  width: 100%;
+  position: absolute;
+  top: 46px;
+  left: 0;
+  bottom: 0;
+  overflow: auto;
+}
+.comlyt_1 .platmana_conj_rightlyt {
+  position: absolute;
+  left: 360px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: auto;
+}
+.comlyt_1 .platmana_conj_right_wrap {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #fff;
+  border: 1px solid #a6bcd3;
+  border-left: none;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+}
+.comlyt_1 .platmana_conj_right_wrap .platmana_conj_info {
+  width: 100%;
+  height: 70px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 8px;
+}
+.comlyt_1 .platmana_conj_right_wrap .platmana_conj_info .infocont .infoline {
+  margin: 5px 0;
+}
+.comlyt_1 .platmana_conj_right_wrap .platmana_conj_info .infocont .conjname {
+  color: #222;
+  font-size: 22px;
+}
+.comlyt_1 .platmana_conj_right_wrap .platmana_conj_info .infocont .editbtn {
+  margin-left: 15px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #666;
+  padding: 0 10px;
+  cursor: pointer;
+}
+.comlyt_1 .platmana_conj_right_wrap .platmana_conj_info .infocont .editbtn:hover {
+  color: #222;
+}
+.comlyt_1 .platmana_conj_right_wrap .platmana_conj_info .infocont .editbtn i {
+  margin-right: 3px;
+}
+.comlyt_1 .platmana_conj_right_wrap .platmana_conj_info .infocont .elseinfo {
+  color: #999;
+  margin-right: 10px;
+}
+.comlyt_1 .platmana_conj_right_wrap .platmana_conj_member {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 70px;
+  bottom: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 8px;
+  padding-top: 0;
+}
+
+/*  通用 布局  end  */
+/* 通用 状态 样式  ————————————————  */
+/*  状态 成功  */
+.com_state_success {
+  color: #379E0D;
+}
+
+/*  状态 信息  */
+.com_state_info {
+  color: #9aa994;
+}
+
+/*  状态 危险  */
+.com_state_danger {
+  padding: 2px 8px;
+  background-color: #FF4D4F;
+  color: #fff;
+  border-radius: 2px;
+}
+
+/*  状态 警告  */
+.com_state_warning {
+  padding: 2px 8px;
+  background-color: #FA8C16;
+  color: #fff;
+  border-radius: 2px;
+}
+
+/* 通用 表格内样式  ————————————————  */
+/* 通用 弹出层容器   ————————————————   */
+.com_popcont {
+  padding: 20px;
+}
+.com_popcont .v-panel {
+  margin-bottom: 10px;
+}
+
+/* 通用 弹出层容器  end   */
+/*  通用 左侧选择，右侧结果  ———————————————————————————— */
+.com_mutiselect {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.com_mutiselect .com_mutiselect_all {
+  width: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+.com_mutiselect .com_mutiselect_all .all_list {
+  width: 100%;
+}
+.com_mutiselect .com_mutiselect_all .all_list li {
+  height: 38px;
+  border-bottom: solid 1px #BFD2DE;
+  padding-left: 10px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.com_mutiselect .com_mutiselect_all .all_list li:first-child {
+  border-top: solid 1px #BFD2DE;
+}
+.com_mutiselect .com_mutiselect_all .all_list li.active, .com_mutiselect .com_mutiselect_all .all_list li:hover {
+  background-color: #C7DEEA;
+}
+.com_mutiselect .com_mutiselect_all .all_list li .deletebtn {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 30px;
+  height: 100%;
+  cursor: pointer;
+  color: #F5222D;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.com_mutiselect .com_mutiselect_all .all_list li .deletebtn:hover {
+  background-color: #C7DEEA;
+  color: #ff4d56;
+}
+.com_mutiselect .com_mutiselect_all .all_list li .permname {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+.com_mutiselect .com_mutiselect_all .all_list li .setbtn {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  cursor: pointer;
+}
+.com_mutiselect .com_mutiselect_selected {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 0;
+  bottom: 0;
+}
+.com_mutiselect .com_mutiselect_selected .v-panel {
+  border-left: none;
+}
+.com_mutiselect .com_mutiselect_selected .selected_list {
+  width: 100%;
+}
+.com_mutiselect .com_mutiselect_selected .selected_list li {
+  height: 38px;
+  border-bottom: solid 1px #BFD2DE;
+  padding-left: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.com_mutiselect .com_mutiselect_selected .selected_list li:first-child {
+  border-top: solid 1px #BFD2DE;
+}
+.com_mutiselect .com_mutiselect_selected .selected_list li.active {
+  background-color: #C7DEEA;
+}
+.com_mutiselect .com_mutiselect_selected .selected_list li .deletebtn {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 30px;
+  height: 100%;
+  cursor: pointer;
+  color: #F5222D;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.com_mutiselect .com_mutiselect_selected .selected_list li .deletebtn:hover {
+  background-color: #C7DEEA;
+  color: #ff4d56;
+}
+.com_mutiselect .com_mutiselect_selected .selected_list li .permname {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+.com_mutiselect .com_mutiselect_selected .selected_list li .setbtn {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  cursor: pointer;
+}
+.com_mutiselect .select_lyt {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.com_mutiselect .select_lyt .select_topbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 8px;
+  background-color: #F1F6FC;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.com_mutiselect .select_lyt .select_topbar .title {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  line-height: 34px;
+}
+.com_mutiselect .select_lyt .select_topbar .cont {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+.com_mutiselect .select_lyt .select_topbar .oper {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+.com_mutiselect .select_lyt .select_topbar .oper .moresearch {
+  font-size: 14px;
+  color: #666666;
+  line-height: 34px;
+}
+.com_mutiselect .select_lyt .select_cont {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  bottom: 40px;
+  width: 100%;
+  overflow: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.com_mutiselect .select_lyt .select_cont .nodata {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+  color: #9B9B9B;
+  line-height: 22px;
+}
+.com_mutiselect .select_lyt .select_oper {
+  position: absolute;
+  height: 40px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 5px 10px 0;
+  text-align: center;
+}
+
+/*  通用 左侧选择，右侧结果   end */
+/* 通用 选择标签   ————————————————   */
+/* 通用 选择标签  待选 */
+.com_label_to_select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 5px 0;
+}
+.com_label_to_select .select_item {
+  height: 22px;
+  background-color: #FBFBFF;
+  border: 1px solid #C7DEEA;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 3px;
+  color: #333;
+  font-size: 12px;
+  line-height: 20px;
+  cursor: pointer;
+  white-space: nowrap;
+  padding: 0 8px;
+  margin: 2px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.com_label_to_select .select_item.moreLabel {
+  margin-left: 5px;
+  margin-right: 5px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#f6faff), to(white));
+  background: linear-gradient(360deg, #f6faff 0%, white 100%);
+  -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid #BFD2DE;
+}
+.com_label_to_select .select_item.moreLabel i {
+  margin-top: 1px;
+  margin-left: 4px;
+}
+.com_label_to_select .select_item.addNewLabel {
+  margin-left: 5px;
+  background-color: #379E0D;
+  -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid #168618;
+  color: #fff;
+}
+.com_label_to_select .select_item.addNewLabel i {
+  margin-top: 1px;
+  margin-right: 2px;
+}
+
+/* 通用 选择标签  已选 */
+.com_label_selected {
+  margin: 2px 0;
+  padding: 2px 10px 2px 2px;
+  border-radius: 3px;
+  background-color: #FBFBFF;
+  border: 1px solid #C7DEEA;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.com_label_selected.no-border {
+  border: none;
+}
+.com_label_selected .select_text {
+  color: #666;
+  font-size: 12px;
+  line-height: 26px;
+  padding-left: 10px;
+}
+.com_label_selected .select_tag {
+  height: 22px;
+  margin: 2px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  white-space: nowrap;
+  padding: 0 8px;
+  border-radius: 3px;
+  color: #222;
+  font-size: 12px;
+  background-color: #cee1f8;
+}
+.com_label_selected .select_tag:nth-child(4n+1) {
+  border: 1px solid rgba(250, 140, 22, 0.2);
+  background-color: rgba(250, 140, 22, 0.1);
+}
+.com_label_selected .select_tag:nth-child(4n+2) {
+  border: 1px solid rgba(72, 178, 255, 0.2);
+  background-color: rgba(63, 169, 255, 0.1);
+}
+.com_label_selected .select_tag:nth-child(4n+3) {
+  border: 1px solid rgba(235, 47, 150, 0.2);
+  background-color: rgba(235, 47, 150, 0.1);
+}
+.com_label_selected .select_tag:nth-child(4n+4) {
+  border: 1px solid rgba(19, 171, 60, 0.2);
+  background-color: rgba(19, 171, 60, 0.1);
+}
+.com_label_selected .select_tag .select_tag_closeBtn {
+  -ms-flex: 0 0 auto;
+  -webkit-box-flex: 0;
+          flex: 0 0 auto;
+  width: 16px;
+  height: 16px;
+  line-height: 14px;
+  text-align: center;
+  margin-left: 4px;
+  cursor: pointer;
+  border-radius: 50%;
+  color: #999;
+}
+.com_label_selected .select_tag .select_tag_closeBtn:hover {
+  background-color: #f00;
+  color: #fff;
+}
+
+/* 通用 选择标签  end   ————————————————   */
+/* 通用 选择标签  更多 标签 弹出层 */
+.com_label_more {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.com_label_more .com_label_more_search {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  padding: 8px;
+}
+.com_label_more .com_label_more_search .xInput-group-icon .iconwrap {
+  color: #bbb;
+  margin-left: 6px;
+}
+.com_label_more .com_label_more_search .xInput-group-icon .xInput {
+  padding-left: 35px;
+}
+.com_label_more .com_label_more_cont {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  overflow: auto;
+  padding: 8px;
+}
+.com_label_more .com_label_more_cont .com_label_more_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.com_label_more .com_label_more_cont .com_label_more_list .label_item {
+  padding: 4px 8px;
+  margin: 2px;
+  min-width: 120px;
+  background: white;
+  border-radius: 3px;
+  border: 1px solid #c7deea;
+  text-align: center;
+  font-size: 12px;
+}
+.com_label_more .com_label_more_page {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  padding: 8px;
+}
+
+/* 通用 选择标签  更多 标签 弹出层  end   ————————————————   */
+/* 通用  查看  静态表格  */
+.com_table_show {
+  table-layout: fixed;
+  width: 100%;
+  min-height: 30px;
+  line-height: 30px;
+  border-collapse: collapse;
+}
+.com_table_show th, .com_table_show td {
+  padding: 5px 10px;
+  border: 1px solid #BFD2DE;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* 内容包裹 */
+}
+.com_table_show th:first-child, .com_table_show td:first-child {
+  border-left-color: transparent;
+}
+.com_table_show th:last-child, .com_table_show td:last-child {
+  border-right-color: transparent;
+}
+.com_table_show th.title, .com_table_show td.title {
+  background: #F1F7FC;
+  font-weight: 14px;
+  font-weight: 600;
+  text-align: right;
+  vertical-align: top;
+}
+.com_table_show th.title.lock, .com_table_show td.title.lock {
+  width: 126px;
+}
+.com_table_show th .content, .com_table_show td .content {
+  line-height: 1.8;
+}
+
+/* 通用  查看  静态表格  end  ————————————————    */
+/* 通用  查看  静态表格2  */
+.com_table_show2 {
+  table-layout: fixed;
+  width: 100%;
+  min-height: 30px;
+  line-height: 30px;
+  border-collapse: collapse;
+}
+.com_table_show2 th, .com_table_show2 td {
+  padding: 5px 10px;
+  border: 1px solid #BFD2DE;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* 内容包裹 */
+}
+.com_table_show2 th:first-child, .com_table_show2 td:first-child {
+  border-left-color: transparent;
+}
+.com_table_show2 th:last-child, .com_table_show2 td:last-child {
+  border-right-color: transparent;
+}
+.com_table_show2 th .content, .com_table_show2 td .content {
+  line-height: 1.8;
+}
+.com_table_show2 thead th {
+  text-align: center;
+  background: #E7E7F0;
+}
+.com_table_show2 thead th.lock-1 {
+  width: 170px;
+}
+.com_table_show2 thead th.lock-2 {
+  width: 80px;
+}
+.com_table_show2 thead th.lock-3 {
+  width: 160px;
+}
+.com_table_show2 .comicon-yes_fill {
+  color: #52C41A;
+  margin-right: 3px;
+  font-size: 16px;
+}
+
+/* 通用  查看  静态表格2  end  ————————————————    */
+/*  通用 暂无数据  ———————————————————————————— */
+.com_nodata {
+  padding: 30px 0 40px;
+  text-align: center;
+}
+.com_nodata .com_nodata_icon {
+  font-size: 48px;
+  color: #c8d6e7;
+}
+.com_nodata .com_nodata_text {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #999;
+}
+
+/*  通用 暂无数据   end */
+/** 通用子三级标题  */
+.com_line_title {
+  border-top: 1px solid #D8D8D8;
+  font-size: 14px;
+  text-align: center;
+  margin: 12px 0px;
+}
+.com_line_title:first-child {
+  margin-top: 0px;
+}
+.com_line_title > legend {
+  padding: 0px 10px;
+  font-weight: 400;
+}
+
+/** 通用子三级标题 end */
+/** 通用子节点标题 */
+.com_childnode_title {
+  padding: 15px 0px 10px;
+}
+.com_childnode_title strong {
+  font-size: 14px;
+  font-weight: 400;
+  color: #222;
+}
+
+/** 通用子节点标题 end*/
+/** 通用病例查看 */
+.com_case_display_wrap {
+  height: 400px;
+}
+
+.com_case_display {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  border: 1px solid #cfe3ed;
+  background: #f1f6fc;
+}
+.com_case_display .com_case_display_header {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  background: #E8F0F8;
+  border-bottom: 1px solid #C7DEEA;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 8px;
+}
+.com_case_display .com_case_display_body {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
+}
+
+/** 通用病例查看 end */
+.v02-popup-wrap > .popup-header {
+  background: #1790FF;
+}
+
+.v02-popup-wrap > .popup-header > .popup-title {
+  color: #fff;
+}
+
+.v02-popup-wrap > .popup-header > .popup-close > i {
+  color: #fff;
+}
+
+/*# sourceMappingURL=common.css.map */

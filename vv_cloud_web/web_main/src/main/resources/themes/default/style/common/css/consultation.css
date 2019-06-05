@@ -1,0 +1,1739 @@
+@charset "UTF-8";
+/* 远程会诊 */
+/*  会诊申请  ————————————————   */
+.consul_apply_wrap {
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+/* 会诊申请 布局 */
+.consul_apply_lyt {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.consul_apply_lyt .consul_apply_lyt_top {
+  position: absolute;
+  top: 0;
+  height: 62px;
+  left: 0;
+  right: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 2px 7px 0px rgba(92, 145, 239, 0.15);
+          box-shadow: 0px 2px 7px 0px rgba(92, 145, 239, 0.15);
+  z-index: 6;
+}
+.consul_apply_lyt .consul_apply_lyt_center {
+  position: absolute;
+  top: 62px;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: auto;
+}
+.consul_apply_lyt .consul_apply_lyt_bottom {
+  position: absolute;
+  bottom: 0;
+  height: 50px;
+  left: 0;
+  right: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 10px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px -2px 4px 0px rgba(0, 0, 0, 0.06);
+          box-shadow: 0px -2px 4px 0px rgba(0, 0, 0, 0.06);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  z-index: 4;
+}
+
+.consul_apply_lyt_center_top {
+  height: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 50px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.consul_apply_lyt_center_cont {
+  position: absolute;
+  top: 50px;
+  bottom: 0;
+  left: 0;
+  right: 50px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: auto;
+  padding: 10px;
+}
+.consul_apply_lyt_center_cont .v-panel {
+  margin-top: 10px;
+}
+
+.consul_apply_lyt_center_right {
+  width: 50px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+/* 会诊 时间轴 */
+.consul_apply_timeaxis {
+  height: 52px;
+  margin-top: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.consul_apply_timeaxis .consul_apply_timeaxis_cont {
+  width: auto;
+  margin-left: -120px;
+}
+.consul_apply_timeaxis .consul_apply_timeaxis_cont .item {
+  width: 150px;
+  height: 52px;
+  display: inline-block;
+  background-color: #fff;
+  color: #999;
+  font-weight: normal;
+  position: relative;
+  overflow: visible;
+}
+.consul_apply_timeaxis .consul_apply_timeaxis_cont .item:before {
+  content: '';
+  position: absolute;
+  top: 23px;
+  left: 0;
+  right: 20px;
+  height: 4px;
+  background-color: #D3D3D3;
+}
+.consul_apply_timeaxis .consul_apply_timeaxis_cont .item:first-child:before {
+  display: none;
+}
+.consul_apply_timeaxis .consul_apply_timeaxis_cont .item .point {
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  top: 21px;
+  right: 4px;
+  border-radius: 50%;
+  background-color: #C7DEEA;
+}
+.consul_apply_timeaxis .consul_apply_timeaxis_cont .item .toptext, .consul_apply_timeaxis .consul_apply_timeaxis_cont .item .textcont {
+  position: absolute;
+  top: 36px;
+  right: 8px;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  font-size: 12px;
+  z-index: 2;
+}
+.consul_apply_timeaxis .consul_apply_timeaxis_cont .item .toptext {
+  top: 2px;
+  color: #999;
+}
+.consul_apply_timeaxis .consul_apply_timeaxis_cont .item.finish:before {
+  background-color: #59b973;
+}
+.consul_apply_timeaxis .consul_apply_timeaxis_cont .item.finish .point {
+  background-color: #59b973;
+}
+.consul_apply_timeaxis .consul_apply_timeaxis_cont .item.finish .textcont {
+  color: #30b554;
+}
+.consul_apply_timeaxis .consul_apply_timeaxis_cont .item.active:before {
+  background-color: #FF6600;
+}
+.consul_apply_timeaxis .consul_apply_timeaxis_cont .item.active .point {
+  background-color: #FF6600;
+  -webkit-box-shadow: 0 0 0px 2px #fff, 0 0 0px 3px #FF6600;
+          box-shadow: 0 0 0px 2px #fff, 0 0 0px 3px #FF6600;
+}
+.consul_apply_timeaxis .consul_apply_timeaxis_cont .item.active .textcont {
+  color: #ff6600;
+}
+
+/* 会诊 申请 提示 */
+.consul_apply_tipwrap {
+  width: 100%;
+  height: 100%;
+  background: #fbf8ea;
+  border: solid 1px #f5e2bb;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 10px;
+}
+.consul_apply_tipwrap .titletext {
+  color: #333;
+  font-size: 18px;
+  font-weight: bolder;
+  margin-right: 20px;
+}
+.consul_apply_tipwrap .titletip {
+  color: #666;
+  font-size: 14px;
+}
+
+/* 会诊 侧边栏 快速导航 */
+.consul_sidenav {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #e2ebf1;
+  -webkit-box-shadow: inset 0 0px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0px 2px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  overflow: hidden;
+  padding-top: 20px;
+  padding-left: 10px;
+  font-size: 14px;
+}
+.consul_sidenav ul {
+  -webkit-box-shadow: 0px 2px 6px 0px rgba(36, 48, 58, 0.06);
+          box-shadow: 0px 2px 6px 0px rgba(36, 48, 58, 0.06);
+}
+.consul_sidenav ul li {
+  width: 70px;
+  height: 70px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 8px 4px;
+  background-color: #fff;
+  border: solid 1px #C7DEEA;
+  border-top: none;
+  color: #666;
+  line-height: 18px;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /*    word-break: break-all;
+      -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+      writing-mode: vertical-lr;*/
+}
+.consul_sidenav ul li.active, .consul_sidenav ul li:hover {
+  background-color: #1790FF;
+  border-color: #1790FF;
+  color: #fff;
+}
+.consul_sidenav ul li:first-child {
+  border-top: solid 1px #C7DEEA;
+}
+.consul_sidenav .gotop {
+  width: 70px;
+  height: 70px;
+  margin-top: 20px;
+  color: #777;
+  background-color: #FBFBFF;
+  border: solid 1px #C7DEEA;
+  -webkit-box-shadow: 0px 2px 6px 0px rgba(36, 48, 58, 0.06);
+          box-shadow: 0px 2px 6px 0px rgba(36, 48, 58, 0.06);
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.consul_sidenav .gotop:hover {
+  background-color: #1790FF;
+  border-color: #1790FF;
+  color: #fff;
+}
+.consul_sidenav .gotop .gotopicon {
+  font-size: 18px;
+  margin-top: -5px;
+  margin-bottom: 6px;
+}
+
+/* 会诊 侧边栏 快速导航 */
+/* 会诊 通用 标题 */
+.consul_com_title {
+  height: 20px;
+  line-height: 20px;
+  font-size: 16px;
+  color: #222;
+  font-weight: bolder;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px 0 10px;
+}
+.consul_com_title:before {
+  content: '';
+  width: 10px;
+  height: 20px;
+  border-radius: 5px;
+  background-color: #1790FF;
+  margin-right: 6px;
+}
+
+/* 会诊申请 操作区 */
+.consul_apply_operwrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.consul_apply_operwraptip {
+  margin-left: 10px;
+  color: #FA8C16;
+}
+.consul_apply_operwraptip .text {
+  margin-left: 3px;
+  font-size: 12px;
+}
+
+/* 会诊申请 操作区 end */
+/* 医生卡 信息查看 */
+.docCardWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.docCardWrap .docCard {
+  width: 380px;
+  margin: 15px 15px 0 0;
+  padding: 5px 10px 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: -webkit-gradient(linear, left bottom, left top, from(#fdfdff), to(#fbfbff));
+  background: linear-gradient(360deg, #fdfdff 0%, #fbfbff 100%);
+  -webkit-box-shadow: 0 4px 24px 0 rgba(36, 48, 58, 0.1);
+          box-shadow: 0 4px 24px 0 rgba(36, 48, 58, 0.1);
+  border-radius: 8px;
+  border: 1px solid #bad1dd;
+  color: #222;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.docCardWrap .docCard .docCard_top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #222;
+}
+.docCardWrap .docCard .docCard_top .operBtn {
+  height: 20px;
+  padding: 4px 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+.docCardWrap .docCard .docCard_top .editBtn i {
+  margin-right: 3px;
+}
+.docCardWrap .docCard .docCard_top .editBtn:hover {
+  color: #3B82FF;
+}
+.docCardWrap .docCard .docCard_top .deleteBtn {
+  margin-left: 20px;
+  font-size: 16px;
+}
+.docCardWrap .docCard .docCard_top .deleteBtn:hover {
+  color: #FF0000;
+}
+.docCardWrap .docCard .docCard_center {
+  padding: 5px 10px 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+.docCardWrap .docCard .docCard_center .contItem {
+  /* 一行 */
+  margin: 8px 0;
+}
+.docCardWrap .docCard .docCard_center .unselected {
+  /* 未选定 */
+  color: #666;
+}
+.docCardWrap .docCard .docCard_center .doctor {
+  /* 医生 */
+  font-size: 22px;
+}
+.docCardWrap .docCard .docCard_center .doctor_tag {
+  font-size: 12px;
+  color: #666;
+}
+.docCardWrap .docCard .docCard_center .hospital {
+  /* 医院 */
+  font-size: 16px;
+}
+.docCardWrap .docCard .docCard_center .hospital_tag {
+  padding: 1px 5px;
+  margin-left: 4px;
+  line-height: 16px;
+  background-color: #f9eccc;
+  border-radius: 2px;
+  border: 1px solid #faab77;
+  color: #f60;
+  font-size: 12px;
+}
+.docCardWrap .docCard .docCard_center .onlySpecialty {
+  /* 专科 */
+  font-size: 16px;
+}
+.docCardWrap .docCard .docCard_center .nortext {
+  /* 正常文字 */
+}
+.docCardWrap .docCard .docCard_center .boldtext {
+  /* 加粗文字 */
+  font-weight: bolder;
+}
+.docCardWrap .docCard .docCard_center .oblique {
+  /* 斜线 */
+  color: #999;
+  margin: 0 2px;
+}
+.docCardWrap .docCard .docCard_center .time_choose {
+  /* 时间选择 */
+}
+.docCardWrap .docCard .docCard_center .time_choose .time_choose_input {
+  width: 95px;
+  height: 25px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 8px;
+  background: #fff;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1) inset;
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1) inset;
+  border-radius: 3px;
+  border: 1px solid #c7dae6;
+  color: #222;
+}
+.docCardWrap .docCard .docCard_center .time_choose .time_choose_input.starttime, .docCardWrap .docCard .docCard_center .time_choose .time_choose_input.endtime {
+  width: 65px;
+}
+.docCardWrap .docCard .docCard_center .time_choose .time_choose_input::-webkit-input-placeholder {
+  color: #999;
+  font-size: 12px;
+}
+.docCardWrap .docCard .docCard_center .time_choose .time_choose_input:-ms-input-placeholder {
+  color: #999;
+  font-size: 12px;
+}
+.docCardWrap .docCard .docCard_center .time_choose .time_choose_input::-ms-input-placeholder {
+  color: #999;
+  font-size: 12px;
+}
+.docCardWrap .docCard .docCard_center .time_choose .time_choose_input::placeholder {
+  color: #999;
+  font-size: 12px;
+}
+.docCardWrap .docCard .docCard_center .time_choose .time_choose_space {
+  padding: 0 1px;
+}
+.docCardWrap .docCard .docCard_center .room_choose {
+  /* 会议室选择 */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 2px 8px;
+  margin-left: 6px;
+  font-size: 12px;
+  color: #333;
+  background: -webkit-gradient(linear, left bottom, left top, from(#f6faff), to(white));
+  background: linear-gradient(360deg, #f6faff 0%, white 100%);
+  -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  border: 1px solid #bfd2de;
+  cursor: pointer;
+}
+.docCardWrap .docCard .docCard_center .room_choose:hover {
+  background: #e4f1f9;
+}
+.docCardWrap .docCard .docCard_center .v-check {
+  margin-right: 16px;
+}
+.docCardWrap .docCard .docCard_center .checked {
+  margin-right: 16px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+.docCardWrap .docCard .docCard_center .checked i {
+  color: #52C41A;
+  margin-right: 3px;
+  font-size: 16px;
+}
+.docCardWrap .docCard .docCard_bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 10px 10px 0;
+}
+.docCardWrap .docCard .docCard_bottom .xBtn {
+  margin-left: 3px;
+}
+
+/* 医生卡 信息查看 end */
+/* 会诊申请   end  */
+/* 会诊 查看   */
+.cons_apply_backlog_conf {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.cons_apply_backlog_conf_left {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 90px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: auto;
+}
+.cons_apply_backlog_conf_left .cons_apply_backlog_conf_top {
+  position: absolute;
+  top: 0;
+  height: 102px;
+  left: 0;
+  right: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 2px 7px 0px rgba(92, 145, 239, 0.15);
+  box-shadow: 0px 2px 7px 0px rgba(92, 145, 239, 0.15);
+  z-index: 6;
+}
+.cons_apply_backlog_conf_left .cons_apply_backlog_conf_center {
+  position: absolute;
+  top: 102px;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: auto;
+  padding: 10px;
+}
+.cons_apply_backlog_conf_left .cons_apply_backlog_conf_center .v-panel {
+  margin: 10px 0;
+}
+.cons_apply_backlog_conf_left .cons_apply_backlog_conf_bottom {
+  position: absolute;
+  bottom: 0;
+  height: 50px;
+  left: 0;
+  right: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 10px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px -2px 4px 0px rgba(0, 0, 0, 0.06);
+          box-shadow: 0px -2px 4px 0px rgba(0, 0, 0, 0.06);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  z-index: 4;
+}
+
+.cons_apply_backlog_conf_right {
+  width: 90px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: auto;
+}
+
+/* 会诊 查看   end  */
+/* 会诊信息查看_顶部总览 */
+.cons_headerInfo_view {
+  background: #EDF6FF;
+  padding-top: 5px;
+  /* 会诊 申请 提示 */
+}
+.cons_headerInfo_view .cons_headerInfo_view_tip {
+  width: 100%;
+  height: 40px;
+  margin-top: 5px;
+  padding: 0 10px;
+  background: #EDF6FF;
+  border-top: solid 1px #C7DEEA;
+  -webkit-box-shadow: 0px 2px 7px 0px rgba(92, 145, 239, 0.15);
+          box-shadow: 0px 2px 7px 0px rgba(92, 145, 239, 0.15);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.cons_headerInfo_view .cons_headerInfo_view_tip .patientname {
+  color: #333;
+  font-size: 18px;
+  font-weight: bolder;
+}
+.cons_headerInfo_view .cons_headerInfo_view_tip .patientinfo {
+  color: #666;
+  font-size: 14px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+/* 会诊 时间轴 */
+.cons_timeLine_view {
+  height: 52px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.cons_timeLine_view .cons_timeLine_view_cont {
+  width: auto;
+  margin-left: -120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.cons_timeLine_view .cons_timeLine_view_cont .item {
+  width: 150px;
+  height: 52px;
+  color: #999;
+  font-weight: normal;
+  position: relative;
+  overflow: visible;
+}
+.cons_timeLine_view .cons_timeLine_view_cont .item:before {
+  content: '';
+  position: absolute;
+  top: 23px;
+  left: 0;
+  right: 26px;
+  height: 4px;
+  background-color: #AEC4CF;
+}
+.cons_timeLine_view .cons_timeLine_view_cont .item:first-child:before {
+  display: none;
+}
+.cons_timeLine_view .cons_timeLine_view_cont .item .point {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 20px;
+  right: 8px;
+  border-radius: 50%;
+  background-color: #AEC4CF;
+}
+.cons_timeLine_view .cons_timeLine_view_cont .item .toptext, .cons_timeLine_view .cons_timeLine_view_cont .item .textcont {
+  position: absolute;
+  top: 36px;
+  right: 10px;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  font-size: 12px;
+  z-index: 2;
+}
+.cons_timeLine_view .cons_timeLine_view_cont .item .toptext {
+  top: 2px;
+}
+.cons_timeLine_view .cons_timeLine_view_cont .item.finish:before {
+  background-color: #13AB3C;
+}
+.cons_timeLine_view .cons_timeLine_view_cont .item.finish .point {
+  background-color: #13AB3C;
+}
+.cons_timeLine_view .cons_timeLine_view_cont .item.active:before {
+  background-color: #13AB3C;
+}
+.cons_timeLine_view .cons_timeLine_view_cont .item.active .point {
+  background-color: #FF6600;
+  -webkit-box-shadow: 0 0 0px 2px #fff, 0 0 0px 3px #FF6600;
+          box-shadow: 0 0 0px 2px #fff, 0 0 0px 3px #FF6600;
+}
+.cons_timeLine_view .cons_timeLine_view_cont .item.active .textcont {
+  color: #222;
+}
+.cons_timeLine_view .cons_timeLine_view_cont .item.active .toptext {
+  color: #222;
+}
+
+/* 医生卡 查看 */
+.cons_doctorCard_view_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.cons_doctorCard_view {
+  width: 380px;
+  margin: 5px 10px 5px 0;
+  padding: 5px 10px 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: -webkit-gradient(linear, left bottom, left top, from(#fdfdff), to(#fbfbff));
+  background: linear-gradient(360deg, #fdfdff 0%, #fbfbff 100%);
+  -webkit-box-shadow: 0 4px 24px 0 rgba(36, 48, 58, 0.1);
+          box-shadow: 0 4px 24px 0 rgba(36, 48, 58, 0.1);
+  border-radius: 8px;
+  border: 1px solid #bad1dd;
+  color: #222;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.cons_doctorCard_view .docCard_center {
+  padding: 5px 10px 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+.cons_doctorCard_view .docCard_center .contItem {
+  /* 一行 */
+  margin: 8px 0;
+}
+.cons_doctorCard_view .docCard_center .unselected {
+  /* 未选定 */
+  color: #666;
+}
+.cons_doctorCard_view .docCard_center .doctor {
+  /* 医生 */
+  font-size: 22px;
+}
+.cons_doctorCard_view .docCard_center .doctor_tag {
+  font-size: 12px;
+  color: #666;
+}
+.cons_doctorCard_view .docCard_center .hospital {
+  /* 医院 */
+  font-size: 16px;
+}
+.cons_doctorCard_view .docCard_center .hospital_tag {
+  padding: 1px 5px;
+  margin-left: 4px;
+  line-height: 16px;
+  background-color: #f9eccc;
+  border-radius: 2px;
+  border: 1px solid #faab77;
+  color: #f60;
+  font-size: 12px;
+}
+.cons_doctorCard_view .docCard_center .onlySpecialty {
+  /* 专科 */
+  font-size: 16px;
+}
+.cons_doctorCard_view .docCard_center .nortext {
+  /* 正常文字 */
+}
+.cons_doctorCard_view .docCard_center .boldtext {
+  /* 加粗文字 */
+  font-weight: bolder;
+}
+.cons_doctorCard_view .docCard_center .oblique {
+  /* 斜线 */
+  color: #999;
+  margin: 0 2px;
+}
+.cons_doctorCard_view .docCard_center .checked {
+  margin-right: 16px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+.cons_doctorCard_view .docCard_center .checked i {
+  color: #52C41A;
+  margin-right: 3px;
+  font-size: 16px;
+}
+
+/* 医生卡 查看 end */
+/*  发起申请  筛选    */
+.start_apply_filtwrap {
+  padding: 10px 0;
+  background-color: #F1F6FC;
+  border-bottom: solid 1px #C7DEEA;
+  position: relative;
+  z-index: 8;
+}
+
+.start_apply_filt_cen {
+  /*width: 1200px;*/
+  margin: auto 20px;
+}
+
+.start_apply_filt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 3px 0;
+}
+.start_apply_filt.inline {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-right: 50px;
+}
+
+.start_apply_filt_title {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  padding-right: 10px;
+  padding-top: 5px;
+  color: #666;
+  width: 80px;
+  text-align: right;
+}
+
+.start_apply_filt_cont {
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+}
+.start_apply_filt_cont ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.start_apply_filt_cont ul li {
+  width: auto;
+  height: 20px;
+  padding: 0 12px;
+  margin: 2px 8px 2px 0;
+  border-radius: 10px;
+  color: #333;
+  line-height: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  cursor: pointer;
+}
+.start_apply_filt_cont ul li.active, .start_apply_filt_cont ul li:hover {
+  background-color: #3FA9FF;
+  color: #fff;
+}
+.start_apply_filt_cont .check {
+  margin: 3px 0;
+}
+
+.start_apply_tip {
+  width: 1200px;
+  margin: 20px auto 10px;
+  color: #222;
+}
+
+/*  发起申请  筛选 end   */
+/*  发起申请  标签   */
+.start_apply_tag .tagitem {
+  height: 22px;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 2px 0 0;
+  padding: 0 6px;
+  color: #222;
+  line-height: 20px;
+  background: #FBFBFF;
+  -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.05);
+  border-radius: 2px;
+  border: 1px solid #c7deea;
+  font-size: 12px;
+}
+.start_apply_tag .tagitem:nth-child(n+1) {
+  color: #417505;
+}
+.start_apply_tag .tagitem:nth-child(n+2) {
+  color: #D0021B;
+}
+.start_apply_tag .tagitem:nth-child(n+3) {
+  color: #4A90E2;
+}
+.start_apply_tag .tagitem:nth-child(n+4) {
+  color: #FF8700;
+}
+
+/*  发起申请  标签 end   */
+/*  发起申请  入口   */
+.start_apply_entry {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: linear-gradient(142deg, #e9f3fb 0%, white 100%);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: auto;
+  /*  border:1px solid rgba(151,151,151,1);*/
+}
+.start_apply_entry .start_apply_entry_center {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 80px 20px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.start_apply_entry .start_apply_entry_tip {
+  color: #222;
+  font-weight: bolder;
+  font-size: 16px;
+}
+.start_apply_entry .start_apply_entry_cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 60px 0;
+}
+.start_apply_entry .start_apply_entry_cont .start_apply_entry_item {
+  width: 222px;
+}
+.start_apply_entry .start_apply_entry_cont .start_apply_entry_item .entry_img {
+  height: 322px;
+  -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 7px;
+  cursor: pointer;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+.start_apply_entry .start_apply_entry_cont .start_apply_entry_item .entry_img .choosebtn {
+  display: inline-block;
+  height: 48px;
+  line-height: 46px;
+  color: #fff;
+  font-size: 22px;
+  font-weight: bolder;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+.start_apply_entry .start_apply_entry_cont .start_apply_entry_item .entry_img .choosebtn i {
+  margin-left: 8px;
+}
+.start_apply_entry .start_apply_entry_cont .start_apply_entry_item .entry_img:hover {
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  -webkit-transform: translate3d(0, 2px, 0);
+          transform: translate3d(0, 2px, 0);
+}
+.start_apply_entry .start_apply_entry_cont .start_apply_entry_item .entry_img.hos {
+  background: url("../images/consultation/start_apply_entry_hos.png") center no-repeat;
+}
+.start_apply_entry .start_apply_entry_cont .start_apply_entry_item .entry_img.doc {
+  background: url("../images/consultation/start_apply_entry_doc.png") center no-repeat;
+}
+.start_apply_entry .start_apply_entry_cont .start_apply_entry_item .entry_img.subject {
+  background: url("../images/consultation/start_apply_entry_subject.png") center no-repeat;
+}
+.start_apply_entry .start_apply_entry_cont .start_apply_entry_item .entry_img.disease {
+  background: url("../images/consultation/start_apply_entry_disease.png") center no-repeat;
+}
+.start_apply_entry .start_apply_entry_cont .start_apply_entry_item .entry_tip {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #666;
+  line-height: 18px;
+}
+.start_apply_entry .start_apply_entry_bottom {
+  padding: 20px 0;
+  border-top: dashed 1px #dbeaf8;
+  text-align: right;
+}
+.start_apply_entry .start_apply_entry_bottom .operbtn {
+  display: inline-block;
+  height: 32px;
+  line-height: 30px;
+  color: #fff;
+  padding: 0 10px;
+  background: #fa8c16;
+  -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  border: 1px solid #c86e0e;
+  cursor: pointer;
+}
+.start_apply_entry .start_apply_entry_bottom .operbtn:hover {
+  background: #f07d11;
+}
+
+/*  发起申请  入口  end */
+/*  发起申请  选择医院  历史版本  */
+.start_apply_hospital_bak {
+  margin: 10px;
+  background-color: #F9FAFF;
+  -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid #a6bcd3;
+}
+
+.start_apply_hospital_bak_list {
+  width: 1200px;
+  margin: auto;
+  padding-bottom: 20px;
+}
+
+.start_apply_hospital_bak_item {
+  padding: 20px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-bottom: solid 1px #E8F0F8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.start_apply_hospital_bak_item:last-child {
+  border-bottom: none;
+}
+.start_apply_hospital_bak_item .hospital_img {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 170px;
+  height: 108px;
+  overflow: hidden;
+}
+.start_apply_hospital_bak_item .hospital_img img {
+  height: 100%;
+}
+.start_apply_hospital_bak_item .hospital_cont {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  padding-left: 10px;
+}
+.start_apply_hospital_bak_item .hospital_cont .hospital_name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.start_apply_hospital_bak_item .hospital_cont .hospital_name .nametext {
+  font-size: 20px;
+  color: #222;
+  margin-right: 20px;
+}
+.start_apply_hospital_bak_item .hospital_cont .hospital_cen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.start_apply_hospital_bak_item .hospital_cont .hospital_cen .hospital_intro {
+  margin: 13px 0;
+  font-size: 14px;
+  color: #666;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.start_apply_hospital_bak_item .hospital_cont .hospital_cen .hospital_oper {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  margin-left: 40px;
+}
+.start_apply_hospital_bak_item .hospital_cont .hospital_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.start_apply_hospital_bak_item .hospital_cont .hospital_info .infoitem {
+  color: #222;
+  border-right: solid 1px #AEC4CF;
+  margin-right: 20px;
+  padding-right: 20px;
+  line-height: 14px;
+}
+.start_apply_hospital_bak_item .hospital_cont .hospital_info .infoitem:last-child {
+  border-right: none;
+}
+.start_apply_hospital_bak_item .hospital_cont .hospital_info .infoitem .number {
+  color: #4A90E2;
+  margin-left: 4px;
+  font-weight: bolder;
+}
+
+/*  发起申请  选择医院  历史版本  end  */
+/*  发起申请  选择医院   */
+.start_apply_hospital {
+  margin: 10px;
+  background-color: #F9FAFF;
+  -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid #a6bcd3;
+}
+
+.start_apply_hospital_list {
+  width: 1220px;
+  margin: auto;
+  padding-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.start_apply_hospital_item {
+  width: 386px;
+  margin: 10px;
+  padding: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #FBFBFF;
+  -webkit-box-shadow: 0px 2px 6px 0px rgba(36, 48, 58, 0.06);
+          box-shadow: 0px 2px 6px 0px rgba(36, 48, 58, 0.06);
+  border-radius: 5px;
+  border: 1px solid #c7deea;
+}
+.start_apply_hospital_item .hospital_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.start_apply_hospital_item .hospital_info .hosimg {
+  width: 96px;
+  height: 96px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+.start_apply_hospital_item .hospital_info .hosimg img {
+  width: 100%;
+  height: 100%;
+}
+.start_apply_hospital_item .hospital_info .baseinfo {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  margin-left: 12px;
+}
+.start_apply_hospital_item .hospital_info .baseinfo .hosname {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 22px;
+}
+.start_apply_hospital_item .hospital_info .baseinfo .good {
+  margin-top: 10px;
+  color: #222;
+  line-height: 18px;
+}
+.start_apply_hospital_item .hospital_intro {
+  margin: 6px 0;
+  font-size: 12px;
+  color: #222;
+  line-height: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.start_apply_hospital_item .hospital_number {
+  margin: 12px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.start_apply_hospital_item .hospital_number .infoitem {
+  color: #222;
+  border-right: solid 1px #AEC4CF;
+  margin-right: 20px;
+  padding-right: 20px;
+  line-height: 14px;
+}
+.start_apply_hospital_item .hospital_number .infoitem:last-child {
+  border-right: none;
+}
+.start_apply_hospital_item .hospital_number .infoitem .number {
+  color: #4A90E2;
+  margin-left: 4px;
+  font-weight: bolder;
+}
+.start_apply_hospital_item .hospital_oper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/*  发起申请  选择医院   end  */
+/*  发起申请  选择医生   */
+.start_apply_doctor {
+  margin: 10px;
+  background-color: #F9FAFF;
+  -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid #a6bcd3;
+}
+
+.start_apply_doctor_list {
+  width: 1220px;
+  margin: auto;
+  padding-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.start_apply_doctor_item {
+  width: 386px;
+  margin: 10px;
+  padding: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #FBFBFF;
+  -webkit-box-shadow: 0px 2px 6px 0px rgba(36, 48, 58, 0.06);
+          box-shadow: 0px 2px 6px 0px rgba(36, 48, 58, 0.06);
+  border-radius: 5px;
+  border: 1px solid #c7deea;
+  /*.doctor_star{
+    color: rgba(239, 218, 177, 0.5);
+    font-size:12px;
+    .allstar{
+      display: inline-block;
+      position: relative;
+      letter-spacing: -1px;
+      .lightstar{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        color: #FAAD14;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+    }
+    .startext{
+      display: inline-block;
+      margin-left: 4px;
+      color: #FAAD14;
+      font-size:14px;
+    }
+  }*/
+}
+.start_apply_doctor_item .doctor_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.start_apply_doctor_item .doctor_info .docimg {
+  width: 96px;
+  height: 96px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+.start_apply_doctor_item .doctor_info .docimg img {
+  width: 100%;
+  height: 100%;
+}
+.start_apply_doctor_item .doctor_info .baseinfo {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  margin-left: 12px;
+}
+.start_apply_doctor_item .doctor_info .baseinfo .docname {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.start_apply_doctor_item .doctor_info .baseinfo .docname .nametext {
+  font-size: 22px;
+}
+.start_apply_doctor_item .doctor_info .baseinfo .profe {
+  margin: 5px 0 10px;
+  font-size: 12px;
+  color: #666;
+}
+.start_apply_doctor_item .doctor_info .baseinfo .good {
+  font-size: 12px;
+  color: #222;
+  line-height: 18px;
+}
+.start_apply_doctor_item .doctor_intro {
+  margin: 6px 0;
+  font-size: 12px;
+  color: #222;
+  line-height: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.start_apply_doctor_item .doctor_disease {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #222;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  /*
+      .item{
+        margin: 3px 8px 3px 0;
+        height: 14px;
+        line-height: 14px;
+        border-right: solid 1px #AEC4CF;
+        &:last-child{
+          border-right: none;
+        }
+      }*/
+}
+.start_apply_doctor_item .doctor_oper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/*  发起申请  选择医生   end  */
+/*  发起申请  选择学科   */
+.start_apply_subject {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.start_apply_subject_nav {
+  width: 250px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  bottom: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.start_apply_subject_nav li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 40px;
+  background-color: #FBFBFF;
+  border-bottom: solid 1px #E8F0F8;
+  cursor: pointer;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.start_apply_subject_nav li:last-child {
+  border-bottom: none;
+}
+.start_apply_subject_nav li.active, .start_apply_subject_nav li:hover {
+  background-color: #E8F0F8;
+  font-weight: bold;
+}
+.start_apply_subject_nav li .arrow {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  color: #1890FF;
+  font-size: 20px;
+  padding: 0 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.start_apply_subject_nav li .subject_name {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.start_apply_subject_cont {
+  position: absolute;
+  left: 270px;
+  top: 10px;
+  bottom: 10px;
+  right: 10px;
+}
+.start_apply_subject_cont .subject_panel {
+  margin: 0 20px;
+  padding: 20px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-bottom: solid 1px #F2F2F2;
+}
+.start_apply_subject_cont .subject_panel:hover {
+  background-color: #f9f9f9;
+}
+.start_apply_subject_cont .subject_panel .subject_panel_title {
+  color: #666;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+.start_apply_subject_cont .subject_panel .subject_panel_cont ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: -10px;
+}
+.start_apply_subject_cont .subject_panel .subject_panel_cont ul li {
+  min-width: 150px;
+  margin: 2px 0;
+  color: #333;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.start_apply_subject_cont .subject_panel .subject_panel_cont ul li .subject_text {
+  display: inline-block;
+  padding: 0 10px;
+  border-radius: 3px;
+  line-height: 28px;
+  cursor: pointer;
+}
+.start_apply_subject_cont .subject_panel .subject_panel_cont ul li .subject_text:hover {
+  background-color: #E8F0F8;
+}
+
+/*  发起申请  选择学科   end  */
+/*  发起申请  选择疾病   */
+.start_apply_disease {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.start_apply_disease_nav {
+  width: 330px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  bottom: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.start_apply_disease_nav .disease_nav_panel {
+  height: 600px;
+}
+
+.start_apply_disease_cont {
+  position: absolute;
+  left: 350px;
+  top: 10px;
+  bottom: 10px;
+  right: 10px;
+}
+.start_apply_disease_cont .part_item {
+  margin: 0 20px;
+  padding: 20px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-bottom: solid 1px #F2F2F2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.start_apply_disease_cont .part_item:hover {
+  background-color: #f9f9f9;
+}
+.start_apply_disease_cont .part_item .part_icon {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  font-size: 60px;
+  padding: 0 20px;
+  margin-right: 30px;
+  color: #1890FF;
+}
+.start_apply_disease_cont .part_item .part_cont {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+.start_apply_disease_cont .part_item .part_cont ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.start_apply_disease_cont .part_item .part_cont ul li {
+  min-width: 180px;
+  margin: 2px 0;
+  color: #333;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.start_apply_disease_cont .part_item .part_cont ul li .disease_text {
+  display: inline-block;
+  padding: 0 10px;
+  border-radius: 3px;
+  line-height: 28px;
+  cursor: pointer;
+}
+.start_apply_disease_cont .part_item .part_cont ul li .disease_text:hover {
+  background-color: #E8F0F8;
+}
+
+.start_apply_disease_tab {
+  position: relative;
+  padding: 10px;
+}
+.start_apply_disease_tab .adultimg {
+  height: 400px;
+  margin: 50px 0;
+}
+.start_apply_disease_tab .adultimg.man_front {
+  background: url("../images/consultation/start_apply_disease_man_front.svg") center no-repeat;
+}
+.start_apply_disease_tab .adultimg.man_back {
+  background: url("../images/consultation/start_apply_disease_man_back.svg") center no-repeat;
+}
+.start_apply_disease_tab .adultimg.woman_front {
+  background: url("../images/consultation/start_apply_disease_woman_front.svg") center no-repeat;
+}
+.start_apply_disease_tab .adultimg.woman_back {
+  background: url("../images/consultation/start_apply_disease_woman_back.svg") center no-repeat;
+}
+.start_apply_disease_tab .choose_feature {
+  text-align: center;
+}
+.start_apply_disease_tab .oldmanimg {
+  height: 400px;
+  margin: 50px 0;
+  background: url("../images/consultation/start_apply_disease_oldman.svg") center no-repeat;
+}
+.start_apply_disease_tab .childimg {
+  height: 300px;
+  margin: 100px 0;
+  background: url("../images/consultation/start_apply_disease_child.svg") center no-repeat;
+}
+.start_apply_disease_tab .start_apply_disease_tab_partshow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.start_apply_disease_tab .start_apply_disease_tab_partshow .partpoint {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background-color: #CDF79F;
+  position: absolute;
+  left: 50%;
+}
+.start_apply_disease_tab .start_apply_disease_tab_partshow .partpoint .parttext {
+  position: absolute;
+  top: -6px;
+  left: 56px;
+  padding: 0 8px;
+  height: 26px;
+  line-height: 26px;
+  border-radius: 2px;
+  background-color: #3FA9FF;
+  -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  font-size: 14px;
+  white-space: nowrap;
+}
+.start_apply_disease_tab .start_apply_disease_tab_partshow .partpoint:before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  border-radius: 50%;
+  background-color: #7ED321;
+}
+.start_apply_disease_tab .start_apply_disease_tab_partshow .partpoint:after {
+  content: "";
+  width: 40px;
+  height: 1px;
+  position: absolute;
+  top: 5px;
+  left: 12px;
+  background-color: #D8D8D8;
+}
+.start_apply_disease_tab .start_apply_disease_tab_partshow .partpoint.left .parttext {
+  right: 56px;
+  left: auto;
+}
+.start_apply_disease_tab .start_apply_disease_tab_partshow .partpoint.left:after {
+  top: 5px;
+  right: 12px;
+  left: auto;
+}
+.start_apply_disease_tab .start_apply_disease_tab_partshow .partpoint.part_1 {
+  top: 65px;
+  margin-left: -6px;
+}
+.start_apply_disease_tab .start_apply_disease_tab_partshow .partpoint.part_2 {
+  top: 125px;
+  margin-left: -36px;
+}
+.start_apply_disease_tab .start_apply_disease_tab_partshow .partpoint.part_3 {
+  top: 160px;
+  margin-left: 16px;
+}
+.start_apply_disease_tab .start_apply_disease_tab_partshow .partpoint.part_4 {
+  top: 210px;
+  margin-left: 10px;
+}
+.start_apply_disease_tab .start_apply_disease_tab_partshow .partpoint.part_5 {
+  top: 255px;
+  margin-left: 6px;
+}
+.start_apply_disease_tab .start_apply_disease_tab_partshow .partpoint.part_6 {
+  top: 300px;
+  margin-left: -26px;
+}
+.start_apply_disease_tab .start_apply_disease_tab_partshow .partpoint.part_21 {
+  top: 125px;
+  margin-left: -36px;
+}
+.start_apply_disease_tab .start_apply_disease_tab_partshow .partpoint.part_22 {
+  top: 160px;
+  margin-left: 16px;
+}
+.start_apply_disease_tab .start_apply_disease_tab_partshow .partpoint.part_23 {
+  top: 235px;
+  margin-left: 10px;
+}
+
+/*  发起申请  选择疾病   end  */

@@ -1,0 +1,32 @@
+<!-- radio -->
+{{each data}}
+<span class="v-radio">
+    <input name="test" type="radio" class="v-radio-input" value="{{$value[config.value]}}" {{$value.checked?"checked":""}}>
+    <div class="v-radio-inner">
+    </div>
+    <div class="v-radio-text">{{$value[config.text]}}</div>
+</span>
+{{/each}}
+<!-- radio  end-->
+
+<!-- checkbox -->
+{{each data}}
+<span class="v-check">
+    <input name="{{config.name}}" type="checkbox" class="v-check-input" value="{{$value[config.value]}}" {{$value.checked?"checked":""}}>
+    <div class="v-check-inner">
+    </div>
+    <div class="v-check-text">{{$value[config.text]}}</div>
+</span>
+{{/each}}
+<!-- checkbox  end-->
+
+<!-- select -->
+<select class="xInput" name="{{config.name}}">
+	{{if config.empty}}
+    	<option title="{{config.firstName}}" value="{{config.firstValue}}">{{config.firstName}}</option>
+    {{/if}}
+	{{each data}}
+	    <option title="{{$value[config.text]}}" value="{{$value[config.value]}}" {{$value.checked?"selected":""}}>{{$value[config.text]}}</option>
+    {{/each}}
+</select>
+<!-- select  end-->

@@ -1,0 +1,93 @@
+<form id="form_hos">
+<div class="platmana_com_popcont">
+	<input type="hidden" class="xInput" value="123456" id="consultation-prim_id">
+	<div class="v-panel hasheader">
+	    <div class="v-panel-header v-combg">
+	        <div class="v-panel-title">患者知情同意书</div>
+	    </div>
+	    <div class="v-panel-body">
+			<div class="form-cont">
+				<a class="xBtn xBtn-default" target="_blank" href="${pageContext.request.contextPath}/download/downloadAgreeBook.htm">下载模板</a>
+				<button class="xBtn xBtn-default bnt-patient-book" type="button" style="position:relative">附件上传</button>
+			</div>
+	    </div>
+	</div>
+<div class="v-panel hasheader">
+	    <div class="v-panel-header v-combg">
+	        <div class="v-panel-title">影像资料附件</div>
+	    </div>
+	    <div class="v-panel-body">
+			<div class="form-cont">
+				<button class="xBtn xBtn-default" type="button" id="btn-addImageExamInfo" style="position:relative">影像采集</button>
+				<button class="xBtn xBtn-default bnt-image-exam" type="button" style="position:relative">附件上传</button>
+			</div>
+			<div class="platmana_comlist_cont">
+				<table class="comlist_tablewrap" id="table-imageExamInfo">
+	                <tr>
+	                    <th><p>检查号</p></th>
+	                    <th><p>患者名称</p></th>
+	                    <th><p>检查时间</p></th>
+	                    <th><p>设备名称</p></th>
+	                    <th><p>设备类型</p></th>
+	                    <th><p>检查描述</p></th>
+	                    <th><p>会诊来源</p></th>
+	                    <th><p>查看</p></th>
+	                    <th><p>操作</p></th>
+	                </tr>
+	                <tr>
+	                    <td>
+	                        <span id="xeguid" value="${imageExamInfo.xeguid}"></span><span id="studyid">${imageExamInfo.studyid}</span>
+	                    </td>
+	                    <td>
+	                        <span id="patientname">${imageExamInfo.patientname}</span>
+	                    </td>
+	                    <td>
+	                        <span id="studytime"><fmt:formatDate  value='${imageExamInfo.studytime}' pattern='yyyy-MM-dd HH:mm:ss'/></span>
+	                    </td>
+	                    <td>
+	                        <span id="devicename">${imageExamInfo.devicename}</span>
+	                    </td>
+	                    <td>
+	                        <span id="devicetypename">${imageExamInfo.devicetypename}</span>
+	                    </td>
+	                    <td>
+	                        <span id="studydescribe">${imageExamInfo.studydescribe}</span>
+	                    </td>
+	                    <td>
+	                        <span id="data_sources">${imageExamInfo.data_sources}</span>
+	                    </td>
+	                    <td>
+	                    	<a class="xBtn xBtn-default ma-l-5" target="_blank" id="lanchCross" href="${imageExamInfo.lanchCross}">客户端</a>
+	                        <a class="xBtn xBtn-default" target="_blank" id="url" href="${imageExamInfo.url}">web端</a>
+	                    </td>
+	                    <td>
+	                        <button class="xBtn xBtn-danger" id="btn-deleteImageExamInfo">删除</button>
+	                    </td>
+	                </tr>
+	            </table>
+	    	</div>
+	    </div>
+	</div>
+	<div class="v-panel hasheader">
+	    <div class="v-panel-header v-combg">
+	        <div class="v-panel-title">检验资料附件</div>
+	    </div>
+	    <div class="v-panel-body">
+			<div class="form-cont">
+				<button class="xBtn xBtn-default bnt-up-check" type="button" style="position:relative">检验资料上传</button>
+			</div>
+	    </div>
+	</div>
+	<div class="v-panel hasheader">
+	    <div class="v-panel-header v-combg">
+	        <div class="v-panel-title">心电资料附件</div>
+	    </div>
+	    <div class="v-panel-body">
+			<div class="form-cont">
+				<button class="xBtn xBtn-default bnt-image-egc" type="button" style="position:relative">心电资料上传</button>
+			</div>
+	    </div>
+	</div>
+
+</div>
+</form>

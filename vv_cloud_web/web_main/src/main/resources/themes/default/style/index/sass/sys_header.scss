@@ -1,0 +1,69 @@
+
+//  变量
+@import "mixins/_variables";
+
+/* 头部 */
+
+.#{$pre}Index_header {
+  width: 100%;
+  height: 100%;
+  padding: 0 16px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  .sysinfo{
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+    .syslogo{
+      flex: 0 0 auto;
+      img{
+        //height: 34px;
+        /*max-height: 100%;*/
+      }
+    }
+    .systitle{
+      font-size: 22px;
+      font-weight: bolder;
+      margin-left: 16px;
+      flex: 0 0 auto;
+    }
+  }
+
+  .sysnav{
+    display: flex;
+    align-items: center;
+    ul{
+      height: 100%;
+      display: flex;
+      li{
+        width: 90px;
+        padding:0 6px;
+        border-left: solid 1px #4590fc;
+        text-align: center;
+        font-size: 14px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:first-child{
+          border-left: none;
+        }
+        &.active, &:hover{
+          background-color: #4590fc;
+        }
+      }
+    }
+    .sysnavmore{
+      margin-left: 8px;
+      font-size: 16px;
+    }
+  }
+
+
+}
+
+
+

@@ -1,0 +1,62 @@
+<!-- root -->
+
+<ul class="syind_menu_ul">
+	{{each root}}
+	<li class="hasarr {{$value[keyMap.is_open]=='10'?'open':''}}">
+		<a href="{{$value[keyMap.children]?'javascript:void(0)':$value[keyMap.menu_url]}}" {{$value[keyMap.open_style]?'open_style='+$value[keyMap.open_style]:''}} menu_id="{{$value[keyMap.menu_id]}}">
+			<span class="group_icon"><i class="{{$value.icon}}"></i></span>
+			<span class="group_title">{{$value[keyMap.menu_name]}}</span>
+			<span class="group_arr"></span>
+		</a>
+		{{if $value[keyMap.children]}}
+			<ul class="sub-menu">
+				{{each $value[keyMap.children] sub index}} 
+					{{@$imports.subMenutpl(sub,keyMap)}}
+				{{/each}}
+			</ul>
+		{{/if}}
+		
+	</li>
+	{{/each}}
+</ul>
+
+<!-- root end  -->
+
+<!-- sub -->
+	{{if renderdata}}
+			<li class="hasarr {{renderdata[keyMap.is_open]=='10'?'open':''}}">
+			
+				<a href="{{renderdata[keyMap.children]?'javascript:void(0)':renderdata[keyMap.menu_url]}}" {{renderdata[keyMap.open_style]?'open_style='+renderdata[keyMap.open_style]:''}} menu_id="{{renderdata[keyMap.menu_id]}}">
+					<span class="group_title">{{renderdata[keyMap.menu_name]}}</span>
+					<span class="group_arr"></span> 
+				</a>
+				{{if renderdata[keyMap.children]}}
+					<ul class="sub-menu">
+						{{each renderdata[keyMap.children]}} 
+							{{@$imports.subMenutpl($value,keyMap)}}
+						{{/each}}
+					</ul>
+				{{/if}}
+				
+				
+			</li>
+	{{/if}}
+<!-- sub end -->
+
+<!-- nav -->
+<div class="sysnav">
+	<ul>
+	    {{each renderdata}}
+			<li url="{{$value[keyMap.menu_url]}}" menu_id="{{$value[keyMap.menu_id]}}" open_style="{{$value[keyMap.open_style]}}">
+				{{$value[keyMap.menu_name]}}
+			</li>
+	    {{/each}}
+	</ul>
+	<div class="sysnavmore">
+		<i class="comicon-down_line"></i>
+	</div>
+</div>
+<!-- nav end -->
+
+
+

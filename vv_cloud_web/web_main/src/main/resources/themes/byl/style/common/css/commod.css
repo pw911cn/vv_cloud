@@ -1,0 +1,229 @@
+@charset "UTF-8";
+/*  通用 公共模块 */
+/*  通用 左侧选择，右侧结果  ———————————————————————————— */
+.com_mutiselect {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.com_mutiselect .com_mutiselect_all {
+  width: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+.com_mutiselect .com_mutiselect_all .all_list {
+  width: 100%;
+}
+.com_mutiselect .com_mutiselect_all .all_list li {
+  height: 38px;
+  border-bottom: solid 1px #BFD2DE;
+  padding-left: 10px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.com_mutiselect .com_mutiselect_all .all_list li:first-child {
+  border-top: solid 1px #BFD2DE;
+}
+.com_mutiselect .com_mutiselect_all .all_list li.active, .com_mutiselect .com_mutiselect_all .all_list li:hover {
+  background-color: #C7DEEA;
+}
+.com_mutiselect .com_mutiselect_all .all_list li .deletebtn {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 30px;
+  height: 100%;
+  cursor: pointer;
+  color: #F5222D;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.com_mutiselect .com_mutiselect_all .all_list li .deletebtn:hover {
+  background-color: #C7DEEA;
+  color: #ff4d56;
+}
+.com_mutiselect .com_mutiselect_all .all_list li .permname {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+.com_mutiselect .com_mutiselect_all .all_list li .setbtn {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  cursor: pointer;
+}
+.com_mutiselect .com_mutiselect_selected {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 0;
+  bottom: 0;
+}
+.com_mutiselect .com_mutiselect_selected .v-panel {
+  border-left: none;
+}
+.com_mutiselect .com_mutiselect_selected .selected_list {
+  width: 100%;
+}
+.com_mutiselect .com_mutiselect_selected .selected_list li {
+  height: 38px;
+  border-bottom: solid 1px #BFD2DE;
+  padding-left: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.com_mutiselect .com_mutiselect_selected .selected_list li:first-child {
+  border-top: solid 1px #BFD2DE;
+}
+.com_mutiselect .com_mutiselect_selected .selected_list li.active {
+  background-color: #C7DEEA;
+}
+.com_mutiselect .com_mutiselect_selected .selected_list li .deletebtn {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 30px;
+  height: 100%;
+  cursor: pointer;
+  color: #F5222D;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.com_mutiselect .com_mutiselect_selected .selected_list li .deletebtn:hover {
+  background-color: #C7DEEA;
+  color: #ff4d56;
+}
+.com_mutiselect .com_mutiselect_selected .selected_list li .permname {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+.com_mutiselect .com_mutiselect_selected .selected_list li .setbtn {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  cursor: pointer;
+}
+.com_mutiselect .select_lyt {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.com_mutiselect .select_lyt .select_topbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 8px;
+  background-color: #F1F6FC;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.com_mutiselect .select_lyt .select_topbar .title {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  line-height: 34px;
+}
+.com_mutiselect .select_lyt .select_topbar .cont {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+.com_mutiselect .select_lyt .select_topbar .oper {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+.com_mutiselect .select_lyt .select_topbar .oper .moresearch {
+  font-size: 14px;
+  color: #666666;
+  line-height: 34px;
+}
+.com_mutiselect .select_lyt .select_cont {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  bottom: 40px;
+  width: 100%;
+  overflow: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.com_mutiselect .select_lyt .select_cont .nodata {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+  color: #9B9B9B;
+  line-height: 22px;
+}
+.com_mutiselect .select_lyt .select_oper {
+  position: absolute;
+  height: 40px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 5px 10px 0;
+  text-align: center;
+}
+
+/*  通用 左侧选择，右侧结果   end */
+/*  通用 暂无数据  ———————————————————————————— */
+.com_nodata {
+  padding: 30px 0 40px;
+  text-align: center;
+}
+.com_nodata .com_nodata_icon {
+  font-size: 48px;
+  color: #c8d6e7;
+}
+.com_nodata .com_nodata_text {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #95aec7;
+  color: #999;
+}
+
+/*  通用 暂无数据   end */

@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="keywords" content="远程医疗协同平台">
+	<meta name="description" content="远程医疗协同平台">
+	
+	<meta http-equiv="Expires" content="0" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Cache-Control" content="no-store" />
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="renderer" content="webkit"/>
+
+	<title>远程医疗协同平台</title>
+	<!-- =======================================CSS START======================================= -->
+	<!-- 组件样式 -->
+	<link rel="stylesheet" href="../../core/plugin/corejs/v/0.2.1/themes/default/v.css">
+
+	<!-- 通用菜单 -->
+	<link rel="stylesheet" href="../../core/plugin/corejs/navigation/0.1/themes/tms4/navigation.css">
+
+	<!-- 页签角标 -->
+	<link type="image/x-icon" href="./style/logo/sys_ico.ico" rel="shortcut icon">
+
+	<!-- 公共初始化 -->
+	<link rel="stylesheet" href="../common/sy_reset.css">
+	<!-- 公共图标 -->
+	<link rel="stylesheet" href="../common/comicon/comicon.css">
+	<script id="activeconfig">
+		function loadScript(uri){
+			if(Object.prototype.toString.call(uri)=="[object Object]"){
+				uri=[uri];
+			}
+		    var script = document.createElement ("script");
+		    var target=uri[0];
+		    if(typeof target=="string"){
+		    	script.src =target+"?"+new Date().getTime();
+		    }else{
+		    	if(target&&target.attr){
+			    	for(var i=0;i<uri[0].attr.length;i++){
+			    		if(uri[0].attr[i].name){
+			    			script.setAttribute(uri[0].attr[i].name,uri[0].attr[i].value);
+			    		}
+			    		
+			    	}
+			    	
+			    }
+		    	script.src =target.url+"?"+new Date().getTime();
+		    }
+		    
+		    script.type = "text/javascript";
+		    if (script.readyState){ //IE
+		        script.onreadystatechange = function(){
+		            if (script.readyState == "loaded" || script.readyState == "complete"){
+		                script.onreadystatechange = null;
+		                callback();
+		            }
+		        };
+		    } else { //Others
+		        script.onload = function(){
+		            callback();
+		        };
+		    }
+		    
+		    document.getElementsByTagName("head")[0].appendChild(script);
+		    
+		    function callback(){
+		    	uri.shift();
+		    	if(!uri.length){
+		    		return
+		    	}
+		    	loadScript(uri);
+		    }
+		}
+		loadScript(["./config.js","./style/ui_index.js","./style/ui_common.js","./style/allcss.js",{
+			url:"../../libs/requirejs/2.3.5/require.min.js",
+			attr:[
+				{name:"data-main",value:"index.js"},
+				{name:"async",value:true}
+			]
+		}]);
+	</script>
+	
+    <!-- 业务 css -->
+    <link rel="stylesheet" href="../../core/plugin/corejs/vValidate/vValidate.css">
+
+	<!-- 业务 上传 -->
+	<link rel="stylesheet" href="../../libs/rebox/jquery-rebox.css">
+	<link rel="stylesheet" href="../../core/plugin/corejs/zUploader/css/upload-common.css">
+	<link rel="stylesheet" href="../../core/plugin/corejs/zUploader/css/aci-oral.css">
+	<link rel="stylesheet" href="../../core/plugin/corejs/zUploader/css/zUploader.css">
+	
+	<!-- 滚动条 -->
+	<link rel="stylesheet" href="../../libs/mCustomScrollbar/jquery.mCustomScrollbar.css">
+	
+	<!-- ztree -->
+	<link rel="stylesheet" href="../../libs/zTree/css/metroStyle/metroStyle.css">
+	<link rel="stylesheet" href="../../libs/zTree/css/diy/diyStyle.css">
+	<link rel="stylesheet" href="../../core/plugin/corejs/fuzzySearch/fuzzySearch.css">
+	<!-- =======================================CSS END======================================= -->
+
+
+
+</head>
+<body>
+	
+</body>
+</html>
+

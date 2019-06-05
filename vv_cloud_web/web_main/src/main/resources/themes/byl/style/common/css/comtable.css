@@ -1,0 +1,59 @@
+
+
+/*  通用展示表格  start */
+.comtable table{
+	width: 100%;height: 100%; table-layout: fixed; border: 0;    
+    border-spacing: 0; box-shadow: 0 1px 1px rgba(0,0,0,.1);
+}
+.comtable tr:first-child td{
+	border-top: solid 1px #d8e4e6;
+}
+.comtable td{
+	padding: 10px 8px; line-height: 20px; vertical-align: top;
+	background-color: #f8fbfc; color: #333; font-size: 14px; word-wrap: break-word;
+	border-top: solid 1px #fff; border-bottom: solid 1px #d8e4e6;border-left: solid 1px #fff;border-right: solid 1px #d8e4e6;
+}
+.comtable td:first-child{
+	border-left: solid 1px #d8e4e6;
+}
+.comtable td.title{
+	background-color: #eef8fb; text-align: right;
+}
+/*  通用展示表格  end */
+
+
+/*  通用 静态 数据表格  start */
+.comstatictable table{
+	width: 100%;height: 100%; table-layout: fixed; border: 0;
+	border-spacing: 0; box-shadow: 0 1px 1px rgba(0,0,0,.1);
+	font-size: 14px;
+}
+.comstatictable table th{
+	padding: 6px;border-top: solid 1px #d8e4e6;
+	border-bottom: solid 1px #d8e4e6;border-right: solid 1px #d8e4e6;
+}
+.comstatictable table th:first-child{
+	border-left: solid 1px #d8e4e6;
+}
+.comstatictable table td{
+	padding: 6px;
+	text-align: left;
+	line-height: 20px; vertical-align: top;
+	border-bottom: solid 1px #d8e4e6;border-right: solid 1px #d8e4e6;
+}
+.comstatictable table td:first-child{
+	border-left: solid 1px #d8e4e6;
+}
+.comstatictable table tr:nth-child(odd){
+	background-color: #f8fbfc;
+}
+.comstatictable table tr:first-child{
+	background-color: #eef8fb;
+}
+/*  通用 静态 数据表格  end */
+
+
+
+
+
+

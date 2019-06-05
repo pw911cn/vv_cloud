@@ -1,0 +1,52 @@
+/*选择文件按钮的外围容器*/
+.webuploader-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.webuploader-element-invisible {
+    position: absolute !important;
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+/*选择文件按钮样式*/
+.webuploader-pick {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    text-align: center;
+}
+
+.webuploader-pick-hover {
+}
+
+.webuploader-pick-disable {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.z_webUploader1{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.z_webUploader1 .z_webUploader_holder{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.z_webUploader1 .z_webUploader_holder>*{
+    position: absolute;
+    width: 100% !important;
+    height: 100% !important;
+}
+.z_webUploader1 .z_webUploader_holder label{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}

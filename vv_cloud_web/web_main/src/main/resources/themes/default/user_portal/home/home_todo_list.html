@@ -1,0 +1,33 @@
+<!--待办区域内容 star-->
+
+    <ul class="home_todo_list">
+        {{each datas.datas as dataObj}}
+        <li class="home_todo_item">
+            <div style="display:none;" id="taskid">{{dataObj.taskid}}</div>
+            <div style="display:none;" id="processId">{{dataObj.processId}}</div>
+            <div class="firstline">
+                {{if dataObj.bizType=='远程会诊'}}
+                <div class="tms4Home_type_tag tms">{{dataObj.bizType}}</div>
+                {{else if dataObj.bizType=='双向转诊'}}
+                <div class="tms4Home_type_tag ref">{{dataObj.bizType}}</div>
+                {{else if dataObj.bizType=='院间互动'}}
+                <div class="tms4Home_type_tag among">{{dataObj.bizType}}</div>
+                {{else if dataObj.bizType=='预约检验'}}
+                <div class="tms4Home_type_tag test">{{dataObj.bizType}}</div>
+                {{/if}}
+                <div class="node"><span class="nodeicon"></span><span class="nodetext">{{dataObj.processStatus}}</span></div>
+                <div class="elseinfo"><span class="item">来自：<span class="cont">{{dataObj.from}}</span></span></div>
+                <div class="timeinfo">50分钟前</div>
+            </div>
+            <div class="infoline">
+                <span class="item">患者：<span class="cont">{{dataObj.patientName}}</span></span>
+                <span class="item timeinfo">会诊时间：<span class="cont">{{dataObj.time}}</span></span>
+            </div>
+            <div class="infoline">
+                <span class="item">会诊：<span class="cont">会诊：{{dataObj.respHospital}} / {{dataObj.respDeptOne}} / {{dataObj.respDeptTwo}}/{{dataObj.respDoctor}}</span></span>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+
+<!--待办区域内容 end-->

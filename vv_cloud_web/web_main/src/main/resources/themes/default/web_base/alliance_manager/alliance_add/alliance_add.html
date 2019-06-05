@@ -1,0 +1,64 @@
+<div class="popup-content-lyt">
+    <div class="popup-content-center">
+
+		
+        <!-- 平台管理  医联体管理  新增医联体  -->
+		<form id="alliance_add_form">
+        <div class="platmana_com_popcont">
+
+
+            <div class="flowlyt-wrap labelwidth8">
+                <div class="flowlyt-child width500px mustfill">
+                    <div class="form-block">
+                        <div class="form-label"><div class="labelcont">医联体名称<span class="muststar">*</span></div></div>
+                        <div class="form-cont">
+                            <input type="text" class="xInput required" value="" name="alliance_name">
+                        </div>
+                    </div>
+                </div>
+<!--                 <div class="flowlyt-child width500px mustfill">
+                    <div class="form-block">
+                        <div class="form-label"><div class="labelcont">所属管理机构<span class="muststar">*</span></div></div>
+                        <div class="form-cont">
+                            <input type="text" class="xInput" value="" >
+                        </div>
+                    </div>
+                </div> -->
+                <div class="flowlyt-child width500px">
+                    <div class="form-block">
+                        <div class="form-label"><div class="labelcont">上级医联体<span class="muststar">*</span></div></div>
+                        <div class="form-cont" style="position:relative">
+                            <div class="xInput-group-icon" id="alliance_add_choosealli">
+                            	<input type="hidden" class="xInput" name="parent_id" value="" id="alliance_add_alli_id">
+                                <input type="text" class="xInput" value="" placeholder="请选择上级医联体" readonly id="alliance_add_allinput">
+                                <span class="iconwrap" id="alliance_add_empty"><i class="comicon-no_fill"></i></span>
+                            </div>
+                            <div id="alliance_add_choosewrap" style="position:absolute;top:35px;left:0px;right:0px;height:350px;border:1px solid #c7dae6;overflow:hidden;display:none">
+                            	<ul id="alliance_add_choosetree" class="ztree">
+                            	</ul>
+                            
+                            
+                            
+                            
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+		</form>
+        <!-- 平台管理  医联体管理  新增医联体  end  -->
+
+
+    </div>
+    <div class="popup-content-footerWrap">
+        <div class="popup-footerText"></div>
+        <div class="popup-btns">
+            <button type="button" class="xBtn xBtn-default" id="alliance_add_cancle">取消</button>
+            <button type="button" class="xBtn xBtn-primary xBtn-horpa-lg" id="alliance_add_save">确认</button>
+        </div>
+    </div>
+</div>

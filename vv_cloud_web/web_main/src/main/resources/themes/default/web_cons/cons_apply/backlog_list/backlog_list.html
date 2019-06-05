@@ -1,0 +1,98 @@
+<!-- 待办申请会诊-待办任务-->
+<div class="comlist_lyt2">
+	<div class="comlist_search">
+		<!-- 搜索区 -->
+		<form id="backlog_list_searchform">
+				<div class="v-panel01 br-all">
+				
+				<div class="inputwrap">
+					
+					<div class="flowlyt-wrap">
+						<div class="flowlyt-child">
+							<div class="form-block">
+								<div class="form-label"><div class="labelcont">患者姓名<span class="muststar">*</span></div></div>
+								<div class="form-cont">
+									<input type="text" class="xInput" value="" name="patientName">
+								</div>
+							</div>
+						</div>
+						<div class="flowlyt-child">
+							<div class="form-block">
+								<div class="form-label"><div class="labelcont">申请医院<span class="muststar">*</span></div></div>
+								<div class="form-cont">
+									<input type="text" class="xInput" value="" name="applyHospitalName">
+								</div>
+							</div>
+						</div>
+						<div class="v-input-groupwrap">
+							<div class="form-block">
+								<div class="form-label"><div class="labelcont">申请日期<span class="muststar">*</span></div></div>
+								<input type="text" class="xInput" placeholder="请输入开始时间" onclick="WdatePicker({el:this,dateFmt:'yyyy-MM-dd'})" name="applyStartTime">
+		                        <div class="v-input-group-space">-</div>
+		                        <input type="text" class="xInput" placeholder="请输入结束时间" onclick="WdatePicker({el:this,dateFmt:'yyyy-MM-dd'})" name="applyEndTime">
+							</div>
+						</div>
+						<div class="flowlyt-child">
+							<div class="form-block">
+								<div class="form-label"><div class="labelcont">会诊专家<span class="muststar">*</span></div></div>
+								<div class="form-cont">
+									<input type="text" class="xInput" value="" name="cm_data">
+								</div>
+							</div>
+						</div>
+						<div class="flowlyt-child">
+							<div class="form-block">
+								<div class="form-label"><div class="labelcont">会诊类型<span class="muststar">*</span></div></div>
+								<div class="form-cont" id="consTypeSelect">
+									
+								</div>
+							</div>
+						</div>
+						<div class="flowlyt-child">
+							<div class="form-block">
+								<div class="form-label"><div class="labelcont">会诊状态<span class="muststar">*</span></div></div>
+								<div class="form-cont" id="statusSelect">
+									<!-- <select class="xInput">
+										<option title="--请选择--" value="">--全部--</option>
+									
+									</select> -->
+								</div>
+							</div>
+						</div>
+						<div class="flowlyt-child">
+							<div class="form-block">
+								<div class="form-label"><div class="labelcont">会诊序号<span class="muststar">*</span></div></div>
+								<div class="form-cont">
+									<input type="text" class="xInput" value="" name="serial_num">
+								</div>
+							</div>
+						</div>
+<!-- 						<div class="flowlyt-child">
+							<div class="form-block">
+								<div class="form-label"><div class="labelcont">会诊来源<span class="muststar">*</span></div></div>
+								<div class="form-cont">
+									<select class="xInput">
+										<option title="--请选择--" value="">--全部--</option>
+									</select>
+								</div>
+							</div>
+						</div> -->
+						
+		
+					</div>
+		
+				</div>
+				<div class="btnwrap">
+					<button class="xBtn xBtn-primary" type="button" id="backlog_list_search">搜索</button>
+					<button class="xBtn xBtn-default" type="button" id="backlog_list_reset">重置</button>
+				</div>
+			</div>
+		</form>
+		<!-- 搜索区 end -->
+	</div>
+	<div class="comlist_cont" id="backlog_list">
+	
+	
+	</div>
+
+</div>

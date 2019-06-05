@@ -1,0 +1,136 @@
+<!-- 患者基本信息 -->
+<div class="v-panel hasheader style-2">
+	<div class="v-panel-header">
+		<div class="v-panel-title">患者病例信息</div>
+	</div>
+	<div class="v-panel-body">
+		<span class="v-panel-body" id="patientBasicInfo"></span>
+	
+	
+	</div>
+</div>
+<!-- 患者信息-患者病例信息-编辑 -->
+
+<div class="v-panel hasheader style-2">
+	<div class="v-panel-header v-combg">
+		<div class="v-panel-title">病例信息</div>
+
+	</div>
+	<div class="v-panel-body">
+		<span class="demotextcont">
+			<div class="flowlyt-wrap labelwidth9">
+				<div class="flowlyt-child width100 mustfill">
+					<div class="form-block">
+						<div class="form-label">
+							<div class="labelcont">
+								主诉<span class="muststar">*</span>
+							</div>
+						</div>
+						<div class="form-cont">
+							<!--内容区，此处放表单元素。-->
+							<textarea class="xInput" name="consPatiInfo.clin_complaint" rows="3"
+								style="width: 500px"></textarea>
+							<!--内容区，此处放表单元素。end -->
+						</div>
+					</div>
+				</div>
+				<div class="flowlyt-child width100 mustfill">
+					<div class="form-block">
+						<div class="form-label">
+							<div class="labelcont">
+								现病史<span class="muststar">*</span>
+							</div>
+						</div>
+						<div class="form-cont">
+							<!--内容区，此处放表单元素。-->
+							<textarea class="xInput" name="consPatiInfo.clin_present" rows="3"
+								style="width: 500px"></textarea>
+							<!--内容区，此处放表单元素。end -->
+						</div>
+					</div>
+				</div>
+				<div class="flowlyt-child width100 mustfill">
+					<div class="form-block">
+						<div class="form-label">
+							<div class="labelcont">
+								更多病史<span class="muststar">*</span>
+							</div>
+						</div>
+						<div class="form-cont">
+							<input type="button" value='既往史'
+								class="xBtn xBtn-primary medical_history" /> <input
+								type="button" value='个人史'
+								class="xBtn xBtn-primary medical_history" /> <input
+								type="button" value='家族史'
+								class="xBtn xBtn-primary medical_history" />
+
+							<script id="medical_editor" type="text/plain"
+								style="width: 500px; height: 200px;"></script>
+
+
+						</div>
+					</div>
+				</div>
+				<div class="flowlyt-child width100 mustfill">
+					<div class="form-block">
+						<div class="form-label">
+							<div class="labelcont">
+								更多检查<span class="muststar">*</span>
+							</div>
+						</div>
+						<div class="form-cont">
+							<input type="button" value='体格检查'
+								class="xBtn xBtn-primary examination" /> <input type="button"
+								value='辅助检查' class="xBtn xBtn-primary examination" />
+
+
+							<script id="examination_editor" type="text/plain"
+								style="width: 500px; height: 200px;"></script>
+
+
+						</div>
+					</div>
+				</div>
+				<div class="flowlyt-child width100 mustfill">
+					<div class="form-block">
+						<div class="form-label">
+							<div class="labelcont">
+								初步诊断<span class="muststar">*</span>
+							</div>
+						</div>
+						<div class="form-cont">
+							<textarea class="xInput" rows="3" name="consPatiInfo.clin_diagnose"
+								style="width: 500px"></textarea>
+						</div>
+					</div>
+				</div>
+				<div class="flowlyt-child width100 mustfill">
+					<div class="form-block">
+						<div class="form-label">
+							<div class="labelcont">
+								治疗经过<span class="muststar">*</span>
+							</div>
+						</div>
+						<div class="form-cont">
+							<textarea class="xInput" rows="3" name="consPatiInfo.clin_treatment"
+								style="width: 500px"></textarea>
+						</div>
+					</div>
+				</div>
+				<div class="flowlyt-child width100 mustfill">
+					<div class="form-block">
+						<div class="form-label">
+							<div class="labelcont">
+								入院后用药<span class="muststar">*</span>
+							</div>
+						</div>
+						<div class="form-cont">
+							<textarea class="xInput" name="consPatiInfo.clin_medicine" rows="3"
+								style="width: 500px"></textarea>
+						</div>
+					</div>
+				</div>
+			</div>
+		</span>
+	</div>
+</div>

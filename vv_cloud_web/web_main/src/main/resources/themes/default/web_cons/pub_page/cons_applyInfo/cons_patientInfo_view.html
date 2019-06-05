@@ -1,0 +1,51 @@
+<div class="cons_patientInfo_view">
+                            <div class="v-panel hasheader style-5">
+                                <div class="v-panel-header">
+                                    <div class="v-panel-title">病历信息</div>
+                                </div>
+                                <div class="v-panel-body">
+                                    <!--=================== 通用静态表格 start =======================-->
+                                    <table class="com_table_show">
+                                        <tr>
+                                            <td class="title lock">主诉</td>
+                                            <td><div class="content">{{datas.consPatiInfo.clin_complaint}}</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="title lock">现病史</td>
+                                            <td>
+                                                <div class="content">{{datas.consPatiInfo.clin_present}}</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="title lock">相关病史</td>
+                                            <td>
+                                                <div class="content">
+         											<script id="medical_editor" type="text/plain" style="width: 100%; height: 200px;"></script>
+                                            </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="title lock">相关检查</td>
+                                            <td>
+                                            	<script id="examination_editor" type="text/plain" style="width: 100%; height: 200px;"></script>
+                                                
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="title lock">初步诊断</td>
+                                            <td><div class="content">{{datas.consPatiInfo.clin_diagnose}}</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="title lock">治疗经过</td>
+                                            <td><div class="content">{{datas.consPatiInfo.clin_treatment}}</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="title lock">入院后用药</td>
+                                            <td><div class="content">{{datas.consPatiInfo.clin_medicine}}</div></td>
+                                        </tr>
+
+                                    </table>
+                                    <!--=================== 通用静态表格 end =======================-->
+                                </div>
+                            </div>
+                        </div>

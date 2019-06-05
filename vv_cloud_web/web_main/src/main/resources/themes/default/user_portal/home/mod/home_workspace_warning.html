@@ -1,0 +1,270 @@
+<!-- 首页工作区 业务预警  -->
+<div class="tms4Home_ws_warning" id="tms4Home_ws_warning">
+	<div class="tms4Home_ws_com_cont">
+		<!-- 搜索区 -->
+		<div class="home_ws_com_search">
+
+			<div class="searchcont">
+				<div class="flowlyt-wrap labelwidth4">
+					<div class="flowlyt-child width200px">
+						<div class="form-block">
+							<div class="form-label"><div class="labelcont"><span class="muststar">*</span>类型：</div></div>
+							<div class="form-cont">
+								<select class="xInput" name="alertedType">
+									<option title="--请选择--" value="">全部</option>
+									<option title="" value="远程会诊">远程会诊</option>
+									<option title="" value="双向转诊">双向转诊</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="flowlyt-child width500px">
+						<div class="form-block">
+							<div class="form-label"><div class="labelcont"><span class="muststar">*</span>日期：</div></div>
+							<div class="form-cont">
+								<div class="v-input-groupwrap">
+									<div class="v-input-group-one quicktime">
+									<span class="v-radio-btn">
+										<span class="v-radio">
+											<input name="timeType" type="radio" class="v-radio-input" value="all" checked="">
+											<div class="v-radio-inner">
+											</div>
+											<div class="v-radio-text">全部</div>
+										</span>
+										<span class="v-radio">
+											<input name="timeType" type="radio" class="v-radio-input" value="today">
+											<div class="v-radio-inner">
+											</div>
+											<div class="v-radio-text">今日</div>
+										</span>
+										<span class="v-radio">
+											<input name="timeType" type="radio" class="v-radio-input" value="tswk">
+											<div class="v-radio-inner">
+											</div>
+											<div class="v-radio-text">本周</div>
+										</span>
+										<span class="v-radio">
+											<input name="timeType" type="radio" class="v-radio-input" value="month">
+											<div class="v-radio-inner">
+											</div>
+											<div class="v-radio-text">本月</div>
+										</span>
+									</span>
+									</div>
+									<div class="v-input-group-space"></div>
+									<div class="v-input-group-one">
+										<div class="xInput-group-icon">
+											<span class="iconwrap"><i class="comicon-calendar"></i></span>
+											<input type="text" class="xInput" placeholder="请选择日期">
+										</div>
+									</div>
+									<div class="v-input-group-space">-</div>
+									<div class="v-input-group-one">
+										<div class="xInput-group-icon">
+											<span class="iconwrap"><i class="comicon-calendar"></i></span>
+											<input type="text" class="xInput" placeholder="请选择日期" >
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="searchcont">
+				<div class="flowlyt-wrap">
+					<div class="flowlyt-child width250px">
+						<div class="form-block">
+							<div class="form-label"><div class="labelcont">医院：<span class="muststar">*</span></div></div>
+							<div class="form-cont">
+								<input type="text" class="xInput" value="" placeholder="请输入医院名" name="hospitalName">
+							</div>
+						</div>
+					</div>
+					<div class="flowlyt-child operbtn">
+						<div class="form-block">
+							<button class="xBtn xBtn-primary" type="button" name="alertSearch">搜索</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!-- 搜索区 end -->
+
+
+
+		<!-- 信息区 -->
+		<div class="home_ws_com_info">
+			<div class="infocont">
+				<div class="infotext">您有<span class="number">48</span>条预警信息</div>
+				<div class="infotext">有<span class="number">36</span>条结果符合筛选条件</div>
+			</div>
+			<div class="infocont">
+				<div class="order">
+					<span class="ordertype"><i class="comicon-sort_vertical"></i>发生时间升序</span>
+					<span class="arricon"><i class="comicon-scroll_down"></i></span>
+					<div class="dropdown">
+						<div class="item">发生时间降序</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 信息区 end -->
+
+
+
+
+		<!-- 列表 -->
+		<div class="home_ws_com_list">
+
+			<table class="home_ws_com_table">
+				<tr>
+					<td class="td_typenode home_com_unread">
+						<div class="td_typewrap">
+							<div class="tms4Home_type_tag tms">远程会诊</div>
+							<div class="node"><span class="nodeicon"></span><span class="nodetext">待前质控</span></div>
+						</div>
+					</td>
+					<td>
+						<div class="textcont">患者：王平</div>
+						<div class="textcont">来自：辽宁省</div>
+					</td>
+					<td>
+						<div class="textcont">申请方：
+							<span class="text">北京宣武医院</span>
+							<span class="oblique">/</span>
+							<span class="text">远程会诊中心</span>
+							<span class="oblique">/</span>
+							<span class="text">刘大帅</span>
+						</div>
+						<div class="textcont">会诊方：
+							<span class="text">新疆医科大学第一附属医院</span>
+							<span class="oblique">/</span>
+							<span class="text">远程会诊中心</span>
+							<span class="oblique">/</span>
+							<span class="text">李梅</span>
+						</div>
+					</td>
+					<td>
+						<div class="textcont">操作截止日期：2018-12-02 12:25</div>
+						<div class="textcont"><span class="dangertext">已超时 1 天</span></div>
+					</td>
+					<td class="td_pushtime">
+						<div class="pushtime">刚刚</div>
+					</td>
+				</tr>
+				<tr>
+					<td class="td_typenode">
+						<div class="td_typewrap">
+							<div class="tms4Home_type_tag tms">远程会诊</div>
+							<div class="node"><span class="nodeicon"></span><span class="nodetext">待前质控</span></div>
+						</div>
+					</td>
+					<td>
+						<div class="textcont">患者：王平</div>
+						<div class="textcont">来自：辽宁省</div>
+					</td>
+					<td>
+						<div class="textcont">申请方：
+							<span class="text">北京宣武医院</span>
+							<span class="oblique">/</span>
+							<span class="text">远程会诊中心</span>
+							<span class="oblique">/</span>
+							<span class="text">刘大帅</span>
+						</div>
+						<div class="textcont">会诊方：
+							<span class="text">新疆医科大学第一附属医院</span>
+							<span class="oblique">/</span>
+							<span class="text">远程会诊中心</span>
+							<span class="oblique">/</span>
+							<span class="text">李梅</span>
+						</div>
+					</td>
+					<td>
+						<div class="textcont">操作截止日期：2018-12-02 12:25</div>
+						<div class="textcont"><span class="warningtext">还有 1 天</span></div>
+					</td>
+					<td>
+						<div class="pushtime">2018-11-15 10:12</div>
+					</td>
+				</tr>
+				<tr>
+					<td class="td_typenode">
+						<div class="td_typewrap">
+							<div class="tms4Home_type_tag ref">双向转诊</div>
+							<div class="node"><span class="nodeicon"></span><span class="nodetext">转出审核</span></div>
+						</div>
+					</td>
+					<td>
+						<div class="textcont">患者：张平治</div>
+					</td>
+					<td>
+						<div class="textcont">申请方：
+							<span class="text">朝阳区人民医院</span>
+							<span class="oblique">/</span>
+							<span class="text">内科</span>
+							<span class="oblique">/</span>
+							<span class="text">林大叔</span>
+						</div>
+						<div class="textcont">接收方：
+							<span class="text">北京宣武医院</span>
+							<span class="oblique">/</span>
+							<span class="text">消化内科</span>
+							<span class="oblique">/</span>
+							<span class="text">王毅三</span>
+						</div>
+					</td>
+					<td>
+						<div class="textcont">操作截止日期：2018-12-02 12:25</div>
+						<div class="textcont"><span class="warningtext">还有 3 天</span></div>
+					</td>
+					<td>
+						<div class="pushtime">6小时前</div>
+					</td>
+				</tr>
+				<tr>
+					<td class="td_typenode">
+						<div class="td_typewrap">
+							<div class="tms4Home_type_tag among">院间互动</div>
+							<div class="node"><span class="nodeicon"></span><span class="nodetext">转出审核</span></div>
+						</div>
+					</td>
+					<td>
+						<div class="textcont">主题：[进修] 学习手术开展规范</div>
+					</td>
+					<td>
+						<div class="textcont">申请医院：<span class="text">朝阳区人民医院</span></div>
+						<div class="textcont">接收医院：<span class="text">北京宣武医院</span></div>
+					</td>
+					<td>
+						<div class="textcont">操作截止日期：2018-12-02 12:25</div>
+						<div class="textcont"><span class="warningtext">还有 3 天</span></div>
+					</td>
+					<td>
+						<div class="pushtime">6小时前</div>
+					</td>
+				</tr>
+			</table>
+
+		</div>
+		<!-- 列表 end -->
+
+
+
+		<!-- 分页 -->
+		<div class="home_ws_com_page" id="pageholder">
+
+		</div>
+		<!-- 分页 end -->
+
+
+
+
+
+	</div>
+
+</div>
+<!-- 首页工作区 业务预警  end  -->
+

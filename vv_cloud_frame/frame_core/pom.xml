@@ -9,6 +9,7 @@
 		<version>${cloudFrame.version}</version>
 	</parent>
 
+	<groupId>com.vv.vv_cloud_frame</groupId>
 	<artifactId>frame_core</artifactId>
 	<packaging>jar</packaging>
 

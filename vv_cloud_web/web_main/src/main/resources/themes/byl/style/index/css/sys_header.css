@@ -1,0 +1,82 @@
+@charset "UTF-8";
+/* 头部 */
+.tms4Index_header {
+  width: 100%;
+  height: 100%;
+  padding: 0 16px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #fff;
+}
+.tms4Index_header .sysinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 0;
+}
+.tms4Index_header .sysinfo .syslogo {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+.tms4Index_header .sysinfo .syslogo img {
+  /*max-height: 100%;*/
+}
+.tms4Index_header .sysinfo .systitle {
+  font-size: 22px;
+  font-weight: bolder;
+  margin-left: 16px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+.tms4Index_header .sysnav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.tms4Index_header .sysnav ul {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.tms4Index_header .sysnav ul li {
+  width: 90px;
+  padding: 0 6px;
+  border-left: solid 1px #4590fc;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.tms4Index_header .sysnav ul li:first-child {
+  border-left: none;
+}
+.tms4Index_header .sysnav ul li.active, .tms4Index_header .sysnav ul li:hover {
+  background-color: #4590fc;
+}
+.tms4Index_header .sysnav .sysnavmore {
+  margin-left: 8px;
+  font-size: 16px;
+}

@@ -1,0 +1,75 @@
+<div class="platmana_conj_info">
+	<input type="hidden" name="alliance_id" value="{{id}}">
+	<div class="infocont">
+		<div class="infoline">
+			<span class="conjname" id="alliance_hos_add_alliname"></span>
+			<div class="editbtn" id="alliance_hos_editalli">
+				<i class="comicon-write"></i>修改
+			</div>
+		</div>
+		<div class="infoline">
+			<span class="elseinfo" id="alliance_hos_to_org">所属管理机构：中日友好医院</span>
+			<span class="elseinfo" id="alliance_hos_to_alli">上级医联体：全国医联体</span>
+		</div>
+	</div>
+	<div class="infocont">
+		<button class="xBtn xBtn-success" type="button" id="alliance_hos_add"><i class="comicon-add"></i> 添加成员</button>
+	</div>
+</div>
+
+<div class="platmana_conj_member">
+
+	<div class="platmana_comlist_lyt1">
+		<div class="platmana_comlist_search">
+			<!-- 搜索区 -->
+			<form id="alliance_hos_form">
+				<div class="v-panel01 br-all">
+					<div class="inputwrap">
+						<input type="hidden" name="alliance_id" value="{{id}}">
+						<div class="flowlyt-wrap labelwidth5">
+							<div class="flowlyt-child width200px">
+								<div class="form-block">
+									<div class="form-label"><div class="labelcont">医院名称<span class="muststar">*</span></div></div>
+									<div class="form-cont">
+										<input type="text" class="xInput" value="" name="org_name">
+									</div>
+								</div>
+							</div>
+							<div class="flowlyt-child width200px">
+								<div class="form-block">
+									<div class="form-label"><div class="labelcont">类型<span class="muststar">*</span></div></div>
+									<div class="form-cont">
+										<select class="xInput">
+											<option title="--请选择--" value="">--请选择性别--</option>
+											<option title="男性" value="1">男性</option>
+											<option title="女性" value="2">女性</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+	
+					</div>
+	
+					<div class="btnwrap">
+						<button class="xBtn xBtn-primary" type="button" id="alliance_hos_searchbtn">搜索</button>
+						<button class="xBtn xBtn-default" type="reset" id="alliance_hos_resetbtn">重置</button>
+					</div>
+	<!--
+									<div class="btnwrap-right">
+									</div>-->
+	
+				</div>
+			</form>
+			<!-- 搜索区 end -->
+		</div>
+		<div class="platmana_comlist_cont">
+			<div class="platmana_comlist_tablewrap" id="tableWrap">
+				<!-- 加载表格 -->
+
+				<!-- 加载表格 end -->
+			</div>
+		</div>
+	</div>
+
+</div>

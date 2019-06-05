@@ -1,0 +1,58 @@
+
+//  变量
+@import "mixins/_variables";
+
+
+/* 顶部工具栏 */
+
+.#{$pre}Index_topTool {
+  width: 100%;
+  height: 100%;
+  padding: 6px 16px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  .welinfo{
+    font-size: 12px;
+    color: #d5d7e4;
+    display: flex;
+    align-items: center;
+    .usericon{
+      margin-right: 5px;
+      font-size: 16px;
+    }
+  }
+
+  .toolwrap{
+    font-size: 14px;
+    color: #ddd;
+    display: flex;
+    align-items: center;
+    .toolitem{
+      margin-right:10px;
+      padding-left: 10px;
+      border-left: solid 1px #555867;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      font-size: 12px;
+      &:hover{
+        color: #fff;
+      }
+      &:first-child{
+        border-left: none;
+      }
+      .toolicon{
+        margin-right: 3px;
+        font-size: 14px;
+      }
+    }
+  }
+
+
+
+}
+
+
+

@@ -15,8 +15,6 @@
 
 	<modules>
 		<module>web_main</module>
-		<module>web_base</module>
-		<module>web_pub</module>
 	</modules>
 
 </project>

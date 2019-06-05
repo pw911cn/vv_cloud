@@ -1,0 +1,135 @@
+<div class="flowlyt-wrap labelwidth9">
+
+	<div class="flowlyt-child width400px ">
+		<div class="form-block">
+			<div class="form-label">
+				<div class="labelcont">
+					患者编号<span class="muststar">*</span>
+				</div>
+			</div>
+			<div class="form-cont">
+				<!--内容区，此处放表单元素。-->
+				<input type="text" class="xInput"  value="{{datas.consPatiInfo.pati_no}}" disabled="disabled">
+				<!--内容区，此处放表单元素。end -->
+			</div>
+		</div>
+	</div>
+	<div class="flowlyt-child width400px ">
+		<div class="form-block">
+			<div class="form-label">
+				<div class="labelcont">
+					患者姓名<span class="muststar">*</span>
+				</div>
+			</div>
+			<div class="form-cont">
+				<!--内容区，此处放表单元素。-->
+				<input type="text" class="xInput" name="consPatiInfo.pati_name" value="{{datas.consPatiInfo.pati_name}}" disabled="disabled">
+				<!--内容区，此处放表单元素。end -->
+			</div>
+		</div>
+	</div>
+
+	<div class="flowlyt-child width400px ">
+		<div class="form-block">
+			<div class="form-label">
+				<div class="labelcont">
+					身份证号<span class="muststar">*</span>
+				</div>
+			</div>
+			<div class="form-cont">
+				<!--内容区，此处放表单元素。-->
+				<input type="text" class="xInput" name="consPatiInfo.pati_identity" value="{{datas.consPatiInfo.pati_identity}}" disabled="disabled">
+				<!--内容区，此处放表单元素。end -->
+			</div>
+		</div>
+	</div>
+
+	<div class="flowlyt-child width400px ">
+		<div class="form-block">
+			<div class="form-label">
+				<div class="labelcont">
+					性别<span class="muststar">*</span>
+				</div>
+			</div>
+			<div class="form-cont">
+				<span class="v-radio"> <input name="consPatiInfo.pati_gender" type="radio"
+					class="v-radio-input" value="男" checked>
+					<div class="v-radio-inner"></div>
+					<div class="v-radio-text">男</div>
+				</span> <span class="v-radio"> <input name="consPatiInfo.pati_gender"
+					type="radio" class="v-radio-input" value="女">
+					<div class="v-radio-inner"></div>
+					<div class="v-radio-text">女</div>
+				</span>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="flowlyt-child width400px ">
+		<div class="form-block">
+			<div class="form-label">
+				<div class="labelcont">
+					年龄<span class="muststar">*</span>
+				</div>
+			</div>
+			<div class="form-cont">
+				<!--内容区，此处放表单元素。-->
+				<!-- <input type="text" class="xInput" name="pati_age"> -->
+				<div class="v-input-group-one">
+		        	<div class="xInput-group-select">
+			            <div class="inputwrap">
+			                <input type="text" class="xInput" name="consPatiInfo.pati_age" value="{{datas.consPatiInfo.pati_age}}" disabled="disabled">
+			            </div>
+			            <div class="selectwrap">
+			                <select class="xInput" name="consPatiInfo.pati_age_unit" >
+			                    <option title="岁" value="0">岁</option>
+			                    <option title="月" value="1">月</option>
+			                    <option title="天" value="2">天</option>
+			                </select>
+			            </div>
+		        	</div>
+		    	</div>
+				<!--内容区，此处放表单元素。end -->
+			</div>
+		</div>
+	</div>
+
+	<div class="flowlyt-child width400px ">
+		<div class="form-block">
+			<div class="form-label">
+				<div class="labelcont">
+					生日<span class="muststar">*</span>
+				</div>
+			</div>
+			<div class="form-cont">
+				  <input type="text" class="xInput"  value="{{datas.consPatiInfo.pati_birthday}}" disabled="disabled">
+			</div>
+		</div>
+	</div>
+
+	<div class="flowlyt-child width400px ">
+		<div class="form-block">
+			<div class="form-label">
+				<div class="labelcont">
+					婚姻状况<span class="muststar">*</span>
+				</div>
+			</div>
+			<div class="form-cont">
+				<!--内容区，此处放表单元素。-->
+				<select class="xInput" name="consPatiInfo.pati_marital">
+					<option title="请选择" value="0">--请选择--</option>
+					<option title="已婚" value="1">已婚</option>
+					<option title="未婚" value="2">未婚</option>
+				</select>
+				<!--内容区，此处放表单元素。end -->
+			</div>
+		</div>
+	</div>
+
+
+
+
+</div>
+

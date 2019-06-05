@@ -1,0 +1,131 @@
+<!-- 首页 业务跟踪  -->
+<div class="v-panel hasheader noPadding style-2">
+	<div class="v-panel-header">
+		<div class="v-panel-icon"><i class="comicon-empty"></i></div>
+		<div class="v-panel-title">业务跟踪</div>
+		<div class="v-panel-headtool"><a class="morebtn"  style="cursor:pointer" id="more_business">更多...</a></div>
+	</div>
+	<div class="v-panel-body">
+
+		<!-- <ul class="tms4Home_business_list">
+			<li class="home_business_item unread">
+				<div class="tms4Home_type_tag tms">远程会诊</div>
+				<div class="baseinfo">
+					<div class="baseinfoline">
+						<span class="basetext"><span class="basetexttitle">患者：</span>王平</span>
+						<span class="basetext"><span class="basetexttitle">期待会诊时间：</span>2018-03-12 08:30</span>
+					</div>
+					<div class="baseinfoline">
+						<span class="basetext"><span class="basetexttitle">期待会诊方：</span>新疆医科大学第一附属医院 / 远程会诊中心 / 李梅</span>
+					</div>
+				</div>
+				<div class="timeaxis">
+					<div class="business_timeaxis">
+						<div class="item"></div>
+						<div class="item"></div>
+						<div class="item"></div>
+
+					</div>
+				</div>
+				<div class="timeinfo">刚刚</div>
+			</li>
+			<li class="home_business_item">
+				<div class="tms4Home_type_tag ref">双向转诊</div>
+				<div class="baseinfo">
+					<div class="baseinfoline">
+						<span class="basetext"><span class="basetexttitle">患者：</span>王平</span>
+						<span class="basetext"><span class="basetexttitle">预计入院时间：</span>2018-03-12 08:30</span>
+					</div>
+					<div class="baseinfoline">
+						<span class="basetext"><span class="basetexttitle">接收方：</span>新疆医科大学第一附属医院 / 远程会诊中心 / 李梅</span>
+					</div>
+				</div>
+				<div class="timeinfo">3小时前</div>
+			</li>
+			<li class="home_business_item">
+				<div class="tms4Home_type_tag among">院间互动</div>
+				<div class="baseinfo">
+					<div class="baseinfoline">
+						<span class="basetext"><span class="basetexttitle">主题：</span>[派遣] 支持中日友好医院开展全国医疗大会工作</span>
+					</div>
+					<div class="baseinfoline">
+						<span class="basetext"><span class="basetexttitle">接收方：</span>中日友好医院</span>
+						<span class="basetext"><span class="basetexttitle">周期：</span>2018-03-12 ~ 2018-04-02</span>
+					</div>
+				</div>
+				<div class="timeinfo">2018-12-10 15:36:12</div>
+			</li>
+
+
+
+
+			<li class="home_business_item unread">
+				<div class="tms4Home_type_tag tms">远程会诊</div>
+				<div class="baseinfo">
+						<span class="basetext"><span class="basetexttitle">患者：</span>王平</span>
+						<span class="basetext"><span class="basetexttitle">期待会诊时间：</span>2018-03-12 08:30</span>
+						<span class="basetext"><span class="basetexttitle">期待会诊方：</span>新疆医科大学第一附属医院 / 远程会诊中心 / 李梅</span>
+				</div>
+				<div class="timeinfo">刚刚</div>
+			</li>
+			<li class="home_business_item">
+				<div class="tms4Home_type_tag ref">双向转诊</div>
+				<div class="baseinfo">
+						<span class="basetext"><span class="basetexttitle">患者：</span>王平</span>
+						<span class="basetext"><span class="basetexttitle">预计入院时间：</span>2018-03-12 08:30</span>
+						<span class="basetext"><span class="basetexttitle">接收方：</span>新疆医科大学第一附属医院 / 远程会诊中心 / 李梅</span>
+				</div>
+				<div class="timeinfo">3小时前</div>
+			</li>
+			<li class="home_business_item">
+				<div class="tms4Home_type_tag among">院间互动</div>
+				<div class="baseinfo">
+					<span class="basetext"><span class="basetexttitle">主题：</span>[派遣] 支持中日友好医院开展全国医疗大会工作</span>
+					<span class="basetext"><span class="basetexttitle">接收方：</span>中日友好医院</span>
+					<span class="basetext"><span class="basetexttitle">周期：</span>2018-03-12 ~ 2018-04-02</span>
+				</div>
+				<div class="timeinfo">2018-12-10 15:36:12</div>
+			</li>
+		</ul>
+ -->
+ 			<ul class="tms4Home_business_list">
+			  {{each datas.datas as dataObj}}
+			  <li class="home_business_item unread">
+				{{if dataObj.bizType=='远程会诊'}}
+                <div class="tms4Home_type_tag tms">{{dataObj.bizType}}</div>
+                {{else if dataObj.bizType=='双向转诊'}}
+                <div class="tms4Home_type_tag ref">{{dataObj.bizType}}</div>
+                {{else if dataObj.bizType=='院间互动'}}
+                <div class="tms4Home_type_tag among">{{dataObj.bizType}}</div>
+                {{/if}}
+				<div class="baseinfo">
+                    <span class="basetext"><span class="basetexttitle">患者：</span>{{dataObj.patientName}}</span>
+                    <span class="basetext"><span class="basetexttitle">期待会诊方：</span>
+                        <span class="text">{{dataObj.outHospital}} </span>
+                        <span class="oblique">/</span>
+                        <span class="text">远程会诊中心</span>
+                        <span class="oblique">/</span>
+                        <span class="text">{{dataObj.outDoctor}}</span>
+                    </span>
+                    <span class="basetext"><span class="basetexttitle">期待会诊时间：</span>{{dataObj.updateDate}}</span>
+				</div>
+				<div class="timeaxis">
+					<div class="business_timeaxis">
+						<div class="item"></div>
+						<div class="item"></div>
+						<div class="item"></div>
+
+					</div>
+				</div>
+				<div class="timeinfo">{{dataObj.interval}}</div>
+			</li>
+			  {{/each}}
+		</ul>
+ 
+
+
+
+	</div>
+</div>
+<!-- 首页 业务跟踪  end  -->
+

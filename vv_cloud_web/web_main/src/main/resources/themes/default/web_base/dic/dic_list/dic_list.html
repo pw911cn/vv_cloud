@@ -1,0 +1,61 @@
+<!-- 平台管理  医院管理 列表  -->
+<div class="platmana_comlist_wrap">
+	<div class="platmana_comlist_lyt2">
+		<div class="platmana_comlist_search">
+		<form id="dic_list_searchform">
+			<!-- 搜索区 -->
+			<div class="v-panel01 br-all">
+				<div class="inputwrap">
+
+					<div class="flowlyt-wrap">
+						<div class="flowlyt-child">
+							<div class="form-block">
+								<div class="form-label"><div class="labelcont">数据字典值<span class="muststar">*</span></div></div>
+								<div class="form-cont">
+									<input type="text" class="xInput" value="" name="type_key">
+								</div>
+							</div>
+						</div>
+						<div class="flowlyt-child">
+							<div class="form-block">
+								<div class="form-label"><div class="labelcont">数据字典名<span class="muststar">*</span></div></div>
+								<div class="form-cont">
+									<input type="text" class="xInput" value="" name="type_name">
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="btnwrap">
+					<button class="xBtn xBtn-primary" type="button" id="dic_list_searchbtn">搜索</button>
+					<button class="xBtn xBtn-default" type="reset" id="dic_list_resetbtn">重置</button>
+				</div>
+
+				<div class="btnwrap-right">
+					<button class="xBtn xBtn-success" type="button" id="dic_list_addBtn"><i class="comicon-add"></i> 新增</button>
+				</div>
+
+			</div>
+
+			<!-- 搜索区 end -->
+		</form>
+		</div>
+		<div class="platmana_comlist_cont">
+			<div class="platmana_comlist_tablewrap">
+				<div  style="width:100%;height:50%;position:absolute;top:0;left:0" id="dic_type_list"></div>
+				<div  style="width:100%;height:50%;position:absolute;bottom:0;left:0">
+					<div class="btnwrap-right" style="padding-top:10px;float:right">
+						<button class="xBtn xBtn-success" type="button" id="dic_vlist_addBtn" disabled=true><i class="comicon-add"></i>新增选项</button>
+					</div>
+					<div id="dic_data_list" style="position:absolute;bottom:0;left:0;top:50px;width:100%;">
+					
+					</div>
+				
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 平台管理  医院管理 列表 end  -->

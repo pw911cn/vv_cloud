@@ -1,0 +1,68 @@
+@charset "UTF-8";
+/* 面包屑 */
+.tms4Index_crumb {
+  width: 100%;
+  height: 100%;
+  padding: 6px 24px 6px 16px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.tms4Index_crumb .breadcrumb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #666;
+}
+.tms4Index_crumb .breadcrumb .localicon {
+  margin-right: 5px;
+  font-size: 16px;
+}
+.tms4Index_crumb .breadcrumb a {
+  margin: 0px 4px;
+  line-height: 18px;
+  text-decoration: none;
+  color: #666;
+}
+.tms4Index_crumb .breadcrumb a:nth-last-child(1) {
+  cursor: text;
+}
+.tms4Index_crumb .notice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+  color: #555;
+}
+.tms4Index_crumb .notice .noticeicon {
+  margin-right: 4px;
+  font-size: 16px;
+  color: #a6bcd3;
+  margin-bottom: 2px;
+}
+.tms4Index_crumb .notice .noticetext {
+  cursor: pointer;
+}
+.tms4Index_crumb .notice .noticetext:hover {
+  text-decoration: underline;
+  color: #1b6bff;
+}
+.tms4Index_crumb .notice .noticemore {
+  margin-left: 12px;
+  cursor: pointer;
+}
+.tms4Index_crumb .notice .noticemore:hover {
+  text-decoration: underline;
+  color: #1b6bff;
+}

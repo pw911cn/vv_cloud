@@ -1,0 +1,70 @@
+
+//  变量
+@import "mixins/_variables";
+
+/* 面包屑 */
+
+.#{$pre}Index_crumb {
+  width: 100%;
+  height: 100%;
+  padding: 6px 24px 6px 16px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+
+  .breadcrumb{
+    display: flex;
+    align-items: center;
+    color: #666;
+    .localicon {
+      margin-right: 5px;
+      font-size: 16px;
+    }
+    a {
+      margin: 0px 4px;
+      line-height: 18px;
+      text-decoration: none;
+      color: #666;
+      &:nth-last-child(1) {
+        cursor: text;
+      }
+    }
+
+  }
+
+  .notice{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #555;
+    .noticeicon{
+      margin-right: 4px;
+      font-size: 16px;
+      //color: #aaa;
+      color: #a6bcd3;
+      margin-bottom: 2px;
+    }
+    .noticetext{
+      cursor: pointer;
+      &:hover{
+        text-decoration: underline;
+        color: #1b6bff;
+      }
+    }
+    .noticemore{
+      margin-left: 12px;
+      cursor: pointer;
+      &:hover{
+        text-decoration: underline;
+        color: #1b6bff;
+      }
+    }
+
+  }
+
+
+}
+
+
+
